@@ -95,18 +95,13 @@ export default function Home() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
           >
-            STEPHEN IS A{" "}
+            HOWDY, I’M{" "}
             <span className="font-normal italic relative">
-              STRATEGIC SOCIAL MEDIA LEADER 🚀
+              STEPHEN—A CREATIVE AND SOCIAL ALCHEMIST 📍
               <HandDrawnUnderline className="text-pastel-blue bottom-0 left-0" />
             </span>{" "}
-            BASED IN{" "}
-            <span className="relative inline-block">
-              HOUSTON
-              <HandDrawnCircle className="text-pastel-pink -top-1/4 -left-1/4 w-150 h-150" />
-            </span>{" "}
-            - CURRENTLY A <span className="bg-pastel-green text-deep-grey px-1">DIGITAL MARKETING</span> & SOCIAL MEDIA
-            PROFESSIONAL.
+            HOUSTON, FREELANCING AS A{" "}
+            <span className="bg-pastel-green text-deep-grey px-1">MARKETING CONSULTANT</span>.
           </motion.h1>
           <motion.h2
             className="text-2xl sm:text-3xl md:text-4xl font-normal max-w-3xl leading-relaxed mb-8 relative font-jetbrains-mono"
@@ -114,13 +109,16 @@ export default function Home() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
           >
-            PREVIOUSLY,{" "}
+            FORMERLY @{" "}
             <span className="relative">
-              GLOBAL SOCIAL MEDIA MANAGER @ ELECTRONIC ARTS 🎮
+              APPLE, VW AGENCY, & SAMSUNG US
               <HandDrawnUnderline className="text-pastel-green bottom-0 left-0" />
             </span>{" "}
-            + <span className="bg-pastel-purple text-deep-grey px-1">SOCIAL STRATEGIST</span> & GAMING CONSULTANT @
-            CASHMERE AGENCY FOR GOOGLE, META, TWITCH, AND MORE.
+            . LED SOCIAL & GAMING CAMPAIGNS FOR{" "}
+            <span className="relative inline-block">
+              DISCORD, TWITCH, CYBERPUNK, & POKÉMON GO 🎮
+              <HandDrawnCircle className="text-pastel-pink -top-1/4 -left-1/4 w-150 h-150" />
+            </span>
           </motion.h2>
         </section>
 
