@@ -90,7 +90,7 @@ export default function Home() {
       <main className="pt-24">
         <section className="container mx-auto px-6 py-24 min-h-screen flex flex-col justify-center">
           <motion.h1
-            className="text-3xl sm:text-4xl md:text-5xl font-bold leading-tight mb-8 max-w-2xl relative"
+            className="text-3xl sm:text-4xl md:text-5xl font-bold leading-tight mb-8 max-w-3xl mx-auto text-left"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
@@ -104,7 +104,7 @@ export default function Home() {
             <span className="bg-pastel-green text-deep-grey px-1">MARKETING CONSULTANT</span>.
           </motion.h1>
           <motion.h2
-            className="text-lg sm:text-xl md:text-2xl font-normal max-w-2xl leading-relaxed mb-8 relative font-jetbrains-mono"
+            className="text-lg sm:text-xl md:text-2xl font-normal max-w-3xl mx-auto text-left leading-relaxed mb-8 relative font-jetbrains-mono"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
@@ -117,7 +117,7 @@ export default function Home() {
             . LED SOCIAL & GAMING CAMPAIGNS FOR{" "}
             <span className="relative inline-block">
               DISCORD, TWITCH, CYBERPUNK, & POKÉMON GO 🎮
-              <HandDrawnCircle className="text-pastel-pink -top-1/4 -left-1/4 w-24 h-24" />
+              <HandDrawnCircle className="text-pastel-pink -top-2 left-1 w-16 h-16" />
             </span>
           </motion.h2>
         </section>
