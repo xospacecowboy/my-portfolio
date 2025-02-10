@@ -90,7 +90,7 @@ export default function Home() {
       <main className="pt-24">
         <section className="container mx-auto px-6 py-24 min-h-screen flex flex-col justify-center">
           <motion.h1
-            className="text-4xl sm:text-5xl md:text-6xl font-bold leading-tight mb-8 max-w-4xl mx-auto relative"
+            className="text-3xl sm:text-4xl md:text-5xl font-bold leading-tight mb-8 max-w-2xl relative"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
@@ -104,7 +104,7 @@ export default function Home() {
             <span className="bg-pastel-green text-deep-grey px-1">MARKETING CONSULTANT</span>.
           </motion.h1>
           <motion.h2
-            className="text-xl sm:text-2xl md:text-3xl font-normal max-w-3xl mx-auto leading-relaxed mb-8 relative font-jetbrains-mono"
+            className="text-lg sm:text-xl md:text-2xl font-normal max-w-2xl leading-relaxed mb-8 relative font-jetbrains-mono"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
