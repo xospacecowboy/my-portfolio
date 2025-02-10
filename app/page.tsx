@@ -54,7 +54,7 @@ export default function Home() {
   }, [])
 
   return (
-    <div className="bg-deep-grey text-white min-h-screen font-space-grotesk">
+    <div className="bg-deep-grey text-white min-h-screen font-space-grotesk overflow-x-hidden">
       <header
         className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${scrolled ? "bg-deep-grey/90 backdrop-blur-sm" : ""}`}
       >
