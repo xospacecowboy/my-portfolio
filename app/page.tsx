@@ -112,7 +112,7 @@ export default function Home() {
       animate={{ scale: 1, opacity: 1 }}
       transition={{ duration: 0.5, delay: 1 }}
     >
-      HTX 📍
+      BASED IN HTX 📍
     </motion.span>
   </motion.h1>
 
