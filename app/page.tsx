@@ -85,7 +85,7 @@ export default function Home() {
       <main className="pt-32">
         <section className="container mx-auto px-6 py-16 flex flex-col">
           <motion.h1
-            className="text-3xl sm:text-4xl md:text-5xl font-bold leading-tight mb-6 max-w-3xl text-left"
+            className="text-3xl sm:text-4xl md:text-5xl font-bold leading-tight mb-6 max-w-6xl text-left"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
