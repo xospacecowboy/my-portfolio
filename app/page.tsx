@@ -85,7 +85,7 @@ export default function Home() {
       </header>
 
 
-      <main className="container mx-auto px-6 pt-24 pb-12">
+      <main className="container mx-auto px-6 pt-40 pb-12">
         {/* Title Section */}
         <motion.h1
           className="text-5xl font-bold leading-tight mb-8 relative text-left max-w-4xl"
