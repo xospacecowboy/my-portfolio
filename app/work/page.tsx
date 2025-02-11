@@ -126,7 +126,7 @@ export default function Work() {
       <main className="container mx-auto px-6 pt-52 pb-12">
         {/* Title Section with New Animations */}
         <motion.h1
-          className="text-5xl font-bold leading-tight mb-16 relative text-left max-w-4xl mt-12"
+          className="text-5xl font-bold leading-tight mb-20 relative text-left max-w-4xl mt-16"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
