@@ -82,93 +82,91 @@ export default function Home() {
         </div>
       </header>
 
-      <main className="pt-24">
+      <main className="pt-32">
         <section className="container mx-auto px-6 py-16 flex flex-col">
-        <main className="pt-24">
-        <section className="container mx-auto px-6 py-8 flex flex-col">
-  <motion.h1
-    className="text-3xl sm:text-4xl md:text-5xl font-bold leading-tight mb-6 max-w-3xl text-left"
-    initial={{ opacity: 0, y: 20 }}
-    animate={{ opacity: 1, y: 0 }}
-    transition={{ duration: 0.8 }}
-  >
-    <span className="inline-block">𐚁 HOWDY, I'M STEPHEN—A</span>{" "}
-    <motion.span
-      className="font-normal italic relative inline-block px-1"
-      initial={{ backgroundSize: "0 100%" }}
-      animate={{ backgroundSize: "100% 100%" }}
-      transition={{ duration: 1, delay: 0.5 }}
-      style={{
-        backgroundImage: "linear-gradient(to right, #BAE1FF, #BAE1FF)",
-        backgroundRepeat: "no-repeat",
-        backgroundPosition: "0 100%",
-      }}
-    >
-      SOCIAL MEDIA & CREATIVE PRO
-    </motion.span>{" "}
-    <motion.span
-      className="inline-block px-1"
-      initial={{ scale: 0.8, opacity: 0 }}
-      animate={{ scale: 1, opacity: 1 }}
-      transition={{ duration: 0.5, delay: 1 }}
-    >
-      BASED IN HTX 📍
-    </motion.span>
-  </motion.h1>
+          <motion.h1
+            className="text-3xl sm:text-4xl md:text-5xl font-bold leading-tight mb-6 max-w-3xl text-left"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+          >
+            <span className="inline-block">𐚁 HOWDY, I'M STEPHEN—A</span>{" "}
+            <motion.span
+              className="font-normal italic relative inline-block px-1"
+              initial={{ backgroundSize: "0 100%" }}
+              animate={{ backgroundSize: "100% 100%" }}
+              transition={{ duration: 1, delay: 0.5 }}
+              style={{
+                backgroundImage: "linear-gradient(to right, #BAE1FF, #BAE1FF)",
+                backgroundRepeat: "no-repeat",
+                backgroundPosition: "0 100%",
+              }}
+            >
+              SOCIAL MEDIA & CREATIVE PRO
+            </motion.span>{" "}
+            <motion.span
+              className="inline-block px-1"
+              initial={{ scale: 0.8, opacity: 0 }}
+              animate={{ scale: 1, opacity: 1 }}
+              transition={{ duration: 0.5, delay: 1 }}
+            >
+              BASED IN HTX 📍
+            </motion.span>
+          </motion.h1>
 
-  <motion.h2
-    className="text-4xl font-bold leading-tight max-w-3xl text-left"
-    initial={{ opacity: 0, y: 10 }}
-    animate={{ opacity: 1, y: 0 }}
-    transition={{ duration: 0.8, delay: 1.2 }}
-  >
-    <motion.span
-      className="bg-gradient-to-r from-pastel-green via-pastel-blue to-pastel-purple text-deep-grey px-2 py-1 rounded-lg"
-      initial={{ opacity: 0, scale: 0.9 }}
-      animate={{ opacity: 1, scale: 1 }}
-      transition={{ duration: 0.6, delay: 1.5 }}
-    >
-      FREELANCING ACROSS INDUSTRIES
-    </motion.span>{" "}
-    <motion.span className="text-xl">
-      🐎
-    </motion.span>
-  </motion.h2>
+          <motion.h2
+            className="text-4xl font-bold leading-tight max-w-3xl text-left"
+            initial={{ opacity: 0, y: 10 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 1.2 }}
+          >
+            <motion.span
+              className="bg-gradient-to-r from-pastel-green via-pastel-blue to-pastel-purple text-deep-grey px-2 py-1 rounded-lg"
+              initial={{ opacity: 0, scale: 0.9 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.6, delay: 1.5 }}
+            >
+              FREELANCING ACROSS INDUSTRIES
+            </motion.span>{" "}
+            <motion.span className="text-xl">
+              🐎
+            </motion.span>
+          </motion.h2>
 
-  <motion.p
-    className="text-lg sm:text-xl md:text-2xl font-light italic max-w-3xl text-left mt-3 relative"
-    initial={{ opacity: 0, y: 10 }}
-    animate={{ opacity: 1, y: 0 }}
-    transition={{ duration: 0.8, delay: 1.8 }}
-  >
-    W/ A PASSION FOR{" "}
-    <motion.span
-      className="font-bold relative inline-block"
-      initial={{ backgroundSize: "0 100%" }}
-      animate={{ backgroundSize: "100% 100%" }}
-      transition={{ duration: 1, delay: 2 }}
-      style={{
-        backgroundImage: "linear-gradient(to right, #BAE1FF, #BAE1FF)",
-        backgroundRepeat: "no-repeat",
-        backgroundPosition: "0 100%",
-      }}
-    >
-      STORYTELLING
-    </motion.span>{" "}
-    &{" "}
-    <motion.span className="relative inline-block font-bold">
-      DESIGN
-      <motion.div
-        className="absolute bottom-0 left-0 w-full h-1 bg-pastel-purple"
-        initial={{ scaleX: 0 }}
-        animate={{ scaleX: 1 }}
-        transition={{ duration: 0.8, delay: 2.2 }}
-      />
-    </motion.span>
-  </motion.p>
-</section>
-</main>
+          <motion.p
+            className="text-lg sm:text-xl md:text-2xl font-light italic max-w-3xl text-left mt-3 relative"
+            initial={{ opacity: 0, y: 10 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 1.8 }}
+          >
+            W/ A PASSION FOR{" "}
+            <motion.span
+              className="font-bold relative inline-block"
+              initial={{ backgroundSize: "0 100%" }}
+              animate={{ backgroundSize: "100% 100%" }}
+              transition={{ duration: 1, delay: 2 }}
+              style={{
+                backgroundImage: "linear-gradient(to right, #BAE1FF, #BAE1FF)",
+                backgroundRepeat: "no-repeat",
+                backgroundPosition: "0 100%",
+              }}
+            >
+              STORYTELLING
+            </motion.span>{" "}
+            &{" "}
+            <motion.span className="relative inline-block font-bold">
+              DESIGN
+              <motion.div
+                className="absolute bottom-0 left-0 w-full h-1 bg-pastel-purple"
+                initial={{ scaleX: 0 }}
+                animate={{ scaleX: 1 }}
+                transition={{ duration: 0.8, delay: 2.2 }}
+              />
+            </motion.span>
+          </motion.p>
+        </section>
 
+        <section className="container mx-auto px-6 py-16">
           <motion.h2
             className="text-lg sm:text-xl md:text-2xl font-normal max-w-3xl text-left leading-relaxed mt-2 relative font-jetbrains-mono"
             initial={{ opacity: 0, y: 20 }}
@@ -185,89 +183,89 @@ export default function Home() {
               DISCORD, TWITCH, CYBERPUNK, & POKÉMON GO + MORE 🎮
             </span>
           </motion.h2>
+
+          <motion.div
+            className="container mx-auto px-6 mt-16"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.4 }}
+          >
+            <div className="w-full h-px bg-gradient-to-r from-transparent via-white/20 to-transparent my-16" />
+            <div className="flex justify-center">
+              <Link href="/work" className="inline-block">
+                <motion.button
+                  className="bg-deep-grey text-white px-8 py-4 text-lg font-bold border border-pastel-blue hover:bg-pastel-blue hover:text-deep-grey transition-all duration-300 relative group"
+                  whileHover={{ scale: 1.05 }}
+                  whileTap={{ scale: 0.95 }}
+                >
+                  <span className="relative z-10">Explore My Work</span>
+                  <div className="absolute inset-0 bg-gradient-to-r from-pastel-pink via-pastel-purple to-pastel-blue opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                </motion.button>
+              </Link>
+            </div>
+            <div className="w-full h-px bg-gradient-to-r from-transparent via-white/20 to-transparent my-16" />
+          </motion.div>
         </section>
 
-        <motion.div
-          className="container mx-auto px-6"
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.4 }}
-        >
-          <div className="w-full h-px bg-gradient-to-r from-transparent via-white/20 to-transparent my-8" />
-          <div className="flex justify-center">
-            <Link href="/work" className="inline-block">
-              <motion.button
-                className="bg-deep-grey text-white px-8 py-4 text-lg font-bold border border-pastel-blue hover:bg-pastel-blue hover:text-deep-grey transition-all duration-300 relative group"
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-              >
-                <span className="relative z-10">Explore My Work</span>
-                <div className="absolute inset-0 bg-gradient-to-r from-pastel-pink via-pastel-purple to-pastel-blue opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-              </motion.button>
-            </Link>
-          </div>
-          <div className="w-full h-px bg-gradient-to-r from-transparent via-white/20 to-transparent my-8" />
-        </motion.div>
-
         <motion.section
-  id="approach"
-  className="container mx-auto px-6 py-16"
-  initial={{ opacity: 0, y: 50 }}
-  animate={{ opacity: 1, y: 0 }}
-  transition={{ duration: 0.8 }}
->
-  <h3 className="text-xl font-medium mb-8 uppercase">Approach</h3>
-  <div className="text-xl sm:text-2xl md:text-3xl font-normal leading-relaxed max-w-4xl relative space-y-6">
-    <motion.p
-      className="font-space-grotesk"
-      initial={{ backgroundSize: "0% 100%" }}
-      whileHover={{ backgroundSize: "100% 100%" }}
-      transition={{ duration: 0.5, ease: "easeOut" }}
-      style={{
-        backgroundImage: "linear-gradient(to right, #BAE1FF, #FFB6C1)",
-        backgroundRepeat: "no-repeat",
-        backgroundPosition: "0 100%",
-      }}
-    >
-      Stories are the <span className="font-bold">heartbeat</span> of connection, shaping our digital landscape.
-      It's not just about <span className="font-bold text-pastel-pink">what</span> we say, but{" "}
-      <span className="font-bold text-pastel-blue">how we say it</span>.
-    </motion.p>
+          id="approach"
+          className="container mx-auto px-6 py-16"
+          initial={{ opacity: 0, y: 50 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+        >
+          <h3 className="text-xl font-medium mb-8 uppercase">Approach</h3>
+          <div className="text-xl sm:text-2xl md:text-3xl font-normal leading-relaxed max-w-4xl relative space-y-6">
+            <motion.p
+              className="font-space-grotesk"
+              initial={{ backgroundSize: "0% 100%" }}
+              whileHover={{ backgroundSize: "100% 100%" }}
+              transition={{ duration: 0.5, ease: "easeOut" }}
+              style={{
+                backgroundImage: "linear-gradient(to right, #BAE1FF, #FFB6C1)",
+                backgroundRepeat: "no-repeat",
+                backgroundPosition: "0 100%",
+              }}
+            >
+              Stories are the <span className="font-bold">heartbeat</span> of connection, shaping our digital landscape.
+              It's not just about <span className="font-bold text-pastel-pink">what</span> we say, but{" "}
+              <span className="font-bold text-pastel-blue">how we say it</span>.
+            </motion.p>
 
-    <motion.p
-      className="font-jetbrains-mono"
-      initial={{ backgroundSize: "0% 100%" }}
-      whileHover={{ backgroundSize: "100% 100%" }}
-      transition={{ duration: 0.5, ease: "easeOut" }}
-      style={{
-        backgroundImage: "linear-gradient(to right, #FFD700, #FF6347)",
-        backgroundRepeat: "no-repeat",
-        backgroundPosition: "0 100%",
-      }}
-    >
-      My focus? Crafting narratives that <span className="font-bold">resonate</span>, designing visuals that{" "}
-      <span className="font-bold">captivate</span>, and developing strategies that <span className="font-bold">engage</span>.
-    </motion.p>
+            <motion.p
+              className="font-jetbrains-mono"
+              initial={{ backgroundSize: "0% 100%" }}
+              whileHover={{ backgroundSize: "100% 100%" }}
+              transition={{ duration: 0.5, ease: "easeOut" }}
+              style={{
+                backgroundImage: "linear-gradient(to right, #FFD700, #FF6347)",
+                backgroundRepeat: "no-repeat",
+                backgroundPosition: "0 100%",
+              }}
+            >
+              My focus? Crafting narratives that <span className="font-bold">resonate</span>, designing visuals that{" "}
+              <span className="font-bold">captivate</span>, and developing strategies that <span className="font-bold">engage</span>.
+            </motion.p>
 
-    <motion.p
-      className="font-space-grotesk"
-      initial={{ backgroundSize: "0% 100%" }}
-      whileHover={{ backgroundSize: "100% 100%" }}
-      transition={{ duration: 0.5, ease: "easeOut" }}
-      style={{
-        backgroundImage: "linear-gradient(to right, #8A2BE2, #00CED1)",
-        backgroundRepeat: "no-repeat",
-        backgroundPosition: "0 100%",
-      }}
-    >
-      Because when content speaks to the <span className="italic">soul</span>,{" "}
-      <span className="italic relative inline-block">
-        it ignites real change
-        <HandDrawnUnderline className="text-pastel-pink bottom-0 left-0" />
-      </span>
-    </motion.p>
-  </div>
-</motion.section>
+            <motion.p
+              className="font-space-grotesk"
+              initial={{ backgroundSize: "0% 100%" }}
+              whileHover={{ backgroundSize: "100% 100%" }}
+              transition={{ duration: 0.5, ease: "easeOut" }}
+              style={{
+                backgroundImage: "linear-gradient(to right, #8A2BE2, #00CED1)",
+                backgroundRepeat: "no-repeat",
+                backgroundPosition: "0 100%",
+              }}
+            >
+              Because when content speaks to the <span className="italic">soul</span>,{" "}
+              <span className="italic relative inline-block">
+                it ignites real change
+                <HandDrawnUnderline className="text-pastel-pink bottom-0 left-0" />
+              </span>
+            </motion.p>
+          </div>
+        </motion.section>
 
         <motion.section
           id="partnerships"
