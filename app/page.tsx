@@ -217,56 +217,6 @@ export default function Home() {
           {/* Additional space after "W/ A PASSION FOR" line */}
           <div className="mt-10" />
 
-          {/* ✨ Skills Grid Showcase ✨ */}
-          <div className="mt-10">
-            <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4">
-              {[
-                { text: "✨ Magic", gradient: "from-pastel-pink to-pastel-purple" },
-                { text: "🎨 Art Direction", gradient: "from-pastel-blue to-pastel-purple" },
-                { text: "📢 Marketing", gradient: "from-pastel-green to-pastel-blue" },
-                { text: "💡 Creative", gradient: "from-pastel-pink to-pastel-blue" },
-                { text: "📺 Content", gradient: "from-pastel-purple to-pastel-blue" },
-                { text: "🎮 Gaming", gradient: "from-pastel-green to-pastel-purple" },
-                { text: "🌐 Web Dev", gradient: "from-pastel-blue to-pastel-pink" },
-                { text: "✍ Social", gradient: "from-pastel-purple to-pastel-green" },
-              ].map((skill, index) => (
-                <motion.div
-                  key={index}
-                  className={`relative overflow-hidden border border-white/10 rounded-lg p-4 cursor-pointer bg-gradient-to-br ${skill.gradient} bg-opacity-5`}
-                  whileHover={{ scale: 1.02 }}
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ 
-                    opacity: 1, 
-                    y: 0,
-                    transition: { delay: index * 0.1 } 
-                  }}
-                >
-                  <motion.span
-                    className="block text-lg md:text-xl font-medium text-center"
-                    whileHover={{
-                      backgroundSize: "100% 100%",
-                    }}
-                    initial={{
-                      backgroundSize: "0% 100%",
-                      backgroundImage: "linear-gradient(to right, #BAE1FF, #BAE1FF)",
-                      backgroundRepeat: "no-repeat",
-                      backgroundPosition: "0 100%",
-                    }}
-                    transition={{ duration: 0.3 }}
-                  >
-                    {skill.text}
-                  </motion.span>
-                  <motion.div
-                    className="absolute inset-0 bg-gradient-to-r from-transparent via-white/5 to-transparent"
-                    initial={{ x: "-100%" }}
-                    whileHover={{ x: "100%" }}
-                    transition={{ duration: 0.5 }}
-                  />
-                </motion.div>
-              ))}
-            </div>
-          </div>
-
           <section
             id="approach"
             className="container mx-auto px-6 py-16"
