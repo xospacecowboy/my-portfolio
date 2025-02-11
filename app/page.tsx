@@ -101,7 +101,7 @@ export default function Home() {
                 whileHover={{ letterSpacing: "2px" }}
                 transition={{ duration: 0.3 }}
               >
-                𐚁 HOWDY,
+                 𐚁 HOWDY,
               </motion.span>{" "}
               I'M STEPHEN—A{" "}
               
@@ -373,6 +373,33 @@ export default function Home() {
                       <div className="w-full h-full bg-gradient-to-br from-pastel-pink via-pastel-purple to-pastel-blue opacity-70 rounded-lg" />
                     </motion.div>
                   </motion.div>
+                </motion.div>
+              ))}
+            </div>
+          </section>
+
+          <section
+            id="skills"
+            className="container mx-auto px-6 py-16"
+          >
+            <h3 className="text-xl font-medium mb-8 uppercase">Skills</h3>
+            <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-6 text-sm font-jetbrains-mono">
+              {[
+                "Social Media",
+                "Client relationships",
+                "Copywriting",
+                "Creative direction",
+                "Content production",
+                "Communication skills",
+                "Influencer Marketing",
+                "Team leadership",
+              ].map((skill, index) => (
+                <motion.div
+                  key={skill}
+                  className="bg-deep-grey border border-white/20 p-4 rounded-lg flex items-center justify-center text-center transition-colors duration-300 cursor-pointer"
+                  whileHover={{ backgroundColor: "rgba(255, 255, 255, 0.1)" }}
+                >
+                  {skill}
                 </motion.div>
               ))}
             </div>
