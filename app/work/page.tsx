@@ -123,7 +123,7 @@ export default function Work() {
         </div>
       </header>
 
-      <main className="container mx-auto px-6 pt-24 pb-12">
+      <main className="container mx-auto px-6 pt-[20rem] pb-12">
         {/* Title Section with New Animations */}
         <motion.h1
           className="text-5xl font-bold leading-tight mb-20 relative text-left max-w-4xl mt-16"
