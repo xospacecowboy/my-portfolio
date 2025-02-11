@@ -224,44 +224,36 @@ export default function Home() {
               initial="start"
               animate="animate"
               variants={{
-                start: {
-                  x: "0%",
-                },
-                animate: {
-                  x: "-50%",
-                },
+                start: { x: "0%" },
+                animate: { x: "-50%" },
               }}
               transition={{
                 x: {
                   repeat: Infinity,
                   repeatType: "loop",
-                  duration: 20,
+                  duration: 15,
                   ease: "linear",
                 },
               }}
             >
               {[
-                "✨ Magic",
-                "🎨 Art",
-                "📢 Marketing",
-                "💡 Creative",
-                "📺 Pop Culture",
-                "🎮 Gaming",
-                "🌐 Web Dev",
-                "✍ Social Media",
-                "🎭 Storytelling",
+                "✨ Magic", "🎨 Art", "📢 Marketing", "💡 Creative",
+                "📺 Pop Culture", "🎮 Gaming", "🌐 Web Dev",
+                "✍ Social Media", "🎭 Storytelling",
               ].map((text, index) => (
                 <motion.span
                   key={index}
+                  style={{ y: 0 }}
                   animate={{
-                    y: [0, -15, 0, 15, 0],
+                    y: [0, -8, 0, 8, 0],
                   }}
                   transition={{
                     y: {
                       repeat: Infinity,
-                      duration: 2,
+                      duration: 1.5,
                       ease: "easeInOut",
-                      delay: index * 0.2, // Creates a wave effect by staggering the animations
+                      times: [0, 0.25, 0.5, 0.75, 1],
+                      delay: index * 0.1,
                     },
                   }}
                   className="inline-block px-4"
@@ -269,29 +261,25 @@ export default function Home() {
                   {text}
                 </motion.span>
               ))}
-              {/* Duplicate the items to create a seamless loop */}
+              {/* Duplicate for seamless loop */}
               {[
-                "✨ Magic",
-                "🎨 Art",
-                "📢 Marketing",
-                "💡 Creative",
-                "📺 Pop Culture",
-                "🎮 Gaming",
-                "🌐 Web Dev",
-                "✍ Social Media",
-                "🎭 Storytelling",
+                "✨ Magic", "🎨 Art", "📢 Marketing", "💡 Creative",
+                "📺 Pop Culture", "🎮 Gaming", "🌐 Web Dev",
+                "✍ Social Media", "🎭 Storytelling",
               ].map((text, index) => (
                 <motion.span
                   key={`duplicate-${index}`}
+                  style={{ y: 0 }}
                   animate={{
-                    y: [0, -15, 0, 15, 0],
+                    y: [0, -8, 0, 8, 0],
                   }}
                   transition={{
                     y: {
                       repeat: Infinity,
-                      duration: 2,
+                      duration: 1.5,
                       ease: "easeInOut",
-                      delay: index * 0.2, // Creates a wave effect by staggering the animations
+                      times: [0, 0.25, 0.5, 0.75, 1],
+                      delay: index * 0.1,
                     },
                   }}
                   className="inline-block px-4"
