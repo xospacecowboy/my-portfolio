@@ -162,46 +162,7 @@ export default function Home() {
       >
         DESIGN
       </motion.span>
-    </motion.p>
-
-    {/* ✨ TEXT FADE-IN SEQUENCE (ALTERNATIVE TO MARQUEE) ✨ */}
-    <div className="mt-10 text-lg sm:text-xl md:text-2xl font-medium uppercase text-center relative">
-      <motion.div
-        className="absolute inset-0 flex justify-center items-center"
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ repeat: Infinity, duration: 6, ease: "easeInOut" }}
-      >
-        <motion.span
-          className="absolute"
-          animate={{ opacity: [1, 0, 0, 0] }}
-          transition={{ repeat: Infinity, duration: 6, ease: "easeInOut" }}
-        >
-          ✨ Magic
-        </motion.span>
-        <motion.span
-          className="absolute"
-          animate={{ opacity: [0, 1, 0, 0] }}
-          transition={{ repeat: Infinity, duration: 6, ease: "easeInOut", delay: 1.5 }}
-        >
-          🎨 Art
-        </motion.span>
-        <motion.span
-          className="absolute"
-          animate={{ opacity: [0, 0, 1, 0] }}
-          transition={{ repeat: Infinity, duration: 6, ease: "easeInOut", delay: 3 }}
-        >
-          📢 Marketing
-        </motion.span>
-        <motion.span
-          className="absolute"
-          animate={{ opacity: [0, 0, 0, 1] }}
-          transition={{ repeat: Infinity, duration: 6, ease: "easeInOut", delay: 4.5 }}
-        >
-          💡 Creative
-        </motion.span>
-      </motion.div>
-          </div>
+    </motion.p>  
         </section>
 
         <section className="container mx-auto px-6 py-16">
