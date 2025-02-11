@@ -93,7 +93,7 @@ export default function Home() {
           </motion.h1>
 
           <motion.h2
-            className="text-lg sm:text-xl md:text-2xl font-normal max-w-3xl text-left leading-relaxed mt-2 mb-8 relative font-jetbrains-mono"
+            className="text-lg sm:text-xl md:text-2xl font-normal max-w-3xl text-left leading-relaxed mt-2 mb-4 relative font-jetbrains-mono"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
@@ -108,7 +108,7 @@ export default function Home() {
           </motion.h2>
 
           <motion.div
-            className="mt-8 mb-8 text-center"
+            className="flex justify-center mt-8 mb-8"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.4 }}
@@ -134,7 +134,7 @@ export default function Home() {
         transition={{ duration: 0.8 }}
       >
         <h3 className="text-xl font-medium mb-8 uppercase">Approach</h3>
-        <p className="text-2xl sm:text-3xl md:text-4xl font-normal leading-relaxed max-w-4xl relative font-jetbrains-mono">
+        <p className="text-2xl sm:text-3xl md:text-4xl font-normal leading-relaxed max-w-4xl font-jetbrains-mono">
           Stories are the heartbeat of connection, shaping our digital landscape 🌟 It's not just about{" "}
           <span className="font-bold text-pastel-pink">what</span> we say, but{" "}
           <span className="font-bold text-pastel-blue">how we say it.</span>
