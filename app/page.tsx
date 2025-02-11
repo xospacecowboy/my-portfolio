@@ -1,6 +1,6 @@
 "use client"
 
-import { useState, useEffect, ReactNode } from "react"
+import { useState, useEffect } from "react"
 import Link from "next/link"
 import { ArrowUpRight } from "lucide-react"
 import { motion } from "framer-motion"
@@ -90,23 +90,23 @@ export default function Home() {
       <main className="pt-24">
         <section className="container mx-auto px-6 py-16 flex flex-col space-y-12">
           <motion.h1
-            className="text-2xl sm:text-3xl md:text-4xl font-bold leading-tight mb-6 max-w-2xl text-left"
+            className="text-3xl sm:text-4xl md:text-5xl font-bold leading-tight mb-4 max-w-3xl text-left"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
           >
             HOWDY, I’M{" "}
             <span className="font-normal italic relative inline-block">
-              STEPHEN—A SOCIAL MEDIA & CREATIVE PRO 📍
-              <HandDrawnUnderline className="text-pastel-blue bottom-0 left-0" />
+              STEPHEN—A SOCIAL MEDIA & CREATIVE PRO
+              <HandDrawnUnderline className="text-pastel-blue bottom-0 left-0 w-full" />
             </span>{" "}
-            HOUSTON, FREELANCING{" "}
+            📍HOUSTON, FREELANCING{" "}
             <span className="bg-pastel-green text-deep-grey px-1">ACROSS INDUSTRIES.</span>
           </motion.h1>
         </section>
       </main>
 
-      <section id="approach" className="container mx-auto px-6 py-12 space-y-12">
+      <section id="approach" className="container mx-auto px-6 py-10 space-y-10">
         <h3 className="text-xl font-medium mb-8 uppercase">Approach</h3>
         <p className="text-2xl sm:text-3xl md:text-4xl font-normal leading-relaxed max-w-4xl relative font-jetbrains-mono">
           Stories shape how we connect,{" "}
