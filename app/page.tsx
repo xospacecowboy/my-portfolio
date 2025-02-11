@@ -83,83 +83,105 @@ export default function Home() {
       </header>
 
       <main className="pt-32">
-  <section className="container mx-auto px-6 py-16 flex flex-col">
-    <motion.h1
-      className="text-4xl sm:text-5xl md:text-6xl font-bold leading-tight mb-6 max-w-5xl text-left relative"
-    >
-      {/* HOWDY Effect - Matches DESIGN */}
-      <motion.span
-        className="relative inline-block px-2 font-bold"
-        whileHover={{ letterSpacing: "2px" }}
-        transition={{ duration: 0.3 }}
-      >
-         𐚁 HOWDY,
-      </motion.span>{" "}
-      I'M STEPHEN—A{" "}
-      
-      {/* Gradient for SOCIAL MEDIA & CREATIVE PRO - Plays Once */}
-      <motion.span
-        className="font-normal italic relative inline-block px-2"
-        initial={{ backgroundSize: "0% 100%" }}
-        animate={{ backgroundSize: "100% 100%" }}
-        transition={{ duration: 1.5, ease: "easeOut" }}
-        style={{
-          backgroundImage: "linear-gradient(to right, #B0E57C, #BAE1FF, #FFB6C1)",
-          backgroundRepeat: "no-repeat",
-          backgroundPosition: "0 100%",
-        }}
-      >
-        SOCIAL MEDIA & CREATIVE PRO
-      </motion.span>{" "}
-      
-      <span className="inline-block px-1">BASED IN HTX 📍</span>{" "}
-      
-      {/* HAND-DRAWN UNDERLINE FOR "FREELANCING ACROSS INDUSTRIES" */}
-      <span className="relative">
-        FREELANCING{" "}
-        <span className="font-italic">ACROSS INDUSTRIES</span> 🐎
-        <HandDrawnUnderline className="text-pastel-green bottom-0 left-0" />
-      </span>
-    </motion.h1>
+        <section className="container mx-auto px-6 py-16 flex flex-col">
+          <motion.h1
+            className="text-4xl sm:text-5xl md:text-6xl font-bold leading-tight mb-6 max-w-5xl text-left relative"
+          >
+            {/* HOWDY Effect - Matches DESIGN */}
+            <motion.span
+              className="relative inline-block px-2 font-bold"
+              whileHover={{ letterSpacing: "2px" }}
+              transition={{ duration: 0.3 }}
+            >
+              𐚁 HOWDY,
+            </motion.span>{" "}
+            I'M STEPHEN—A{" "}
+            
+            {/* Gradient for SOCIAL MEDIA & CREATIVE PRO - Plays Once */}
+            <motion.span
+              className="font-normal italic relative inline-block px-2"
+              initial={{ backgroundSize: "0% 100%" }}
+              animate={{ backgroundSize: "100% 100%" }}
+              transition={{ duration: 1.5, ease: "easeOut" }}
+              style={{
+                backgroundImage: "linear-gradient(to right, #B0E57C, #BAE1FF, #FFB6C1)",
+                backgroundRepeat: "no-repeat",
+                backgroundPosition: "0 100%",
+              }}
+            >
+              SOCIAL MEDIA & CREATIVE PRO
+            </motion.span>{" "}
+            
+            <span className="inline-block px-1">BASED IN HTX 📍</span>{" "}
+            
+            {/* HAND-DRAWN UNDERLINE FOR "FREELANCING ACROSS INDUSTRIES" */}
+            <span className="relative">
+              FREELANCING{" "}
+              <span className="font-italic">ACROSS INDUSTRIES</span> 🐎
+              <HandDrawnUnderline className="text-pastel-green bottom-0 left-0" />
+            </span>
+          </motion.h1>
 
-    {/* FULL-WIDTH DOTTED LINE BREAK */}
-    <motion.div
-      className="flex justify-center space-x-4 mt-6 mb-4"
-    >
-      {[...Array(50)].map((_, i) => (
-        <motion.span
-          key={i}
-          className="w-2 h-2 bg-white rounded-full"
-          animate={{ y: [0, -2, 0] }}
-          transition={{ duration: 1, delay: i * 0.05, repeat: Infinity, ease: "easeInOut" }}
-        />
-      ))}
-    </motion.div>
+          {/* FULL-WIDTH DOTTED LINE BREAK */}
+          <motion.div
+            className="flex justify-center space-x-4 mt-6 mb-4"
+          >
+            {[...Array(50)].map((_, i) => (
+              <motion.span
+                key={i}
+                className="w-2 h-2 bg-gradient-to-r from-pastel-pink via-pastel-purple to-pastel-blue rounded-full"
+                animate={{ y: [0, -2, 0] }}
+                transition={{ duration: 1, delay: i * 0.05, repeat: Infinity, ease: "easeInOut" }}
+              />
+            ))}
+          </motion.div>
 
-    <motion.p className="text-2xl sm:text-3xl md:text-4xl font-light italic max-w-5xl text-left mt-4 relative">
-      W/ A PASSION FOR{" "}
-      <motion.span
-        className="font-bold relative inline-block cursor-pointer"
-        whileHover={{ backgroundSize: "100% 100%" }}
-        transition={{ duration: 0.5 }}
-        style={{
-          backgroundImage: "linear-gradient(to right, #BAE1FF, #BAE1FF)",
-          backgroundRepeat: "no-repeat",
-          backgroundPosition: "0 100%",
-          backgroundSize: "0% 100%",
-        }}
-      >
-        STORYTELLING
-      </motion.span>{" "}
-      &{" "}
-      <motion.span
-        className="relative inline-block font-bold cursor-pointer"
-        whileHover={{ letterSpacing: "2px" }}
-        transition={{ duration: 0.3 }}
-      >
-        DESIGN
-      </motion.span>
-    </motion.p>  
+          <motion.p className="text-2xl sm:text-3xl md:text-4xl font-light italic max-w-5xl text-left mt-4 relative">
+            W/ A PASSION FOR{" "}
+            <motion.span
+              className="font-bold relative inline-block cursor-pointer"
+              whileHover={{ backgroundSize: "100% 100%" }}
+              transition={{ duration: 0.5 }}
+              style={{
+                backgroundImage: "linear-gradient(to right, #BAE1FF, #BAE1FF)",
+                backgroundRepeat: "no-repeat",
+                backgroundPosition: "0 100%",
+                backgroundSize: "0% 100%",
+              }}
+            >
+              STORYTELLING
+            </motion.span>{" "}
+            &{" "}
+            <motion.span
+              className="relative inline-block font-bold cursor-pointer"
+              whileHover={{ letterSpacing: "2px" }}
+              transition={{ duration: 0.3 }}
+            >
+              DESIGN
+            </motion.span>
+          </motion.p>
+
+          {/* Additional space after "W/ A PASSION FOR" line */}
+          <div className="mt-10" />
+
+          {/* ✨ Dynamic Marquee with Wave Motion ✨ */}
+          <div className="overflow-hidden mt-10 relative">
+            <motion.div
+              className="text-lg sm:text-xl md:text-2xl font-medium uppercase flex space-x-6"
+              animate={{ x: ["100%", "-100%"], y: [0, -5, 0, 5, 0] }} // Adds a subtle wave effect
+              transition={{ repeat: Infinity, duration: 12, ease: "linear" }}
+            >
+              <span>✨ Magic</span>
+              <span>🎨 Art</span>
+              <span>📢 Marketing</span>
+              <span>💡 Creative</span>
+              <span>📺 Pop Culture</span>
+              <span>🎮 Gaming</span>
+              <span>🌐 Web Dev</span>
+              <span>✍ Social Media</span>
+              <span>🎭 Storytelling</span>
+            </motion.div>
+          </div>
         </section>
 
         <section className="container mx-auto px-6 py-16">
