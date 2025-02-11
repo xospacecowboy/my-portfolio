@@ -2,12 +2,10 @@
 
 import { useState, useEffect } from "react"
 import Link from "next/link"
-import { ArrowUpRight } from "lucide-react"
 import { motion, useAnimation } from "framer-motion"
 import Footer from "../components/Footer"
 import { useMousePosition } from "../hooks/useMousePosition"
 
-// Hand-drawn underline effect
 const HandDrawnUnderline = ({ className }: { className?: string }) => (
   <svg
     className={`absolute pointer-events-none ${className}`}
@@ -19,54 +17,15 @@ const HandDrawnUnderline = ({ className }: { className?: string }) => (
     xmlns="http://www.w3.org/2000/svg"
   >
     <path
-      d="M0 7.5C10 1.5 25 14.5 40 7.5C55 1.5 70 14.5 85 7.5C95 2.5 100 7.5 100 7.5"
+      d="M0 7.5C8 2.5 20 12.5 30 7.5C40 2.5 50 12.5 60 7.5C70 2.5 80 12.5 90 7.5C95 5 100 7.5 100 7.5"
       stroke="currentColor"
-      strokeWidth="3"
+      strokeWidth="2.5"
       strokeLinecap="round"
-      strokeDasharray="4 3"
     />
   </svg>
 )
 
-const portfolioItems = [
-  {
-    title: "Creative Strategy 🎨",
-    description:
-      "Redefining Electronic Arts' public image through purpose-driven campaigns and influencer collaborations. Increased brand sentiment and gained 4MM+ new followers.",
-    link: "https://drive.google.com/file/d/1kuw0kRWxzysufPdO0n9gEWzm7anrpuwW/view?usp=sharing",
-    color: "text-pastel-blue",
-  },
-  {
-    title: "Community Building 🌟",
-    description:
-      "Developed a Discord platform to engage and retain gaming audiences. Led community management and created a space with 5,000+ unique sign-ups.",
-    link: "#",
-    color: "text-pastel-pink",
-  },
-  {
-    title: "Talent & Celebrity 🤝",
-    description:
-      "Negotiated 300+ creator partnerships, working with Twitch streamers, musicians, and actors to amplify digital campaigns.",
-    link: "#",
-    color: "text-pastel-green",
-  },
-  {
-    title: "Experiential Marketing 🎭",
-    description:
-      "Led Samsung’s PAX East activation, partnering with top gaming influencers to drive product engagement and capture 200+ brand assets.",
-    link: "#",
-    color: "text-pastel-yellow",
-  },
-  {
-    title: "Influencer Strategy 🚀",
-    description:
-      "Built and scaled an influencer program for Samsung US, contracting 90 creators to generate 5,262+ unique content pieces, reaching 229M+ impressions.",
-    link: "https://www.youtube.com/watch?v=o3aLdZK_9TI",
-    color: "text-pastel-orange",
-  },
-]
-
-export default function Work() {
+export default function Home() {
   const [scrolled, setScrolled] = useState(false)
   const mousePosition = useMousePosition()
   const cursorControls = useAnimation()
@@ -85,7 +44,7 @@ export default function Work() {
   }, [mousePosition, cursorControls])
 
   return (
-    <div className="bg-deep-grey text-white min-h-screen font-space-grotesk overflow-x-hidden pt-32">
+    <div className="bg-deep-grey text-white min-h-screen font-space-grotesk overflow-x-hidden">
       <motion.div
         className="fixed w-8 h-8 rounded-full bg-pastel-blue mix-blend-difference pointer-events-none z-50"
         animate={cursorControls}
@@ -123,67 +82,56 @@ export default function Work() {
         </div>
       </header>
 
-      <main className="container mx-auto px-6 pt-64 pb-12">
-        {/* Title Section with New Animations */}
-        <motion.h1
-          className="text-5xl font-bold leading-tight mb-16 mt-64 relative text-left max-w-4xl"
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
-        >
-          𐚁 HOWDY, I'M STEPHEN—A{" "}
-          <motion.span
-            className="font-normal italic relative inline-block"
-            initial={{ backgroundSize: "0 100%" }}
-            animate={{ backgroundSize: "100% 100%" }}
-            transition={{ duration: 1, delay: 0.5 }}
-            style={{
-              backgroundImage: "linear-gradient(to right, #BAE1FF, #BAE1FF)",
-              backgroundRepeat: "no-repeat",
-              backgroundPosition: "0 100%",
-            }}
+      <main className="pt-24">
+        <section className="container mx-auto px-6 py-16 flex flex-col">
+          <motion.h1
+            className="text-3xl sm:text-4xl md:text-5xl font-bold leading-tight mb-4 max-w-3xl text-left"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
           >
-            SOCIAL MEDIA & CREATIVE PRO
-          </motion.span>{" "}
-          📍HTX,
-          <br className="sm:hidden" />
+            𐚁 HOWDY, I'M STEPHEN—A{" "}
+            <motion.span
+              className="font-normal italic relative inline-block"
+              initial={{ backgroundSize: "0 100%" }}
+              animate={{ backgroundSize: "100% 100%" }}
+              transition={{ duration: 1, delay: 0.5 }}
+              style={{
+                backgroundImage: "linear-gradient(to right, #BAE1FF, #BAE1FF)",
+                backgroundRepeat: "no-repeat",
+                backgroundPosition: "0 100%",
+              }}
+            >
+              SOCIAL MEDIA & CREATIVE PRO
+            </motion.span>{" "}
+            HTX 📍 FREELANCING <span className="bg-pastel-green text-deep-grey px-1">ACROSS INDUSTRIES 🐎</span>
+          </motion.h1>
 
-          {/* New Animation for "Freelancing Across Industries" */}
-          <motion.span
-            className="inline-block px-2 py-1 text-deep-grey text-5xl font-bold"
-            initial={{ opacity: 0, skewX: "-10deg", scale: 0.9 }}
-            animate={{ opacity: 1, skewX: "0deg", scale: 1 }}
-            transition={{ duration: 0.8, ease: "easeOut" }}
+          <motion.h2
+            className="text-lg sm:text-xl md:text-2xl font-normal max-w-3xl text-left leading-relaxed mt-2 relative font-jetbrains-mono"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.2 }}
           >
-            FREELANCING ACROSS INDUSTRIES 🐎
-          </motion.span>
-        </motion.h1>
-
-        {/* Formerly Section with Extra Space */}
-        <motion.h2
-          className="text-3xl sm:text-3xl font-medium font-jetbrains-mono max-w-3xl leading-snug mt-40 relative text-left"
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.2 }}
-        >
-          FORMERLY @{" "}
-          <span className="relative">
-            APPLE 👨🏻‍💻, VERIFIEDWORKS AGENCY; MANAGED CLIENTS @SAMSUNGUS, ELECTRONIC ARTS,
-            <HandDrawnUnderline className="text-pastel-pink bottom-0 left-0" />
-          </span>{" "}
-          LED SOCIAL & GAMING CAMPAIGNS FOR{" "}
-          <span className="border-b-4 border-dotted border-pastel-purple">
-            DISCORD, TWITCH, CYBERPUNK, & POKÉMON GO + MORE 🎮
-          </span>
-        </motion.h2>
+            FORMERLY @{" "}
+            <span className="relative">
+              APPLE 👨🏻‍💻, VERIFIEDWORKS AGENCY; MANAGED CLIENTS @SAMSUNGUS, ELECTRONIC ARTS,
+              <HandDrawnUnderline className="text-pastel-green bottom-0 left-0" />
+            </span>{" "}
+            LED SOCIAL & GAMING CAMPAIGNS FOR{" "}
+            <span className="border-b-2 border-dotted border-pastel-pink">
+              DISCORD, TWITCH, CYBERPUNK, & POKÉMON GO + MORE 🎮
+            </span>
+          </motion.h2>
+        </section>
 
         <motion.div
-          className="container mx-auto px-6 mt-16"
+          className="container mx-auto px-6"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.4 }}
         >
-          <div className="w-full h-px bg-gradient-to-r from-transparent via-white/20 to-transparent my-16 mb-16" />
+          <div className="w-full h-px bg-gradient-to-r from-transparent via-white/20 to-transparent my-8" />
           <div className="flex justify-center">
             <Link href="/work" className="inline-block">
               <motion.button
@@ -196,61 +144,42 @@ export default function Work() {
               </motion.button>
             </Link>
           </div>
-          <div className="w-full h-px bg-gradient-to-r from-transparent via-white/20 to-transparent my-16" />
+          <div className="w-full h-px bg-gradient-to-r from-transparent via-white/20 to-transparent my-8" />
         </motion.div>
 
-        {/* Approach Section with New Effects */}
         <motion.section
           id="approach"
-          className="container mx-auto px-6 py-16 text-left md:text-left"
+          className="container mx-auto px-6 py-16"
           initial={{ opacity: 0, y: 50 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
         >
           <h3 className="text-xl font-medium mb-8 uppercase">Approach</h3>
-          <div className="text-xl sm:text-2xl md:text-3xl font-normal leading-relaxed max-w-4xl mx-auto space-y-6">
-            <motion.p
-              className="font-space-grotesk relative"
-              initial={{ opacity: 0, y: 10 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.2 }}
-            >
-              Stories are the <span className="text-pastel-pink font-bold">heartbeat</span> of connection, shaping our
-              digital landscape. It's not just about{" "}
-              <span className="font-bold text-pastel-blue">what</span> we say, but{" "}
-              <span className="font-bold text-pastel-green">how we say it</span>.
-              <HandDrawnUnderline className="text-pastel-pink bottom-0 left-0" />
-            </motion.p>
+          <div className="text-xl sm:text-2xl md:text-3xl font-normal leading-relaxed max-w-4xl relative space-y-6">
+            <p className="font-space-grotesk">
+              Stories are the heartbeat of connection, shaping our digital landscape. It's not just about{" "}
+              <span className="font-bold text-pastel-pink">what</span> we say, but{" "}
+              <span className="font-bold text-pastel-blue">how we say it</span>.
+            </p>
 
-            <motion.p
-              className="font-jetbrains-mono"
-              initial={{ opacity: 0, y: 10 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.4 }}
-            >
-              My focus? Crafting narratives that **resonate**, designing visuals that **captivate**, and developing
-              strategies that engage**.
-            </motion.p>
+            <p className="font-jetbrains-mono">
+              My focus? Crafting narratives that resonate, designing visuals that captivate, and developing strategies
+              that engage.
+            </p>
 
-            <motion.p
-              className="font-space-grotesk relative"
-              initial={{ opacity: 0, y: 10 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.6 }}
-            >
+            <p className="font-space-grotesk">
               Because when content speaks to the soul,{" "}
               <span className="italic relative inline-block">
                 it ignites real change
-                <HandDrawnUnderline className="text-pastel-purple bottom-0 left-0" />
+                <HandDrawnUnderline className="text-pastel-pink bottom-0 left-0" />
               </span>
-            </motion.p>
+            </p>
           </div>
         </motion.section>
 
-        {/* Partnerships Section */}
         <motion.section
           id="partnerships"
-          className="container mx-auto px-6 py-16 text-left"
+          className="container mx-auto px-6 py-16"
           initial={{ opacity: 0, y: 50 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.2 }}
@@ -269,17 +198,31 @@ export default function Work() {
             ].map((partner, index) => (
               <motion.div
                 key={partner}
-                className="bg-deep-grey border border-white/20 p-4 rounded-lg flex items-center justify-center text-left hover:bg-white/10 transition-colors duration-300 cursor-pointer"
+                className="bg-deep-grey border border-white/20 p-4 rounded-lg flex items-center justify-center text-center hover:bg-white/10 transition-colors duration-300 cursor-pointer"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
               >
-                {partner}
+                <motion.div
+                  className="relative w-full h-full"
+                  initial={false}
+                  whileHover={{ rotateY: 180 }}
+                  transition={{ duration: 0.6 }}
+                >
+                  <motion.div className="absolute w-full h-full flex items-center justify-center backface-hidden">
+                    {partner}
+                  </motion.div>
+                  <motion.div
+                    className="absolute w-full h-full flex items-center justify-center backface-hidden"
+                    style={{ rotateY: 180 }}
+                  >
+                    <div className="w-full h-full bg-gradient-to-br from-pastel-pink via-pastel-purple to-pastel-blue opacity-70 rounded-lg" />
+                  </motion.div>
+                </motion.div>
               </motion.div>
             ))}
           </div>
         </motion.section>
       </main>
-
       <Footer />
     </div>
   )
