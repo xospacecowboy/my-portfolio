@@ -78,9 +78,9 @@ export default function Home() {
               backgroundPosition: "0 100%",
             }}
           >
-            SOCIAL MEDIA & CREATIVE PRO
+            SOCIAL MEDIA & CREATIVE PRO 📍
           </motion.span>{" "}
-          HTX 📍 <br className="sm:hidden" />
+          HTX, <br className="sm:hidden" />
           <span className="bg-pastel-green text-deep-grey px-2 py-1 rounded-xl">
             FREELANCING ACROSS INDUSTRIES 🐎
           </span>
@@ -121,7 +121,7 @@ export default function Home() {
         {/* Approach Section with New Effects */}
         <motion.section
           id="approach"
-          className="container mx-auto px-6 py-16 text-center md:text-left"
+          className="container mx-auto px-6 py-16 text-left md:text-left"
           initial={{ opacity: 0, y: 50 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
