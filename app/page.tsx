@@ -44,183 +44,179 @@ export default function Home() {
   }, [mousePosition, cursorControls])
 
   return (
-    <div className="bg-deep-grey text-white min-h-screen font-space-grotesk overflow-x-hidden">
-      <motion.div
-        className="fixed w-8 h-8 rounded-full bg-pastel-blue mix-blend-difference pointer-events-none z-50"
-        animate={cursorControls}
-      />
+    <>
+      <div className="bg-deep-grey text-white min-h-screen font-space-grotesk overflow-x-hidden">
+        <motion.div
+          className="fixed w-8 h-8 rounded-full bg-pastel-blue mix-blend-difference pointer-events-none z-50"
+          animate={cursorControls}
+        />
 
-      <header
-        className={`fixed top-0 left-0 right-0 z-40 transition-all duration-300 ${scrolled ? "bg-deep-grey/90 backdrop-blur-sm" : ""}`}
-      >
-        <div className="container mx-auto px-6 py-4 flex justify-between items-center">
-          <Link href="/" className="text-2xl font-bold tracking-tighter">
-            @OXYTOCINS
-          </Link>
-          <nav className="flex items-center space-x-8">
-            <Link href="/work" className="text-sm hover:opacity-70 transition-opacity font-jetbrains-mono">
-              PORTFOLIO
+        <header
+          className={`fixed top-0 left-0 right-0 z-40 transition-all duration-300 ${scrolled ? "bg-deep-grey/90 backdrop-blur-sm" : ""}`}
+        >
+          <div className="container mx-auto px-6 py-4 flex justify-between items-center">
+            <Link href="/" className="text-2xl font-bold tracking-tighter">
+              @OXYTOCINS
             </Link>
-            <Link href="/meet-stephen" className="text-sm hover:opacity-70 transition-opacity font-jetbrains-mono">
-              ABOUT
-            </Link>
-            <motion.a
-              href="mailto:beardslee.stephen@icloud.com"
-              className="bg-white text-deep-grey px-4 py-2 text-sm font-medium hover:bg-gray-200 transition-colors relative overflow-hidden font-jetbrains-mono"
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-            >
-              MAIL
-              <motion.div
-                className="absolute inset-0 bg-gradient-to-r from-pastel-pink via-pastel-purple to-pastel-blue opacity-0"
-                initial={{ x: "-100%" }}
-                whileHover={{ x: "100%", opacity: 0.5 }}
-                transition={{ duration: 0.5 }}
-              />
-            </motion.a>
-          </nav>
-        </div>
-      </header>
+            <nav className="flex items-center space-x-8">
+              <Link href="/work" className="text-sm hover:opacity-70 transition-opacity font-jetbrains-mono">
+                PORTFOLIO
+              </Link>
+              <Link href="/meet-stephen" className="text-sm hover:opacity-70 transition-opacity font-jetbrains-mono">
+                ABOUT
+              </Link>
+              <motion.a
+                href="mailto:beardslee.stephen@icloud.com"
+                className="bg-white text-deep-grey px-4 py-2 text-sm font-medium hover:bg-gray-200 transition-colors relative overflow-hidden font-jetbrains-mono"
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+              >
+                MAIL
+                <motion.div
+                  className="absolute inset-0 bg-gradient-to-r from-pastel-pink via-pastel-purple to-pastel-blue opacity-0"
+                  initial={{ x: "-100%" }}
+                  whileHover={{ x: "100%", opacity: 0.5 }}
+                  transition={{ duration: 0.5 }}
+                />
+              </motion.a>
+            </nav>
+          </div>
+        </header>
 
-      <main className="pt-32">
-        <section className="container mx-auto px-6 py-16 flex flex-col">
-          <motion.h1
-            className="text-4xl sm:text-5xl md:text-6xl font-bold leading-tight mb-6 max-w-5xl text-left relative"
-          >
-            {/* HOWDY Effect - Matches DESIGN */}
-            <motion.span
-              className="relative inline-block px-2 font-bold"
-              whileHover={{ letterSpacing: "2px" }}
-              transition={{ duration: 0.3 }}
+        <main className="pt-32">
+          <section className="container mx-auto px-6 py-16 flex flex-col">
+            <motion.h1
+              className="text-4xl sm:text-5xl md:text-6xl font-bold leading-tight mb-6 max-w-5xl text-left relative"
             >
-              𐚁 HOWDY,
-            </motion.span>{" "}
-            I'M STEPHEN—A{" "}
-            
-            {/* Gradient for SOCIAL MEDIA & CREATIVE PRO - Plays Once */}
-            <motion.span
-              className="font-normal italic relative inline-block px-2"
-              initial={{ backgroundSize: "0% 100%" }}
-              animate={{ backgroundSize: "100% 100%" }}
-              transition={{ duration: 1.5, ease: "easeOut" }}
-              style={{
-                backgroundImage: "linear-gradient(to right, #B0E57C, #BAE1FF, #FFB6C1)",
-                backgroundRepeat: "no-repeat",
-                backgroundPosition: "0 100%",
-              }}
-            >
-              SOCIAL MEDIA & CREATIVE PRO
-            </motion.span>{" "}
-            
-            <span className="inline-block px-1">BASED IN HTX 📍</span>{" "}
-            
-            {/* HAND-DRAWN UNDERLINE FOR "FREELANCING ACROSS INDUSTRIES" */}
-            <span className="relative">
-              FREELANCING{" "}
-              <span className="font-italic">ACROSS INDUSTRIES</span> 🐎
-              <HandDrawnUnderline className="text-pastel-green bottom-0 left-0" />
-            </span>
-          </motion.h1>
-
-          {/* FULL-WIDTH DOTTED LINE BREAK */}
-          <motion.div
-            className="flex justify-center space-x-4 mt-6 mb-4"
-          >
-            {[...Array(50)].map((_, i) => (
+              {/* HOWDY Effect - Matches DESIGN */}
               <motion.span
-                key={i}
-                className="w-2 h-2 bg-gradient-to-r from-pastel-pink via-pastel-purple to-pastel-blue rounded-full"
-                animate={{ y: [0, -2, 0] }}
-                transition={{ duration: 1, delay: i * 0.05, repeat: Infinity, ease: "easeInOut" }}
-              />
-            ))}
-          </motion.div>
+                className="relative inline-block px-2 font-bold"
+                whileHover={{ letterSpacing: "2px" }}
+                transition={{ duration: 0.3 }}
+              >
+                𐚁 HOWDY,
+              </motion.span>{" "}
+              I'M STEPHEN—A{" "}
+              
+              {/* Gradient for SOCIAL MEDIA & CREATIVE PRO - Plays Once */}
+              <motion.span
+                className="font-normal italic relative inline-block px-2"
+                initial={{ backgroundSize: "0% 100%" }}
+                animate={{ backgroundSize: "100% 100%" }}
+                transition={{ duration: 1.5, ease: "easeOut" }}
+                style={{
+                  backgroundImage: "linear-gradient(to right, #B0E57C, #BAE1FF, #FFB6C1)",
+                  backgroundRepeat: "no-repeat",
+                  backgroundPosition: "0 100%",
+                }}
+              >
+                SOCIAL MEDIA & CREATIVE PRO
+              </motion.span>{" "}
+              
+              <span className="inline-block px-1">BASED IN HTX 📍</span>{" "}
+              
+              {/* HAND-DRAWN UNDERLINE FOR "FREELANCING ACROSS INDUSTRIES" */}
+              <span className="relative">
+                FREELANCING{" "}
+                <span className="font-italic">ACROSS INDUSTRIES</span> 🐎
+                <HandDrawnUnderline className="text-pastel-green bottom-0 left-0" />
+              </span>
+            </motion.h1>
 
-          <motion.p className="text-2xl sm:text-3xl md:text-4xl font-light italic max-w-5xl text-left mt-4 relative">
-            W/ A PASSION FOR{" "}
-            <motion.span
-              className="font-bold relative inline-block cursor-pointer"
-              whileHover={{ backgroundSize: "100% 100%" }}
-              transition={{ duration: 0.5 }}
-              style={{
-                backgroundImage: "linear-gradient(to right, #BAE1FF, #BAE1FF)",
-                backgroundRepeat: "no-repeat",
-                backgroundPosition: "0 100%",
-                backgroundSize: "0% 100%",
-              }}
+            {/* FULL-WIDTH DOTTED LINE BREAK */}
+            <motion.div
+              className="flex justify-center space-x-4 mt-6 mb-4"
             >
-              STORYTELLING
-            </motion.span>{" "}
-            &{" "}
-            <motion.span
-              className="relative inline-block font-bold cursor-pointer"
-              whileHover={{ letterSpacing: "2px" }}
-              transition={{ duration: 0.3 }}
-            >
-              DESIGN
-            </motion.span>
-            , I{" "}
-            <motion.span
-              className="font-bold relative inline-block cursor-pointer"
-              whileHover={{ scale: 1.05 }}
-              transition={{ duration: 0.3 }}
-            >
-              CRAFT
-            </motion.span>{" "}
-            DIGITAL{" "}
-            <motion.span
-              className="relative inline-block font-bold cursor-pointer"
-              whileHover={{ backgroundSize: "100% 100%" }}
-              transition={{ duration: 0.5 }}
-              style={{
-                backgroundImage: "linear-gradient(to right, #BAE1FF, #BAE1FF)",
-                backgroundRepeat: "no-repeat",
-                backgroundPosition: "0 100%",
-                backgroundSize: "0% 100%",
-              }}
-            >
-              EXPERIENCES
-            </motion.span>{" "}
-            THAT{" "}
-            <motion.span
-              className="relative inline-block font-bold cursor-pointer"
-              whileHover={{ letterSpacing: "2px" }}
-              transition={{ duration: 0.3 }}
-            >
-              CONNECT
-            </motion.span>
-            ,{" "}
-            <motion.span
-              className="font-bold relative inline-block cursor-pointer"
-              whileHover={{ scale: 1.05 }}
-              transition={{ duration: 0.3 }}
-            >
-              INSPIRE
-            </motion.span>{" "}
-            &{" "}
-            <motion.span
-              className="relative inline-block font-bold cursor-pointer"
-              whileHover={{ backgroundSize: "100% 100%" }}
-              transition={{ duration: 0.5 }}
-              style={{
-                backgroundImage: "linear-gradient(to right, #BAE1FF, #BAE1FF)",
-                backgroundRepeat: "no-repeat",
-                backgroundPosition: "0 100%",
-                backgroundSize: "0% 100%",
-              }}
-            >
-              ENGAGE
-            </motion.span>
-            .
-          </motion.p>
+              {[...Array(50)].map((_, i) => (
+                <motion.span
+                  key={i}
+                  className="w-2 h-2 bg-gradient-to-r from-pastel-pink via-pastel-purple to-pastel-blue rounded-full"
+                  animate={{ y: [0, -2, 0] }}
+                  transition={{ duration: 1, delay: i * 0.05, repeat: Infinity, ease: "easeInOut" }}
+                />
+              ))}
+            </motion.div>
 
-          {/* Additional space after "W/ A PASSION FOR" line */}
-          <div className="mt-10" />
+            <motion.p className="text-2xl sm:text-3xl md:text-4xl font-light italic max-w-5xl text-left mt-4 relative">
+              W/ A PASSION FOR{" "}
+              <motion.span
+                className="font-bold relative inline-block cursor-pointer"
+                whileHover={{ backgroundSize: "100% 100%" }}
+                transition={{ duration: 0.5 }}
+                style={{
+                  backgroundImage: "linear-gradient(to right, #BAE1FF, #BAE1FF)",
+                  backgroundRepeat: "no-repeat",
+                  backgroundPosition: "0 100%",
+                  backgroundSize: "0% 100%",
+                }}
+              >
+                STORYTELLING
+              </motion.span>{" "}
+              &{" "}
+              <motion.span
+                className="relative inline-block font-bold cursor-pointer"
+                whileHover={{ letterSpacing: "2px" }}
+                transition={{ duration: 0.3 }}
+              >
+                DESIGN
+              </motion.span>
+              , I{" "}
+              <motion.span
+                className="font-bold relative inline-block cursor-pointer"
+                whileHover={{ scale: 1.05 }}
+                transition={{ duration: 0.3 }}
+              >
+                CRAFT
+              </motion.span>{" "}
+              DIGITAL{" "}
+              <motion.span
+                className="relative inline-block font-bold cursor-pointer"
+                whileHover={{ backgroundSize: "100% 100%" }}
+                transition={{ duration: 0.5 }}
+                style={{
+                  backgroundImage: "linear-gradient(to right, #BAE1FF, #BAE1FF)",
+                  backgroundRepeat: "no-repeat",
+                  backgroundPosition: "0 100%",
+                  backgroundSize: "0% 100%",
+                }}
+              >
+                EXPERIENCES
+              </motion.span>{" "}
+              THAT{" "}
+              <motion.span
+                className="relative inline-block font-bold cursor-pointer"
+                whileHover={{ letterSpacing: "2px" }}
+                transition={{ duration: 0.3 }}
+              >
+                CONNECT
+              </motion.span>
+              ,{" "}
+              <motion.span
+                className="font-bold relative inline-block cursor-pointer"
+                whileHover={{ scale: 1.05 }}
+                transition={{ duration: 0.3 }}
+              >
+                INSPIRE
+              </motion.span>{" "}
+              &{" "}
+              <motion.span
+                className="relative inline-block font-bold cursor-pointer"
+                whileHover={{ backgroundSize: "100% 100%" }}
+                transition={{ duration: 0.5 }}
+                style={{
+                  backgroundImage: "linear-gradient(to right, #BAE1FF, #BAE1FF)",
+                  backgroundRepeat: "no-repeat",
+                  backgroundPosition: "0 100%",
+                  backgroundSize: "0% 100%",
+                }}
+              >
+                ENGAGE
+              </motion.span>
+              .
+            </motion.p>
+          </section>
 
-          <section
-            id="approach"
-            className="container mx-auto px-6 py-16"
-          >
+          <section id="approach" className="container mx-auto px-6 py-16">
             <h3 className="text-xl font-medium mb-8 uppercase">Approach</h3>
             <div className="text-xl sm:text-2xl md:text-3xl font-normal leading-relaxed max-w-4xl relative space-y-6">
               <motion.p
@@ -316,45 +312,25 @@ export default function Home() {
               ))}
             </div>
           </section>
-        </section>
 
-        <section className="container mx-auto px-6 py-16">
-          <motion.h2
-            className="text-lg sm:text-xl md:text-2xl font-normal max-w-3xl text-left leading-relaxed mt-2 relative font-jetbrains-mono"
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.2 }}
-          >
-            FORMERLY @{" "}
-            <span className="relative">
-              APPLE 👨🏻‍💻, VERIFIEDWORKS AGENCY; MANAGED CLIENTS @SAMSUNGUS, ELECTRONIC ARTS,
-              <HandDrawnUnderline className="text-pastel-green bottom-0 left-0" />
-            </span>{" "}
-            LED SOCIAL & GAMING CAMPAIGNS FOR{" "}
-            <span className="border-b-2 border-dotted border-pastel-pink">
-              DISCORD, TWITCH, CYBERPUNK, & POKÉMON GO + MORE 🎮
-            </span>
-          </motion.h2>
-
-          <div className="container mx-auto px-6 mt-16">
-            <div className="w-full h-px bg-gradient-to-r from-transparent via-white/20 to-transparent my-16" />
-            <div className="flex justify-center">
-              <Link href="/work" className="inline-block">
-                <motion.button
-                  className="bg-deep-grey text-white px-8 py-4 text-lg font-bold border border-pastel-blue hover:bg-pastel-blue hover:text-deep-grey transition-all duration-300 relative group"
-                  whileHover={{ scale: 1.05 }}
-                  whileTap={{ scale: 0.95 }}
-                >
-                  <span className="relative z-10">Explore My Work</span>
-                  <div className="absolute inset-0 bg-gradient-to-r from-pastel-pink via-pastel-purple to-pastel-blue opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-                </motion.button>
-              </Link>
-            </div>
-            <div className="w-full h-px bg-gradient-to-r from-transparent via-white/20 to-transparent my-16" />
+        <div className="container mx-auto px-6 mt-16">
+          <div className="w-full h-px bg-gradient-to-r from-transparent via-white/20 to-transparent my-16" />
+          <div className="flex justify-center">
+            <Link href="/work" className="inline-block">
+              <motion.button
+                className="bg-deep-grey text-white px-8 py-4 text-lg font-bold border border-pastel-blue hover:bg-pastel-blue hover:text-deep-grey transition-all duration-300 relative group"
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+              >
+                <span className="relative z-10">Explore My Work</span>
+                <div className="absolute inset-0 bg-gradient-to-r from-pastel-pink via-pastel-purple to-pastel-blue opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+              </motion.button>
+            </Link>
           </div>
-        </section>
+          <div className="w-full h-px bg-gradient-to-r from-transparent via-white/20 to-transparent my-16" />
+        </div>
       </main>
-      <Footer />
     </div>
-  )
+  </>
+)
 }
