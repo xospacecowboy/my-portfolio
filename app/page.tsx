@@ -90,7 +90,7 @@ export default function Home() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
           >
-            HOWDY, I'M STEPHEN—A{" "}
+            𐚁 HOWDY, I'M STEPHEN—A{" "}
             <motion.span
               className="font-normal italic relative inline-block"
               initial={{ backgroundSize: "0 100%" }}
