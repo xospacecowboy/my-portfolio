@@ -5,6 +5,7 @@ import Link from "next/link"
 import { motion, useAnimation } from "framer-motion"
 import Footer from "../components/Footer"
 import { useMousePosition } from "../hooks/useMousePosition"
+import BadgeAnimatedGradientBorder from "../components/BadgeAnimatedGradientBorder";
 
 const HandDrawnUnderline = ({ className }: { className?: string }) => (
   <svg
@@ -198,26 +199,11 @@ export default function Home() {
             ].map((partner, index) => (
               <motion.div
                 key={partner}
-                className="bg-deep-grey border border-white/20 p-4 rounded-lg flex items-center justify-center text-center hover:bg-white/10 transition-colors duration-300 cursor-pointer"
+                className="flex items-center justify-center"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
               >
-                <motion.div
-                  className="relative w-full h-full"
-                  initial={false}
-                  whileHover={{ rotateY: 180 }}
-                  transition={{ duration: 0.6 }}
-                >
-                  <motion.div className="absolute w-full h-full flex items-center justify-center backface-hidden">
-                    {partner}
-                  </motion.div>
-                  <motion.div
-                    className="absolute w-full h-full flex items-center justify-center backface-hidden"
-                    style={{ rotateY: 180 }}
-                  >
-                    <div className="w-full h-full bg-gradient-to-br from-pastel-pink via-pastel-purple to-pastel-blue opacity-70 rounded-lg" />
-                  </motion.div>
-                </motion.div>
+                <BadgeAnimatedGradientBorder text={partner} />
               </motion.div>
             ))}
           </div>
