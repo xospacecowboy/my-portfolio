@@ -88,38 +88,30 @@ export default function Home() {
       <main className="container mx-auto px-6 py-12">
         {/* Title Section */}
         <motion.h1
-  className="text-5xl font-bold leading-tight mb-8 relative text-left max-w-4xl mt-12"
-  initial={{ opacity: 0, y: 20 }}
-  animate={{ opacity: 1, y: 0 }}
-  transition={{ duration: 0.8 }}
->
-  𐚁 HOWDY, I'M STEPHEN—A{" "}
-  <motion.span
-    className="font-normal italic relative inline-block"
-    initial={{ backgroundSize: "0 100%" }}
-    animate={{ backgroundSize: "100% 100%" }}
-    transition={{ duration: 1, delay: 0.5 }}
-    style={{
-      backgroundImage: "linear-gradient(to right, #BAE1FF, #BAE1FF)",
-      backgroundRepeat: "no-repeat",
-      backgroundPosition: "0 100%",
-    }}
-  >
-    SOCIAL MEDIA & CREATIVE PRO
-  </motion.span>{" "}
-  📍HTX,
-  <br className="sm:hidden" />
-
-  {/* New Animation for "Freelancing Across Industries" */}
-  <motion.span
-    className="inline-block px-2 py-1 text-deep-grey text-5xl font-bold"
-    initial={{ opacity: 0, skewX: "-10deg", scale: 0.9 }}
-    animate={{ opacity: 1, skewX: "0deg", scale: 1 }}
-    transition={{ duration: 0.8, ease: "easeOut" }}
-  >
-    FREELANCING ACROSS INDUSTRIES 🐎
-  </motion.span>
-</motion.h1>
+          className="text-5xl font-bold leading-tight mb-8 relative text-left max-w-4xl"
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+        >
+          𐚁 HOWDY, I'M STEPHEN—A{" "}
+          <motion.span
+            className="font-normal italic relative inline-block"
+            initial={{ backgroundSize: "0 100%" }}
+            animate={{ backgroundSize: "100% 100%" }}
+            transition={{ duration: 1, delay: 0.5 }}
+            style={{
+              backgroundImage: "linear-gradient(to right, #BAE1FF, #BAE1FF)",
+              backgroundRepeat: "no-repeat",
+              backgroundPosition: "0 100%",
+            }}
+          >
+            SOCIAL MEDIA & CREATIVE PRO
+          </motion.span>{" "}
+          📍HTX, <br className="sm:hidden" />
+          <span className="bg-pastel-green text-deep-grey px-2 py-1 rounded-xl">
+            FREELANCING ACROSS INDUSTRIES 🐎
+          </span>
+        </motion.h1>
 
         {/* Formerly Section */}
         <motion.h2
@@ -139,23 +131,27 @@ export default function Home() {
           </span>
         </motion.h2>
 
-        {/* Formerly Section with Extra Space */}
-<motion.h2
-  className="text-3xl sm:text-3xl font-medium font-jetbrains-mono max-w-3xl leading-snug mt-6 relative text-left"
-  initial={{ opacity: 0, y: 20 }}
-  animate={{ opacity: 1, y: 0 }}
-  transition={{ duration: 0.8, delay: 0.2 }}
->
-  FORMERLY @{" "}
-  <span className="relative">
-    APPLE 👨🏻‍💻, VERIFIEDWORKS AGENCY; MANAGED CLIENTS @SAMSUNGUS, ELECTRONIC ARTS,
-    <HandDrawnUnderline className="text-pastel-pink bottom-0 left-0" />
-  </span>{" "}
-  LED SOCIAL & GAMING CAMPAIGNS FOR{" "}
-  <span className="border-b-4 border-dotted border-pastel-purple">
-    DISCORD, TWITCH, CYBERPUNK, & POKÉMON GO + MORE 🎮
-  </span>
-</motion.h2>
+        <motion.div
+          className="container mx-auto px-6"
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.4 }}
+        >
+          <div className="w-full h-px bg-gradient-to-r from-transparent via-white/20 to-transparent my-8" />
+          <div className="flex justify-center">
+            <Link href="/work" className="inline-block">
+              <motion.button
+                className="bg-deep-grey text-white px-8 py-4 text-lg font-bold border border-pastel-blue hover:bg-pastel-blue hover:text-deep-grey transition-all duration-300 relative group"
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+              >
+                <span className="relative z-10">Explore My Work</span>
+                <div className="absolute inset-0 bg-gradient-to-r from-pastel-pink via-pastel-purple to-pastel-blue opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+              </motion.button>
+            </Link>
+          </div>
+          <div className="w-full h-px bg-gradient-to-r from-transparent via-white/20 to-transparent my-8" />
+        </motion.div>
 
         {/* Approach Section with New Effects */}
         <motion.section
