@@ -217,94 +217,54 @@ export default function Home() {
           {/* Additional space after "W/ A PASSION FOR" line */}
           <div className="mt-10" />
 
-          {/* ✨ Skills Showcase Carousel ✨ */}
-          <div className="mt-10 relative h-16 flex items-center justify-center overflow-hidden">
-            <div className="absolute inset-0 bg-gradient-to-r from-deep-grey via-transparent to-deep-grey z-10" />
-            <motion.div
-              className="flex items-center justify-center gap-8 px-4"
-              animate={{
-                x: [0, -1920],
-              }}
-              transition={{
-                x: {
-                  repeat: Infinity,
-                  duration: 30,
-                  ease: "linear",
-                },
-              }}
-            >
+          {/* ✨ Skills Grid Showcase ✨ */}
+          <div className="mt-10">
+            <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4">
               {[
-                { text: "✨ Magic", color: "#FFB6C1" },
-                { text: "🎨 Art Direction", color: "#BAE1FF" },
-                { text: "📢 Marketing", color: "#B0E57C" },
-                { text: "💡 Creative Strategy", color: "#FFB6C1" },
-                { text: "📺 Content Creation", color: "#BAE1FF" },
-                { text: "🎮 Gaming", color: "#B0E57C" },
-                { text: "🌐 Web Development", color: "#FFB6C1" },
-                { text: "✍ Social Media", color: "#BAE1FF" },
-                { text: "🎭 Storytelling", color: "#B0E57C" },
-              ].map((item, index) => (
+                { text: "✨ Magic", gradient: "from-pastel-pink to-pastel-purple" },
+                { text: "🎨 Art Direction", gradient: "from-pastel-blue to-pastel-purple" },
+                { text: "📢 Marketing", gradient: "from-pastel-green to-pastel-blue" },
+                { text: "💡 Creative", gradient: "from-pastel-pink to-pastel-blue" },
+                { text: "📺 Content", gradient: "from-pastel-purple to-pastel-blue" },
+                { text: "🎮 Gaming", gradient: "from-pastel-green to-pastel-purple" },
+                { text: "🌐 Web Dev", gradient: "from-pastel-blue to-pastel-pink" },
+                { text: "✍ Social", gradient: "from-pastel-purple to-pastel-green" },
+              ].map((skill, index) => (
                 <motion.div
                   key={index}
-                  className="flex items-center"
-                  whileHover={{
-                    scale: 1.1,
-                    transition: { duration: 0.2 },
+                  className={`relative overflow-hidden border border-white/10 rounded-lg p-4 cursor-pointer bg-gradient-to-br ${skill.gradient} bg-opacity-5`}
+                  whileHover={{ scale: 1.02 }}
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ 
+                    opacity: 1, 
+                    y: 0,
+                    transition: { delay: index * 0.1 } 
                   }}
                 >
                   <motion.span
-                    className="text-xl md:text-2xl font-medium cursor-pointer px-4 py-2 rounded-full"
-                    style={{
-                      background: `linear-gradient(135deg, ${item.color}15, ${item.color}05)`,
-                      backdropFilter: "blur(8px)",
-                      border: `1px solid ${item.color}30`,
-                    }}
+                    className="block text-lg md:text-xl font-medium text-center"
                     whileHover={{
-                      color: item.color,
-                      transition: { duration: 0.2 },
+                      backgroundSize: "100% 100%",
                     }}
+                    initial={{
+                      backgroundSize: "0% 100%",
+                      backgroundImage: "linear-gradient(to right, #BAE1FF, #BAE1FF)",
+                      backgroundRepeat: "no-repeat",
+                      backgroundPosition: "0 100%",
+                    }}
+                    transition={{ duration: 0.3 }}
                   >
-                    {item.text}
+                    {skill.text}
                   </motion.span>
+                  <motion.div
+                    className="absolute inset-0 bg-gradient-to-r from-transparent via-white/5 to-transparent"
+                    initial={{ x: "-100%" }}
+                    whileHover={{ x: "100%" }}
+                    transition={{ duration: 0.5 }}
+                  />
                 </motion.div>
               ))}
-              {/* Duplicate for seamless loop */}
-              {[
-                { text: "✨ Magic", color: "#FFB6C1" },
-                { text: "🎨 Art Direction", color: "#BAE1FF" },
-                { text: "📢 Marketing", color: "#B0E57C" },
-                { text: "💡 Creative Strategy", color: "#FFB6C1" },
-                { text: "📺 Content Creation", color: "#BAE1FF" },
-                { text: "🎮 Gaming", color: "#B0E57C" },
-                { text: "🌐 Web Development", color: "#FFB6C1" },
-                { text: "✍ Social Media", color: "#BAE1FF" },
-                { text: "🎭 Storytelling", color: "#B0E57C" },
-              ].map((item, index) => (
-                <motion.div
-                  key={`duplicate-${index}`}
-                  className="flex items-center"
-                  whileHover={{
-                    scale: 1.1,
-                    transition: { duration: 0.2 },
-                  }}
-                >
-                  <motion.span
-                    className="text-xl md:text-2xl font-medium cursor-pointer px-4 py-2 rounded-full"
-                    style={{
-                      background: `linear-gradient(135deg, ${item.color}15, ${item.color}05)`,
-                      backdropFilter: "blur(8px)",
-                      border: `1px solid ${item.color}30`,
-                    }}
-                    whileHover={{
-                      color: item.color,
-                      transition: { duration: 0.2 },
-                    }}
-                  >
-                    {item.text}
-                  </motion.span>
-                </motion.div>
-              ))}
-            </motion.div>
+            </div>
           </div>
 
           <section
