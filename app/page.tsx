@@ -217,78 +217,195 @@ export default function Home() {
           {/* Additional space after "W/ A PASSION FOR" line */}
           <div className="mt-10" />
 
-          {/* ✨ Dynamic Marquee with Wave Motion ✨ */}
-          <div className="overflow-hidden mt-10 relative">
+          {/* ✨ Skills Showcase Carousel ✨ */}
+          <div className="mt-10 relative h-16 flex items-center justify-center overflow-hidden">
+            <div className="absolute inset-0 bg-gradient-to-r from-deep-grey via-transparent to-deep-grey z-10" />
             <motion.div
-              className="text-lg sm:text-xl md:text-2xl font-medium uppercase flex space-x-8 whitespace-nowrap"
-              initial="start"
-              animate="animate"
-              variants={{
-                start: { x: "0%" },
-                animate: { x: "-50%" },
+              className="flex items-center justify-center gap-8 px-4"
+              animate={{
+                x: [0, -1920],
               }}
               transition={{
                 x: {
                   repeat: Infinity,
-                  repeatType: "loop",
-                  duration: 15,
+                  duration: 30,
                   ease: "linear",
                 },
               }}
             >
               {[
-                "✨ Magic", "🎨 Art", "📢 Marketing", "💡 Creative",
-                "📺 Pop Culture", "🎮 Gaming", "🌐 Web Dev",
-                "✍ Social Media", "🎭 Storytelling",
-              ].map((text, index) => (
-                <motion.span
+                { text: "✨ Magic", color: "#FFB6C1" },
+                { text: "🎨 Art Direction", color: "#BAE1FF" },
+                { text: "📢 Marketing", color: "#B0E57C" },
+                { text: "💡 Creative Strategy", color: "#FFB6C1" },
+                { text: "📺 Content Creation", color: "#BAE1FF" },
+                { text: "🎮 Gaming", color: "#B0E57C" },
+                { text: "🌐 Web Development", color: "#FFB6C1" },
+                { text: "✍ Social Media", color: "#BAE1FF" },
+                { text: "🎭 Storytelling", color: "#B0E57C" },
+              ].map((item, index) => (
+                <motion.div
                   key={index}
-                  style={{ y: 0 }}
-                  animate={{
-                    y: [0, -8, 0, 8, 0],
+                  className="flex items-center"
+                  whileHover={{
+                    scale: 1.1,
+                    transition: { duration: 0.2 },
                   }}
-                  transition={{
-                    y: {
-                      repeat: Infinity,
-                      duration: 1.5,
-                      ease: "easeInOut",
-                      times: [0, 0.25, 0.5, 0.75, 1],
-                      delay: index * 0.1,
-                    },
-                  }}
-                  className="inline-block px-4"
                 >
-                  {text}
-                </motion.span>
+                  <motion.span
+                    className="text-xl md:text-2xl font-medium cursor-pointer px-4 py-2 rounded-full"
+                    style={{
+                      background: `linear-gradient(135deg, ${item.color}15, ${item.color}05)`,
+                      backdropFilter: "blur(8px)",
+                      border: `1px solid ${item.color}30`,
+                    }}
+                    whileHover={{
+                      color: item.color,
+                      transition: { duration: 0.2 },
+                    }}
+                  >
+                    {item.text}
+                  </motion.span>
+                </motion.div>
               ))}
               {/* Duplicate for seamless loop */}
               {[
-                "✨ Magic", "🎨 Art", "📢 Marketing", "💡 Creative",
-                "📺 Pop Culture", "🎮 Gaming", "🌐 Web Dev",
-                "✍ Social Media", "🎭 Storytelling",
-              ].map((text, index) => (
-                <motion.span
+                { text: "✨ Magic", color: "#FFB6C1" },
+                { text: "🎨 Art Direction", color: "#BAE1FF" },
+                { text: "📢 Marketing", color: "#B0E57C" },
+                { text: "💡 Creative Strategy", color: "#FFB6C1" },
+                { text: "📺 Content Creation", color: "#BAE1FF" },
+                { text: "🎮 Gaming", color: "#B0E57C" },
+                { text: "🌐 Web Development", color: "#FFB6C1" },
+                { text: "✍ Social Media", color: "#BAE1FF" },
+                { text: "🎭 Storytelling", color: "#B0E57C" },
+              ].map((item, index) => (
+                <motion.div
                   key={`duplicate-${index}`}
-                  style={{ y: 0 }}
-                  animate={{
-                    y: [0, -8, 0, 8, 0],
+                  className="flex items-center"
+                  whileHover={{
+                    scale: 1.1,
+                    transition: { duration: 0.2 },
                   }}
-                  transition={{
-                    y: {
-                      repeat: Infinity,
-                      duration: 1.5,
-                      ease: "easeInOut",
-                      times: [0, 0.25, 0.5, 0.75, 1],
-                      delay: index * 0.1,
-                    },
-                  }}
-                  className="inline-block px-4"
                 >
-                  {text}
-                </motion.span>
+                  <motion.span
+                    className="text-xl md:text-2xl font-medium cursor-pointer px-4 py-2 rounded-full"
+                    style={{
+                      background: `linear-gradient(135deg, ${item.color}15, ${item.color}05)`,
+                      backdropFilter: "blur(8px)",
+                      border: `1px solid ${item.color}30`,
+                    }}
+                    whileHover={{
+                      color: item.color,
+                      transition: { duration: 0.2 },
+                    }}
+                  >
+                    {item.text}
+                  </motion.span>
+                </motion.div>
               ))}
             </motion.div>
           </div>
+
+          <section
+            id="approach"
+            className="container mx-auto px-6 py-16"
+          >
+            <h3 className="text-xl font-medium mb-8 uppercase">Approach</h3>
+            <div className="text-xl sm:text-2xl md:text-3xl font-normal leading-relaxed max-w-4xl relative space-y-6">
+              <motion.p
+                className="font-space-grotesk"
+                initial={{ backgroundSize: "0% 100%" }}
+                whileHover={{ backgroundSize: "100% 100%" }}
+                transition={{ duration: 0.5, ease: "easeOut" }}
+                style={{
+                  backgroundImage: "linear-gradient(to right, #BAE1FF, #FFB6C1)",
+                  backgroundRepeat: "no-repeat",
+                  backgroundPosition: "0 100%",
+                }}
+              >
+                Stories are the <span className="font-bold">heartbeat</span> of connection, shaping our digital landscape.
+                It's not just about <span className="font-bold text-pastel-pink">what</span> we say, but{" "}
+                <span className="font-bold text-pastel-blue">how we say it</span>.
+              </motion.p>
+
+              <motion.p
+                className="font-jetbrains-mono"
+                initial={{ backgroundSize: "0% 100%" }}
+                whileHover={{ backgroundSize: "100% 100%" }}
+                transition={{ duration: 0.5, ease: "easeOut" }}
+                style={{
+                  backgroundImage: "linear-gradient(to right, #FFD700, #FF6347)",
+                  backgroundRepeat: "no-repeat",
+                  backgroundPosition: "0 100%",
+                }}
+              >
+                My focus? Crafting narratives that <span className="font-bold">resonate</span>, designing visuals that{" "}
+                <span className="font-bold">captivate</span>, and developing strategies that <span className="font-bold">engage</span>.
+              </motion.p>
+
+              <motion.p
+                className="font-space-grotesk"
+                initial={{ backgroundSize: "0% 100%" }}
+                whileHover={{ backgroundSize: "100% 100%" }}
+                transition={{ duration: 0.5, ease: "easeOut" }}
+                style={{
+                  backgroundImage: "linear-gradient(to right, #8A2BE2, #00CED1)",
+                  backgroundRepeat: "no-repeat",
+                  backgroundPosition: "0 100%",
+                }}
+              >
+                Because when content speaks to the <span className="italic">soul</span>,{" "}
+                <span className="italic relative inline-block">
+                  it ignites real change
+                  <HandDrawnUnderline className="text-pastel-pink bottom-0 left-0" />
+                </span>
+              </motion.p>
+            </div>
+          </section>
+
+          <section
+            id="partnerships"
+            className="container mx-auto px-6 py-16"
+          >
+            <h3 className="text-xl font-medium mb-8 uppercase">Featured Partnerships</h3>
+            <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-6 text-sm font-jetbrains-mono">
+              {[
+                "APPLE",
+                "SAMSUNG",
+                "ELECTRONIC ARTS",
+                "DISCORD",
+                "TWITCH",
+                "CYBERPUNK",
+                "POKÉMON GO",
+                "VERIFIEDWORKS",
+              ].map((partner, index) => (
+                <motion.div
+                  key={partner}
+                  className="bg-deep-grey border border-white/20 p-4 rounded-lg flex items-center justify-center text-center hover:bg-white/10 transition-colors duration-300 cursor-pointer"
+                  whileHover={{ scale: 1.05 }}
+                  whileTap={{ scale: 0.95 }}
+                >
+                  <motion.div
+                    className="relative w-full h-full"
+                    initial={false}
+                    whileHover={{ rotateY: 180 }}
+                    transition={{ duration: 0.6 }}
+                  >
+                    <motion.div className="absolute w-full h-full flex items-center justify-center backface-hidden">
+                      {partner}
+                    </motion.div>
+                    <motion.div
+                      className="absolute w-full h-full flex items-center justify-center backface-hidden"
+                      style={{ rotateY: 180 }}
+                    >
+                      <div className="w-full h-full bg-gradient-to-br from-pastel-pink via-pastel-purple to-pastel-blue opacity-70 rounded-lg" />
+                    </motion.div>
+                  </motion.div>
+                </motion.div>
+              ))}
+            </div>
+          </section>
         </section>
 
         <section className="container mx-auto px-6 py-16">
@@ -324,106 +441,6 @@ export default function Home() {
               </Link>
             </div>
             <div className="w-full h-px bg-gradient-to-r from-transparent via-white/20 to-transparent my-16" />
-          </div>
-        </section>
-
-        <section
-          id="approach"
-          className="container mx-auto px-6 py-16"
-        >
-          <h3 className="text-xl font-medium mb-8 uppercase">Approach</h3>
-          <div className="text-xl sm:text-2xl md:text-3xl font-normal leading-relaxed max-w-4xl relative space-y-6">
-            <motion.p
-              className="font-space-grotesk"
-              initial={{ backgroundSize: "0% 100%" }}
-              whileHover={{ backgroundSize: "100% 100%" }}
-              transition={{ duration: 0.5, ease: "easeOut" }}
-              style={{
-                backgroundImage: "linear-gradient(to right, #BAE1FF, #FFB6C1)",
-                backgroundRepeat: "no-repeat",
-                backgroundPosition: "0 100%",
-              }}
-            >
-              Stories are the <span className="font-bold">heartbeat</span> of connection, shaping our digital landscape.
-              It's not just about <span className="font-bold text-pastel-pink">what</span> we say, but{" "}
-              <span className="font-bold text-pastel-blue">how we say it</span>.
-            </motion.p>
-
-            <motion.p
-              className="font-jetbrains-mono"
-              initial={{ backgroundSize: "0% 100%" }}
-              whileHover={{ backgroundSize: "100% 100%" }}
-              transition={{ duration: 0.5, ease: "easeOut" }}
-              style={{
-                backgroundImage: "linear-gradient(to right, #FFD700, #FF6347)",
-                backgroundRepeat: "no-repeat",
-                backgroundPosition: "0 100%",
-              }}
-            >
-              My focus? Crafting narratives that <span className="font-bold">resonate</span>, designing visuals that{" "}
-              <span className="font-bold">captivate</span>, and developing strategies that <span className="font-bold">engage</span>.
-            </motion.p>
-
-            <motion.p
-              className="font-space-grotesk"
-              initial={{ backgroundSize: "0% 100%" }}
-              whileHover={{ backgroundSize: "100% 100%" }}
-              transition={{ duration: 0.5, ease: "easeOut" }}
-              style={{
-                backgroundImage: "linear-gradient(to right, #8A2BE2, #00CED1)",
-                backgroundRepeat: "no-repeat",
-                backgroundPosition: "0 100%",
-              }}
-            >
-              Because when content speaks to the <span className="italic">soul</span>,{" "}
-              <span className="italic relative inline-block">
-                it ignites real change
-                <HandDrawnUnderline className="text-pastel-pink bottom-0 left-0" />
-              </span>
-            </motion.p>
-          </div>
-        </section>
-
-        <section
-          id="partnerships"
-          className="container mx-auto px-6 py-16"
-        >
-          <h3 className="text-xl font-medium mb-8 uppercase">Featured Partnerships</h3>
-          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-6 text-sm font-jetbrains-mono">
-            {[
-              "APPLE",
-              "SAMSUNG",
-              "ELECTRONIC ARTS",
-              "DISCORD",
-              "TWITCH",
-              "CYBERPUNK",
-              "POKÉMON GO",
-              "VERIFIEDWORKS",
-            ].map((partner, index) => (
-              <motion.div
-                key={partner}
-                className="bg-deep-grey border border-white/20 p-4 rounded-lg flex items-center justify-center text-center hover:bg-white/10 transition-colors duration-300 cursor-pointer"
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-              >
-                <motion.div
-                  className="relative w-full h-full"
-                  initial={false}
-                  whileHover={{ rotateY: 180 }}
-                  transition={{ duration: 0.6 }}
-                >
-                  <motion.div className="absolute w-full h-full flex items-center justify-center backface-hidden">
-                    {partner}
-                  </motion.div>
-                  <motion.div
-                    className="absolute w-full h-full flex items-center justify-center backface-hidden"
-                    style={{ rotateY: 180 }}
-                  >
-                    <div className="w-full h-full bg-gradient-to-br from-pastel-pink via-pastel-purple to-pastel-blue opacity-70 rounded-lg" />
-                  </motion.div>
-                </motion.div>
-              </motion.div>
-            ))}
           </div>
         </section>
       </main>
