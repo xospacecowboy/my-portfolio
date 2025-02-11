@@ -25,25 +25,6 @@ const HandDrawnUnderline = ({ className }: { className?: string }) => (
   </svg>
 )
 
-const HandDrawnCircle = ({ className }: { className?: string }) => (
-  <svg
-    className={`absolute pointer-events-none ${className}`}
-    width="120"
-    height="120"
-    viewBox="0 0 120 120"
-    fill="none"
-    xmlns="http://www.w3.org/2000/svg"
-  >
-    <path
-      d="M60 10C71.2 10 82 13.8 90.7 20.8C99.4 27.8 105.6 37.7 108.2 48.8C110.8 59.9 109.6 71.5 104.8 81.7C100 91.9 91.9 100 81.7 104.8C71.5 109.6 59.9 110.8 48.8 108.2C37.7 105.6 27.8 99.4 20.8 90.7C13.8 82 10 71.2 10 60"
-      stroke="currentColor"
-      strokeWidth="2.5"
-      strokeLinecap="round"
-      strokeDasharray="7 14"
-    />
-  </svg>
-)
-
 export default function Home() {
   const [scrolled, setScrolled] = useState(false)
   const mousePosition = useMousePosition()
@@ -70,7 +51,7 @@ export default function Home() {
       />
 
       <header
-        className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${scrolled ? "bg-deep-grey/90 backdrop-blur-sm" : ""}`}
+        className={`fixed top-0 left-0 right-0 z-40 transition-all duration-300 ${scrolled ? "bg-deep-grey/90 backdrop-blur-sm" : ""}`}
       >
         <div className="container mx-auto px-6 py-4 flex justify-between items-center">
           <Link href="/" className="text-2xl font-bold tracking-tighter">
@@ -102,62 +83,99 @@ export default function Home() {
       </header>
 
       <main className="pt-24">
-        <section className="container mx-auto px-6 py-16 flex flex-col space-y-12">
+        <section className="container mx-auto px-6 py-16 flex flex-col">
           <motion.h1
             className="text-3xl sm:text-4xl md:text-5xl font-bold leading-tight mb-4 max-w-3xl text-left"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
           >
-            HOWDY, I’M{" "}
-            <span className="font-normal italic relative inline-block">
-              STEPHEN—A SOCIAL MEDIA & CREATIVE PRO
-              <HandDrawnUnderline className="text-pastel-blue bottom-0 left-0 w-full" />
-            </span>{" "}
-            📍BASED IN HOUSTON, FREELANCING{" "}
-            <span className="bg-pastel-green text-deep-grey px-1">ACROSS INDUSTRIES.</span>
+            HOWDY, I'M STEPHEN—A{" "}
+            <motion.span
+              className="font-normal italic relative inline-block"
+              initial={{ backgroundSize: "0 100%" }}
+              animate={{ backgroundSize: "100% 100%" }}
+              transition={{ duration: 1, delay: 0.5 }}
+              style={{
+                backgroundImage: "linear-gradient(to right, #BAE1FF, #BAE1FF)",
+                backgroundRepeat: "no-repeat",
+                backgroundPosition: "0 100%",
+              }}
+            >
+              SOCIAL MEDIA & CREATIVE PRO
+            </motion.span>{" "}
+            📍HOUSTON, FREELANCING <span className="bg-pastel-green text-deep-grey px-1">ACROSS INDUSTRIES.</span>
           </motion.h1>
+
           <motion.h2
-            className="text-lg sm:text-xl md:text-2xl font-normal max-w-2xl leading-relaxed mb-8 relative font-jetbrains-mono"
+            className="text-lg sm:text-xl md:text-2xl font-normal max-w-3xl text-left leading-relaxed mt-2 relative font-jetbrains-mono"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
           >
             FORMERLY @{" "}
             <span className="relative">
-              APPLE, VW AGENCY, & SAMSUNG US
+              APPLE 👨🏻‍💻, VERIFIEDWORKS AGENCY; MANAGED CLIENTS @SAMSUNGUS, ELECTRONIC ARTS,
               <HandDrawnUnderline className="text-pastel-green bottom-0 left-0" />
             </span>{" "}
-            . LED SOCIAL & GAMING CAMPAIGNS FOR{" "}
-            <span className="relative inline-block">
-              DISCORD, TWITCH, CYBERPUNK, & POKÉMON GO 🎮
-              <HandDrawnCircle className="text-pastel-pink -top-1/4 -left-1/4 w-24 h-24" />
+            LED SOCIAL & GAMING CAMPAIGNS FOR{" "}
+            <span className="border-b-2 border-dotted border-pastel-pink">
+              DISCORD, TWITCH, CYBERPUNK, & POKÉMON GO + MORE 🎮
             </span>
           </motion.h2>
-          <Link href="/work" className="inline-block bg-pastel-blue text-deep-grey px-6 py-3 text-lg font-medium rounded-md hover:bg-pastel-blue/90 transition-colors">
-            View My Work
-          </Link>
         </section>
 
-        <section id="approach" className="container mx-auto px-6 py-16 space-y-12">
+        <motion.div
+          className="container mx-auto px-6"
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.4 }}
+        >
+          <div className="w-full h-px bg-gradient-to-r from-transparent via-white/20 to-transparent my-8" />
+          <div className="flex justify-center">
+            <Link href="/work" className="inline-block">
+              <motion.button
+                className="bg-deep-grey text-white px-8 py-4 text-lg font-bold border border-pastel-blue hover:bg-pastel-blue hover:text-deep-grey transition-all duration-300 relative group"
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+              >
+                <span className="relative z-10">Explore My Work</span>
+                <div className="absolute inset-0 bg-gradient-to-r from-pastel-pink via-pastel-purple to-pastel-blue opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+              </motion.button>
+            </Link>
+          </div>
+          <div className="w-full h-px bg-gradient-to-r from-transparent via-white/20 to-transparent my-8" />
+        </motion.div>
+
+        <motion.section
+          id="approach"
+          className="container mx-auto px-6 py-16"
+          initial={{ opacity: 0, y: 50 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+        >
           <h3 className="text-xl font-medium mb-8 uppercase">Approach</h3>
-          <p className="text-2xl sm:text-3xl md:text-4xl font-normal leading-relaxed max-w-4xl relative font-jetbrains-mono">
-            Stories shape how we connect,{" "}
-            <span className="relative inline-block">
-              not just what we consume 🎭
-              <HandDrawnCircle className="text-pastel-purple -top-1/4 -left-1/4 w-24 h-24" />
-            </span>.  
-            The right message, told the right way, reaches people where they are and makes them feel seen.  
-            I focus on crafting{" "}
-            <span className="italic relative bg-pastel-red text-deep-grey px-1">
-              compelling narratives, immersive visuals, and strategic copy
-            </span>{" "}  
-            that resonate with communities in meaningful ways. Because when content feels personal,{" "}
-            <span className="italic relative bg-pastel-red text-deep-grey px-1">
-              it creates real impact.
-            </span>
-          </p>
-        </section>
+          <div className="text-xl sm:text-2xl md:text-3xl font-normal leading-relaxed max-w-4xl relative space-y-6">
+            <p className="font-space-grotesk">
+              Stories are the heartbeat of connection, shaping our digital landscape. It's not just about{" "}
+              <span className="font-bold text-pastel-pink">what</span> we say, but{" "}
+              <span className="font-bold text-pastel-blue">how we say it</span>.
+            </p>
+
+            <p className="font-jetbrains-mono">
+              My focus? Crafting narratives that resonate, designing visuals that captivate, and developing strategies
+              that engage.
+            </p>
+
+            <p className="font-space-grotesk">
+              Because when content speaks to the soul,{" "}
+              <span className="italic relative inline-block">
+                it ignites real change
+                <HandDrawnUnderline className="text-pastel-pink bottom-0 left-0" />
+              </span>
+            </p>
+          </div>
+        </motion.section>
 
         <motion.section
           id="partnerships"
@@ -205,7 +223,6 @@ export default function Home() {
           </div>
         </motion.section>
       </main>
-
       <Footer />
     </div>
   )
