@@ -84,65 +84,66 @@ export default function Home() {
 
       <main className="pt-32">
         <section className="container mx-auto px-6 py-16 flex flex-col">
-        <motion.h1
-  className="text-4xl sm:text-5xl md:text-6xl font-bold leading-tight mb-6 max-w-5xl text-left"
->
-  <span className="inline-block">𐚁 HOWDY, I'M STEPHEN—A</span>{" "}
-  <motion.span
-    className="font-normal italic relative inline-block px-1"
-    whileHover={{ textShadow: "0px 0px 5px rgba(186, 225, 255, 0.8)" }}
-    transition={{ duration: 0.3 }}
-  >
-    SOCIAL MEDIA & CREATIVE PRO
-  </motion.span>{" "}
-  <span className="inline-block px-1">BASED IN HTX 📍</span>
-</motion.h1>
+          <motion.h1
+            className="text-4xl sm:text-5xl md:text-6xl font-bold leading-tight mb-6 max-w-5xl text-left"
+          >
+            <span className="inline-block">𐚁 HOWDY, I'M STEPHEN—A</span>{" "}
+            <motion.span
+              className="font-normal italic relative inline-block px-1"
+              whileHover={{ textShadow: "0px 0px 5px rgba(186, 225, 255, 0.8)" }}
+              transition={{ duration: 0.3 }}
+            >
+              SOCIAL MEDIA & CREATIVE PRO
+            </motion.span>{" "}
+            <span className="inline-block px-1">BASED IN HTX 📍</span>
+          </motion.h1>
 
-<motion.h2
-  className="text-4xl font-bold leading-tight max-w-5xl text-left"
->
-  <motion.span
-    className="relative px-3 py-1 bg-gradient-to-r from-pastel-green via-pastel-blue to-pastel-purple rounded-md cursor-pointer"
-    whileHover={{ scale: 1.05 }}
-    transition={{ duration: 0.3 }}
-  >
-    FREELANCING ACROSS INDUSTRIES
-  </motion.span>{" "}
-  <motion.span className="text-xl">🐎</motion.span>
-</motion.h2>
+          <motion.h2
+            className="text-4xl font-bold leading-tight max-w-5xl text-left"
+          >
+            <motion.span
+              className="relative px-3 py-1 bg-gradient-to-r from-pastel-green via-pastel-blue to-pastel-purple rounded-md cursor-pointer"
+              whileHover={{ scale: 1.05 }}
+              transition={{ duration: 0.3 }}
+            >
+              FREELANCING ACROSS INDUSTRIES
+            </motion.span>{" "}
+            <motion.span className="text-xl">🐎</motion.span>
+          </motion.h2>
 
-<motion.p className="text-lg sm:text-xl md:text-2xl font-light italic max-w-5xl text-left mt-3 relative">
-  W/ A PASSION FOR{" "}
-  <motion.span
-    className="font-bold relative inline-block cursor-pointer"
-    whileHover={{ backgroundSize: "100% 100%" }}
-    transition={{ duration: 0.5 }}
-    style={{
-      backgroundImage: "linear-gradient(to right, #BAE1FF, #BAE1FF)",
-      backgroundRepeat: "no-repeat",
-      backgroundPosition: "0 100%",
-      backgroundSize: "0% 100%",
-    }}
-  >
-    STORYTELLING
-  </motion.span>{" "}
-  &{" "}
-  <motion.span
-    className="relative inline-block font-bold cursor-pointer"
-    whileHover={{ letterSpacing: "2px" }}
-    transition={{ duration: 0.3 }}
-  >
-    DESIGN
-  </motion.span>
-</motion.p>
+          <motion.p className="text-lg sm:text-xl md:text-2xl font-light italic max-w-5xl text-left mt-3 relative">
+            W/ A PASSION FOR{" "}
+            <motion.span
+              className="font-bold relative inline-block cursor-pointer"
+              whileHover={{ backgroundSize: "100% 100%" }}
+              transition={{ duration: 0.5 }}
+              style={{
+                backgroundImage: "linear-gradient(to right, #BAE1FF, #BAE1FF)",
+                backgroundRepeat: "no-repeat",
+                backgroundPosition: "0 100%",
+                backgroundSize: "0% 100%",
+              }}
+            >
+              STORYTELLING
+            </motion.span>{" "}
+            &{" "}
+            <motion.span
+              className="relative inline-block font-bold cursor-pointer"
+              whileHover={{ letterSpacing: "2px" }}
+              transition={{ duration: 0.3 }}
+            >
+              DESIGN
+            </motion.span>
+          </motion.p>
 
-{/* Purple Underline - Only Under "DESIGN" */}
-<motion.div
-  className="w-24 h-1 bg-pastel-purple mt-1"
-  initial={{ scaleX: 0 }}
-  animate={{ scaleX: 1 }}
-  transition={{ duration: 0.8, delay: 2.2 }}
-/>
+          {/* Purple Underline - Only Under "DESIGN" */}
+          <motion.div
+            className="w-24 h-1 bg-pastel-purple mt-1"
+            initial={{ scaleX: 0 }}
+            animate={{ scaleX: 1 }}
+            transition={{ duration: 0.8, delay: 2.2 }}
+          />
+        </section>
 
         <section className="container mx-auto px-6 py-16">
           <motion.h2
