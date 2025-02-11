@@ -19,7 +19,7 @@ export default function Footer() {
               ABOUT
             </Link>
             <a href="mailto:beardslee.stephen@icloud.com" className="hover:text-pastel-blue transition-colors">
-              Contact
+              MAIL
             </a>
           </nav>
           <div className="flex space-x-4">
