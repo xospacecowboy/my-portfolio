@@ -100,7 +100,6 @@ export default function Home() {
                 backgroundImage: "linear-gradient(to right, #BAE1FF, #BAE1FF)",
                 backgroundRepeat: "repeat-x",
                 backgroundPosition: "0 100%",
-                padding: "2px 5px",
               }}
             >
               SOCIAL MEDIA & CREATIVE PRO
