@@ -133,16 +133,11 @@ export default function Home() {
             </motion.span>
           </motion.h2>
 
-          <motion.p
-            className="text-lg sm:text-xl md:text-2xl font-light italic max-w-3xl text-left mt-3 relative"
-            initial={{ opacity: 0, y: 10 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 1.8 }}
-          >
+          <motion.p className="text-lg sm:text-xl md:text-2xl font-light italic max-w-3xl text-left mt-3 relative">
             W/ A PASSION FOR{" "}
             <motion.span
               className="font-bold relative inline-block"
-              initial={{ backgroundSize: "0 100%" }}
+              initial={{ backgroundSize: "0% 100%" }}
               animate={{ backgroundSize: "100% 100%" }}
               transition={{ duration: 1, delay: 2 }}
               style={{
@@ -156,14 +151,16 @@ export default function Home() {
             &{" "}
             <motion.span className="relative inline-block font-bold">
               DESIGN
-              <motion.div
-                className="absolute bottom-0 left-0 w-full h-1 bg-pastel-purple"
-                initial={{ scaleX: 0 }}
-                animate={{ scaleX: 1 }}
-                transition={{ duration: 0.8, delay: 2.2 }}
-              />
             </motion.span>
           </motion.p>
+
+          {/* Underline Effect - Moved Outside the <p> Tag */}
+          <motion.div
+            className="w-full h-1 bg-pastel-purple mt-1"
+            initial={{ scaleX: 0 }}
+            animate={{ scaleX: 1 }}
+            transition={{ duration: 0.8, delay: 2.2 }}
+          />
         </section>
 
         <section className="container mx-auto px-6 py-16">
