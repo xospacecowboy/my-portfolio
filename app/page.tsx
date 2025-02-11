@@ -122,19 +122,19 @@ export default function Home() {
       </span>
     </motion.h1>
 
-    {/* ANIMATED DOT DIVIDER TO FILL SPACING */}
+    {/* FULL-WIDTH DOTTED LINE BREAK */}
     <motion.div
-      className="flex justify-center space-x-2 mt-4"
+      className="flex justify-center space-x-4 mt-6 mb-4"
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
-      transition={{ repeat: Infinity, duration: 1.5, ease: "easeInOut" }}
+      transition={{ repeat: Infinity, duration: 2, ease: "easeInOut" }}
     >
-      {[...Array(5)].map((_, i) => (
+      {[...Array(50)].map((_, i) => (
         <motion.span
           key={i}
           className="w-2 h-2 bg-white rounded-full"
-          animate={{ y: [0, -5, 0] }}
-          transition={{ duration: 1, delay: i * 0.2, repeat: Infinity }}
+          animate={{ y: [0, -2, 0] }}
+          transition={{ duration: 1, delay: i * 0.05, repeat: Infinity }}
         />
       ))}
     </motion.div>
@@ -164,22 +164,42 @@ export default function Home() {
       </motion.span>
     </motion.p>
 
-    {/* ✨ MARQUEE TEXT WITH WAVE EFFECT ✨ */}
-    <div className="overflow-hidden mt-10 relative">
+    {/* ✨ TEXT FADE-IN SEQUENCE (ALTERNATIVE TO MARQUEE) ✨ */}
+    <div className="mt-10 text-lg sm:text-xl md:text-2xl font-medium uppercase text-center relative">
       <motion.div
-        className="text-sm sm:text-lg md:text-xl font-medium uppercase flex space-x-6"
-        animate={{ x: ["100%", "-100%"], y: [0, -3, 0, 3, 0] }} // Creates subtle wave effect
-        transition={{ repeat: Infinity, duration: 15, ease: "easeInOut" }}
+        className="absolute inset-0 flex justify-center items-center"
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ repeat: Infinity, duration: 6, ease: "easeInOut" }}
       >
-        <span>✨ Magic</span>
-        <span>🎨 Art</span>
-        <span>📢 Marketing</span>
-        <span>💡 Creative</span>
-        <span>📺 Pop Culture</span>
-        <span>🎮 Gaming</span>
-        <span>🌐 Web Dev</span>
-        <span>✍ Social Media</span>
-        <span>🎭 Storytelling</span>
+        <motion.span
+          className="absolute"
+          animate={{ opacity: [1, 0, 0, 0] }}
+          transition={{ repeat: Infinity, duration: 6, ease: "easeInOut" }}
+        >
+          ✨ Magic
+        </motion.span>
+        <motion.span
+          className="absolute"
+          animate={{ opacity: [0, 1, 0, 0] }}
+          transition={{ repeat: Infinity, duration: 6, ease: "easeInOut", delay: 1.5 }}
+        >
+          🎨 Art
+        </motion.span>
+        <motion.span
+          className="absolute"
+          animate={{ opacity: [0, 0, 1, 0] }}
+          transition={{ repeat: Infinity, duration: 6, ease: "easeInOut", delay: 3 }}
+        >
+          📢 Marketing
+        </motion.span>
+        <motion.span
+          className="absolute"
+          animate={{ opacity: [0, 0, 0, 1] }}
+          transition={{ repeat: Infinity, duration: 6, ease: "easeInOut", delay: 4.5 }}
+        >
+          💡 Creative
+        </motion.span>
       </motion.div>
           </div>
         </section>
