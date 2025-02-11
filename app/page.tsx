@@ -104,7 +104,7 @@ export default function Home() {
             >
               SOCIAL MEDIA & CREATIVE PRO
             </motion.span>{" "}
-            BASED IN HOUSTON 📍 FREELANCING <span className="bg-pastel-green text-deep-grey px-1">ACROSS INDUSTRIES.</span>
+            HTX 📍 FREELANCING <span className="bg-pastel-green text-deep-grey px-1">ACROSS INDUSTRIES.</span>
           </motion.h1>
 
           <motion.h2
