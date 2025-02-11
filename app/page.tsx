@@ -44,7 +44,7 @@ export default function Home() {
   }, [mousePosition, cursorControls])
 
   return (
-    <div className="bg-deep-grey text-white min-h-screen font-space-grotesk overflow-x-hidden">
+    <div className="bg-deep-grey text-white min-h-screen font-pragmatica-extended overflow-x-hidden">
       <motion.div
         className="fixed w-8 h-8 rounded-full bg-pastel-blue mix-blend-difference pointer-events-none z-50"
         animate={cursorControls}
