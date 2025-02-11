@@ -88,7 +88,7 @@ export default function Home() {
 
         {/* Formerly Section */}
         <motion.h2
-          className="text-lg font-light font-jetbrains-mono max-w-3xl leading-relaxed mt-2 relative text-left"
+          className="text-xlg font-light font-jetbrains-mono max-w-3xl leading-relaxed mt-2 relative text-left"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.2 }}
@@ -96,7 +96,7 @@ export default function Home() {
           FORMERLY @{" "}
           <span className="relative">
             APPLE 👨🏻‍💻, VERIFIEDWORKS AGENCY; MANAGED CLIENTS @SAMSUNGUS, ELECTRONIC ARTS,
-            <HandDrawnUnderline className="text-pastel-pink bottom-1 left-0" />
+            <HandDrawnUnderline className="text-pastel-pink bottom-0 left-0" />
           </span>{" "}
           LED SOCIAL & GAMING CAMPAIGNS FOR{" "}
           <span className="border-b-4 border-dotted border-pastel-purple">
