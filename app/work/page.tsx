@@ -70,34 +70,71 @@ export default function Work() {
         animate={cursorControls}
       />
 
-      <header className="container mx-auto px-6 py-8">
-        <Link href="/" className="text-2xl font-bold tracking-tighter">
-          STEPHEN
-        </Link>
+      <header
+        className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${scrolled ? "bg-deep-grey/90 backdrop-blur-sm" : ""}`}
+      >
+        <div className="container mx-auto px-6 py-4 flex justify-between items-center">
+          <Link href="/" className="text-2xl font-bold tracking-tighter">
+            @OXYTOCINS
+          </Link>
+          <nav className="flex items-center space-x-8">
+            <Link href="/work" className="text-sm hover:opacity-70 transition-opacity font-jetbrains-mono">
+              PORTFOLIO
+            </Link>
+            <Link href="/meet-stephen" className="text-sm hover:opacity-70 transition-opacity font-jetbrains-mono">
+              ABOUT
+            </Link>
+            <motion.a
+              href="mailto:beardslee.stephen@icloud.com"
+              className="bg-white text-deep-grey px-4 py-2 text-sm font-medium hover:bg-gray-200 transition-colors relative overflow-hidden font-jetbrains-mono"
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+            >
+              MAIL
+              <motion.div
+                className="absolute inset-0 bg-gradient-to-r from-pastel-pink via-pastel-purple to-pastel-blue opacity-0"
+                initial={{ x: "-100%" }}
+                whileHover={{ x: "100%", opacity: 0.5 }}
+                transition={{ duration: 0.5 }}
+              />
+            </motion.a>
+          </nav>
+        </div>
       </header>
 
-      <main className="container mx-auto px-6 py-12">
-        <h1 className="text-5xl font-bold mb-12">Work</h1>
+      <main className="pt-24">
+        <section className="container mx-auto px-6 py-16 flex flex-col space-y-12">
+          <motion.h1
+            className="text-3xl sm:text-4xl md:text-5xl font-bold leading-tight mb-4 max-w-3xl text-left"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+          >
+            WORK
+          </motion.h1>
+        </section>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {portfolioItems.map((item, index) => (
-            <motion.div
-              key={index}
-              whileHover={{ scale: 1.05 }}
-              className="bg-dark-grey p-6 rounded-2xl shadow-lg transition-all"
-            >
-              <h2 className={`text-3xl font-bold mb-4 ${item.color}`}>{item.title}</h2>
-              <p className="text-lg mb-4 font-jetbrains-mono">{item.description}</p>
-              <Link
-                href={item.link}
-                target="_blank"
-                className="inline-flex items-center text-lg font-medium text-white hover:underline"
+        <section className="container mx-auto px-6 py-16">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {portfolioItems.map((item, index) => (
+              <motion.div
+                key={index}
+                whileHover={{ scale: 1.05 }}
+                className="bg-dark-grey p-6 rounded-2xl shadow-lg transition-all"
               >
-                View Work <ArrowUpRight className="ml-2 w-5 h-5" />
-              </Link>
-            </motion.div>
-          ))}
-        </div>
+                <h2 className={`text-3xl font-bold mb-4 ${item.color}`}>{item.title}</h2>
+                <p className="text-lg mb-4 font-jetbrains-mono">{item.description}</p>
+                <Link
+                  href={item.link}
+                  target="_blank"
+                  className="inline-flex items-center text-lg font-medium text-white hover:underline"
+                >
+                  View Work <ArrowUpRight className="ml-2 w-5 h-5" />
+                </Link>
+              </motion.div>
+            ))}
+          </div>
+        </section>
       </main>
 
       <Footer />
