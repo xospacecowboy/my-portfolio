@@ -98,7 +98,7 @@ export default function Home() {
             HOWDY, I’M{" "}
             <span className="font-normal italic relative inline-block">
               STEPHEN—A SOCIAL MEDIA & CREATIVE PRO
-              <HandDrawnUnderline className="text-pastel-blue bottom-0 left-0 w-full" />
+              <HandDrawnUnderline className="text-pastel-blue bottom-0 left-0 w-[85%]" />
             </span>{" "}
             📍HOUSTON, FREELANCING{" "}
             <span className="bg-pastel-green text-deep-grey px-1">ACROSS INDUSTRIES.</span>
