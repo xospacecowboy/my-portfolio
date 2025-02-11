@@ -8,15 +8,15 @@ export default function Footer() {
         <div className="flex flex-col md:flex-row justify-between items-center">
           <div className="mb-6 md:mb-0">
             <Link href="/" className="text-2xl font-bold tracking-tighter">
-              STEPHEN
+              HOME
             </Link>
           </div>
           <nav className="flex space-x-6 mb-6 md:mb-0">
             <Link href="/work" className="hover:text-pastel-blue transition-colors">
-              Work
+              PORTFOLIO
             </Link>
             <Link href="/meet-stephen" className="hover:text-pastel-blue transition-colors">
-              Meet Stephen
+              ABOUT
             </Link>
             <a href="mailto:beardslee.stephen@icloud.com" className="hover:text-pastel-blue transition-colors">
               Contact
@@ -24,7 +24,7 @@ export default function Footer() {
           </nav>
           <div className="flex space-x-4">
             <a
-              href="https://www.linkedin.com/in/stephenbeardslee/"
+              href="https://www.linkedin.com/in/stephen-beardslee/"
               target="_blank"
               rel="noopener noreferrer"
               className="hover:text-pastel-blue transition-colors"
@@ -32,7 +32,7 @@ export default function Footer() {
               <Linkedin className="w-6 h-6" />
             </a>
             <a
-              href="https://twitter.com/yourtwitterhandle"
+              href="https://twitter.com/oxytocins"
               target="_blank"
               rel="noopener noreferrer"
               className="hover:text-pastel-blue transition-colors"
@@ -40,7 +40,7 @@ export default function Footer() {
               <Twitter className="w-6 h-6" />
             </a>
             <a
-              href="https://www.instagram.com/yourinstagramhandle/"
+              href="https://www.instagram.com/oxytocins/"
               target="_blank"
               rel="noopener noreferrer"
               className="hover:text-pastel-blue transition-colors"
