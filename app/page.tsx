@@ -52,11 +52,38 @@ export default function Home() {
         animate={cursorControls}
       />
 
-      <header className="container mx-auto px-6 py-8">
-        <Link href="/" className="text-2xl font-bold tracking-tighter">
-          @OXYTOCINS
-        </Link>
+<header
+        className={`fixed top-0 left-0 right-0 z-40 transition-all duration-300 ${scrolled ? "bg-deep-grey/90 backdrop-blur-sm" : ""}`}
+      >
+        <div className="container mx-auto px-6 py-4 flex justify-between items-center">
+          <Link href="/" className="text-2xl font-bold tracking-tighter">
+            @OXYTOCINS
+          </Link>
+          <nav className="flex items-center space-x-8">
+            <Link href="/work" className="text-sm hover:opacity-70 transition-opacity font-jetbrains-mono">
+              PORTFOLIO
+            </Link>
+            <Link href="/meet-stephen" className="text-sm hover:opacity-70 transition-opacity font-jetbrains-mono">
+              ABOUT
+            </Link>
+            <motion.a
+              href="mailto:beardslee.stephen@icloud.com"
+              className="bg-white text-deep-grey px-4 py-2 text-sm font-medium hover:bg-gray-200 transition-colors relative overflow-hidden font-jetbrains-mono"
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+            >
+              MAIL
+              <motion.div
+                className="absolute inset-0 bg-gradient-to-r from-pastel-pink via-pastel-purple to-pastel-blue opacity-0"
+                initial={{ x: "-100%" }}
+                whileHover={{ x: "100%", opacity: 0.5 }}
+                transition={{ duration: 0.5 }}
+              />
+            </motion.a>
+          </nav>
+        </div>
       </header>
+
 
       <main className="container mx-auto px-6 py-12">
         {/* Title Section */}
