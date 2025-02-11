@@ -87,39 +87,38 @@ export default function Home() {
     <motion.h1
       className="text-4xl sm:text-5xl md:text-6xl font-bold leading-tight mb-6 max-w-5xl text-left relative"
     >
-      {/* Gradient Animation Behind HOWDY */}
+      {/* New HOWDY Effect (Matches DESIGN) */}
       <motion.span
-        className="relative inline-block px-2"
-        initial={{ backgroundSize: "0% 100%" }}
-        animate={{ backgroundSize: "100% 100%" }}
-        transition={{ duration: 30, ease: "easeInOut", repeat: Infinity }}
-        style={{
-          backgroundImage: "linear-gradient(to right, #FFB6C1, #BAE1FF, #B0E57C)",
-          backgroundRepeat: "no-repeat",
-          backgroundPosition: "0 100%",
-        }}
+        className="relative inline-block px-2 font-bold"
+        whileHover={{ letterSpacing: "2px" }}
+        transition={{ duration: 0.3 }}
       >
         𐚁 HOWDY,
       </motion.span>{" "}
       I'M STEPHEN—A{" "}
-      {/* Hand-drawn underline for SOCIAL MEDIA & CREATIVE PRO */}
-      <motion.span className="font-normal italic relative inline-block">
-        SOCIAL MEDIA & CREATIVE PRO
-        <span className="absolute left-0 bottom-0 w-full h-2">
-          <svg width="100%" height="10" viewBox="0 0 100 10" fill="none">
-            <path
-              d="M0 5C10 2 20 7 30 5C40 3 50 7 60 5C70 2 80 7 90 5C95 4 100 5 100 5"
-              stroke="#F4E285"
-              strokeWidth="2.5"
-              strokeLinecap="round"
-            />
-          </svg>
-        </span>
-      </motion.span>{" "}
-      <span className="inline-block px-1">BASED IN HTX 📍</span>{" "}
-      {/* Merged FREELANCING across INDUSTRIES onto the same line */}
+      
+      {/* Gradient & Animation for SOCIAL MEDIA & CREATIVE PRO */}
       <motion.span
-        className="relative px-3 py-1 bg-gradient-to-r from-[#B0E57C] via-[#BAE1FF] to-[#FFB6C1] text-deep-grey rounded-md"
+        className="font-normal italic relative inline-block px-2"
+        initial={{ backgroundSize: "0% 100%" }}
+        animate={{ backgroundSize: "100% 100%" }}
+        transition={{ duration: 3, repeat: Infinity, repeatType: "reverse" }}
+        style={{
+          backgroundImage: "linear-gradient(to right, #B0E57C, #BAE1FF, #FFB6C1)",
+          backgroundRepeat: "no-repeat",
+          backgroundPosition: "0 100%",
+        }}
+      >
+        SOCIAL MEDIA & CREATIVE PRO
+      </motion.span>{" "}
+      
+      <span className="inline-block px-1">BASED IN HTX 📍</span>{" "}
+      
+      {/* Subtle Floating Effect for FREELANCING ACROSS INDUSTRIES */}
+      <motion.span
+        className="relative px-3 py-1 bg-white text-deep-grey rounded-md shadow-lg"
+        animate={{ y: [0, -2, 0] }}
+        transition={{ repeat: Infinity, duration: 3, ease: "easeInOut" }}
       >
         FREELANCING ACROSS INDUSTRIES 🐎
       </motion.span>
