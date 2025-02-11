@@ -123,7 +123,7 @@ export default function Work() {
         </div>
       </header>
 
-      <main className="container mx-auto px-6 pt-32 pb-12">
+      <main className="container mx-auto px-6 pt-52 pb-12">
         {/* Title Section with New Animations */}
         <motion.h1
           className="text-5xl font-bold leading-tight mb-16 relative text-left max-w-4xl mt-12"
@@ -161,7 +161,7 @@ export default function Work() {
 
         {/* Formerly Section with Extra Space */}
         <motion.h2
-          className="text-3xl sm:text-3xl font-medium font-jetbrains-mono max-w-3xl leading-snug mt-16 relative text-left"
+          className="text-3xl sm:text-3xl font-medium font-jetbrains-mono max-w-3xl leading-snug mt-28 relative text-left"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.2 }}
@@ -183,7 +183,7 @@ export default function Work() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.4 }}
         >
-          <div className="w-full h-px bg-gradient-to-r from-transparent via-white/20 to-transparent my-16" />
+          <div className="w-full h-px bg-gradient-to-r from-transparent via-white/20 to-transparent my-16 mb-16" />
           <div className="flex justify-center">
             <Link href="/work" className="inline-block">
               <motion.button
