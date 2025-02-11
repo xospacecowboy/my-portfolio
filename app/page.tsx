@@ -159,6 +159,59 @@ export default function Home() {
             >
               DESIGN
             </motion.span>
+            , I{" "}
+            <motion.span
+              className="font-bold relative inline-block cursor-pointer"
+              whileHover={{ scale: 1.05 }}
+              transition={{ duration: 0.3 }}
+            >
+              CRAFT
+            </motion.span>{" "}
+            DIGITAL{" "}
+            <motion.span
+              className="relative inline-block font-bold cursor-pointer"
+              whileHover={{ backgroundSize: "100% 100%" }}
+              transition={{ duration: 0.5 }}
+              style={{
+                backgroundImage: "linear-gradient(to right, #BAE1FF, #BAE1FF)",
+                backgroundRepeat: "no-repeat",
+                backgroundPosition: "0 100%",
+                backgroundSize: "0% 100%",
+              }}
+            >
+              EXPERIENCES
+            </motion.span>{" "}
+            THAT{" "}
+            <motion.span
+              className="relative inline-block font-bold cursor-pointer"
+              whileHover={{ letterSpacing: "2px" }}
+              transition={{ duration: 0.3 }}
+            >
+              CONNECT
+            </motion.span>
+            ,{" "}
+            <motion.span
+              className="font-bold relative inline-block cursor-pointer"
+              whileHover={{ scale: 1.05 }}
+              transition={{ duration: 0.3 }}
+            >
+              INSPIRE
+            </motion.span>{" "}
+            &{" "}
+            <motion.span
+              className="relative inline-block font-bold cursor-pointer"
+              whileHover={{ backgroundSize: "100% 100%" }}
+              transition={{ duration: 0.5 }}
+              style={{
+                backgroundImage: "linear-gradient(to right, #BAE1FF, #BAE1FF)",
+                backgroundRepeat: "no-repeat",
+                backgroundPosition: "0 100%",
+                backgroundSize: "0% 100%",
+              }}
+            >
+              ENGAGE
+            </motion.span>
+            .
           </motion.p>
 
           {/* Additional space after "W/ A PASSION FOR" line */}
