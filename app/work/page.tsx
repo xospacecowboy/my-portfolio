@@ -91,9 +91,7 @@ export default function Work() {
         animate={cursorControls}
       />
 
-      <header
-        className={`fixed top-0 left-0 right-0 z-40 transition-all duration-300 ${scrolled ? "bg-deep-grey/90 backdrop-blur-sm" : ""}`}
-      >
+     <header className="fixed top-0 left-0 right-0 z-40 transition-all duration-300 mb-52">
         <div className="container mx-auto px-6 py-4 flex justify-between items-center">
           <Link href="/" className="text-2xl font-bold tracking-tighter">
             @OXYTOCINS
@@ -123,7 +121,7 @@ export default function Work() {
         </div>
       </header>
 
-      <main className="container mx-auto px-6 pt-[20rem] pb-12">
+      <main className="container mx-auto px-6 pt-52 pb-12" style={{ paddingTop: "20rem !important" }}>
         {/* Title Section with New Animations */}
         <motion.h1
           className="text-5xl font-bold leading-tight mb-20 relative text-left max-w-4xl mt-16"
