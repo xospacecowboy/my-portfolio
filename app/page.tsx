@@ -88,7 +88,7 @@ export default function Home() {
       </header>
 
       <main className="pt-24">
-        <section className="container mx-auto px-6 py-24 min-h-screen flex flex-col justify-center">
+        <section className="container mx-auto px-6 py-16 flex flex-col space-y-12">
           <motion.h1
             className="text-3xl sm:text-4xl md:text-5xl font-bold leading-tight mb-8 max-w-3xl text-left"
             initial={{ opacity: 0, y: 20 }}
@@ -121,7 +121,7 @@ export default function Home() {
           </motion.h2>
         </section>
 
-        <section id="methodology" className="container mx-auto px-6 py-24">
+        <section id="methodology" className="container mx-auto px-6 py-16 space-y-12">
           <h3 className="text-xl font-medium mb-8 uppercase">Methodology</h3>
           <p className="text-2xl sm:text-3xl md:text-4xl font-normal leading-relaxed max-w-4xl relative font-jetbrains-mono">
             Good stories are the key to{" "}
@@ -138,7 +138,7 @@ export default function Home() {
           </p>
         </section>
 
-        <section id="partnerships" className="container mx-auto px-6 py-24">
+        <section id="partnerships" className="container mx-auto px-6 py-16 space-y-12">
           <h3 className="text-xl font-medium mb-12 uppercase">Significant Partnerships 🤝</h3>
           <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-8 text-lg">
             {[
