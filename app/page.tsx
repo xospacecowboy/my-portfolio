@@ -87,6 +87,7 @@ export default function Home() {
     <motion.h1
       className="text-4xl sm:text-5xl md:text-6xl font-bold leading-tight mb-6 max-w-5xl text-left relative"
     >
+      {/* HOWDY Effect - Matches DESIGN */}
       <motion.span
         className="relative inline-block px-2 font-bold"
         whileHover={{ letterSpacing: "2px" }}
@@ -96,7 +97,7 @@ export default function Home() {
       </motion.span>{" "}
       I'M STEPHEN—A{" "}
       
-      {/* Gradient for SOCIAL MEDIA & CREATIVE PRO */}
+      {/* Gradient for SOCIAL MEDIA & CREATIVE PRO - Plays Once */}
       <motion.span
         className="font-normal italic relative inline-block px-2"
         initial={{ backgroundSize: "0% 100%" }}
@@ -113,28 +114,32 @@ export default function Home() {
       
       <span className="inline-block px-1">BASED IN HTX 📍</span>{" "}
       
-      {/* UNDERLINE FOR FREELANCING ACROSS INDUSTRIES */}
-      <span className="relative font-normal italic">
+      {/* HAND-DRAWN UNDERLINE FOR "FREELANCING ACROSS INDUSTRIES" */}
+      <span className="relative">
         FREELANCING{" "}
-        <motion.span
-          className="relative inline-block font-bold"
-          initial={{ backgroundSize: "0% 100%" }}
-          whileHover={{ backgroundSize: "100% 100%" }}
-          transition={{ duration: 0.5 }}
-          style={{
-            backgroundImage: "linear-gradient(to right, #BAE1FF, #FFB6C1)",
-            backgroundRepeat: "no-repeat",
-            backgroundPosition: "0 100%",
-          }}
-        >
-          ACROSS INDUSTRIES
-        </motion.span>{" "}
-        🐎
+        <span className="font-italic">ACROSS INDUSTRIES</span> 🐎
+        <HandDrawnUnderline className="text-pastel-green bottom-0 left-0" />
       </span>
     </motion.h1>
 
-    {/* Adjusted Spacing to Align Properly */}
-    <motion.p className="text-2xl sm:text-3xl md:text-4xl font-light italic max-w-5xl text-left mt-2 relative">
+    {/* ANIMATED DOT DIVIDER TO FILL SPACING */}
+    <motion.div
+      className="flex justify-center space-x-2 mt-4"
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      transition={{ repeat: Infinity, duration: 1.5, ease: "easeInOut" }}
+    >
+      {[...Array(5)].map((_, i) => (
+        <motion.span
+          key={i}
+          className="w-2 h-2 bg-white rounded-full"
+          animate={{ y: [0, -5, 0] }}
+          transition={{ duration: 1, delay: i * 0.2, repeat: Infinity }}
+        />
+      ))}
+    </motion.div>
+
+    <motion.p className="text-2xl sm:text-3xl md:text-4xl font-light italic max-w-5xl text-left mt-4 relative">
       W/ A PASSION FOR{" "}
       <motion.span
         className="font-bold relative inline-block cursor-pointer"
@@ -159,12 +164,12 @@ export default function Home() {
       </motion.span>
     </motion.p>
 
-    {/* New Wavy Marquee Effect */}
-    <div className="overflow-hidden mt-8 relative">
+    {/* ✨ MARQUEE TEXT WITH WAVE EFFECT ✨ */}
+    <div className="overflow-hidden mt-10 relative">
       <motion.div
-        className="text-sm sm:text-base md:text-lg font-medium uppercase flex space-x-6"
-        animate={{ x: ["100%", "-100%"], y: [0, -3, 3, -3, 0] }}
-        transition={{ repeat: Infinity, duration: 12, ease: "linear" }}
+        className="text-sm sm:text-lg md:text-xl font-medium uppercase flex space-x-6"
+        animate={{ x: ["100%", "-100%"], y: [0, -3, 0, 3, 0] }} // Creates subtle wave effect
+        transition={{ repeat: Infinity, duration: 15, ease: "easeInOut" }}
       >
         <span>✨ Magic</span>
         <span>🎨 Art</span>
