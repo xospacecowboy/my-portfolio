@@ -133,7 +133,7 @@ export default function Home() {
             </motion.span>
           </motion.h2>
 
-          <motion.p className="text-lg sm:text-xl md:text-2xl font-light italic max-w-3xl text-left mt-3 relative">
+          <motion.p className="text-2xl sm:text-xl md:text-2xl font-light italic max-w-3xl text-left mt-3 relative">
             W/ A PASSION FOR{" "}
             <motion.span
               className="font-bold relative inline-block"
