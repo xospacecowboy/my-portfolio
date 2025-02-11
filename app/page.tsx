@@ -148,34 +148,64 @@ export default function Home() {
         </motion.div>
 
         <motion.section
-          id="approach"
-          className="container mx-auto px-6 py-16"
-          initial={{ opacity: 0, y: 50 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
-        >
-          <h3 className="text-xl font-medium mb-8 uppercase">Approach</h3>
-          <div className="text-xl sm:text-2xl md:text-3xl font-normal leading-relaxed max-w-4xl relative space-y-6">
-            <p className="font-space-grotesk">
-              Stories are the heartbeat of connection, shaping our digital landscape. It's not just about{" "}
-              <span className="font-bold text-pastel-pink">what</span> we say, but{" "}
-              <span className="font-bold text-pastel-blue">how we say it</span>.
-            </p>
+  id="approach"
+  className="container mx-auto px-6 py-16"
+  initial={{ opacity: 0, y: 50 }}
+  animate={{ opacity: 1, y: 0 }}
+  transition={{ duration: 0.8 }}
+>
+  <h3 className="text-xl font-medium mb-8 uppercase">Approach</h3>
+  <div className="text-xl sm:text-2xl md:text-3xl font-normal leading-relaxed max-w-4xl relative space-y-6">
+    <motion.p
+      className="font-space-grotesk"
+      initial={{ backgroundSize: "0% 100%" }}
+      whileHover={{ backgroundSize: "100% 100%" }}
+      transition={{ duration: 0.5, ease: "easeOut" }}
+      style={{
+        backgroundImage: "linear-gradient(to right, #BAE1FF, #FFB6C1)",
+        backgroundRepeat: "no-repeat",
+        backgroundPosition: "0 100%",
+      }}
+    >
+      Stories are the <span className="font-bold">heartbeat</span> of connection, shaping our digital landscape.
+      It's not just about <span className="font-bold text-pastel-pink">what</span> we say, but{" "}
+      <span className="font-bold text-pastel-blue">how we say it</span>.
+    </motion.p>
 
-            <p className="font-jetbrains-mono">
-              My focus? Crafting narratives that resonate, designing visuals that captivate, and developing strategies
-              that engage.
-            </p>
+    <motion.p
+      className="font-jetbrains-mono"
+      initial={{ backgroundSize: "0% 100%" }}
+      whileHover={{ backgroundSize: "100% 100%" }}
+      transition={{ duration: 0.5, ease: "easeOut" }}
+      style={{
+        backgroundImage: "linear-gradient(to right, #FFD700, #FF6347)",
+        backgroundRepeat: "no-repeat",
+        backgroundPosition: "0 100%",
+      }}
+    >
+      My focus? Crafting narratives that <span className="font-bold">resonate</span>, designing visuals that{" "}
+      <span className="font-bold">captivate</span>, and developing strategies that <span className="font-bold">engage</span>.
+    </motion.p>
 
-            <p className="font-space-grotesk">
-              Because when content speaks to the soul,{" "}
-              <span className="italic relative inline-block">
-                it ignites real change
-                <HandDrawnUnderline className="text-pastel-pink bottom-0 left-0" />
-              </span>
-            </p>
-          </div>
-        </motion.section>
+    <motion.p
+      className="font-space-grotesk"
+      initial={{ backgroundSize: "0% 100%" }}
+      whileHover={{ backgroundSize: "100% 100%" }}
+      transition={{ duration: 0.5, ease: "easeOut" }}
+      style={{
+        backgroundImage: "linear-gradient(to right, #8A2BE2, #00CED1)",
+        backgroundRepeat: "no-repeat",
+        backgroundPosition: "0 100%",
+      }}
+    >
+      Because when content speaks to the <span className="italic">soul</span>,{" "}
+      <span className="italic relative inline-block">
+        it ignites real change
+        <HandDrawnUnderline className="text-pastel-pink bottom-0 left-0" />
+      </span>
+    </motion.p>
+  </div>
+</motion.section>
 
         <motion.section
           id="partnerships"
