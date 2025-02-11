@@ -85,7 +85,7 @@ export default function Work() {
   }, [mousePosition, cursorControls])
 
   return (
-    <div className="bg-deep-grey text-white min-h-screen font-space-grotesk overflow-x-hidden">
+    <div className="bg-deep-grey text-white min-h-screen font-space-grotesk overflow-x-hidden pt-32">
       <motion.div
         className="fixed w-8 h-8 rounded-full bg-pastel-blue mix-blend-difference pointer-events-none z-50"
         animate={cursorControls}
@@ -123,7 +123,7 @@ export default function Work() {
         </div>
       </header>
 
-      <main className="container mx-auto px-6 pt-64 mt-32 pb-12">
+      <main className="container mx-auto px-6 pt-64 pb-12">
         {/* Title Section with New Animations */}
         <motion.h1
           className="text-5xl font-bold leading-tight mb-16 mt-64 relative text-left max-w-4xl"
