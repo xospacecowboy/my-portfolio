@@ -118,16 +118,16 @@ export default function Home() {
           </Link>
         </div>
 
-        {/* Approach Section */}
+        {/* Approach Section with New Effects */}
         <motion.section
           id="approach"
-          className="container mx-auto px-6 py-16 text-left"
+          className="container mx-auto px-6 py-16 text-center md:text-left"
           initial={{ opacity: 0, y: 50 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
         >
           <h3 className="text-xl font-medium mb-8 uppercase">Approach</h3>
-          <div className="text-xl sm:text-2xl md:text-3xl font-normal leading-relaxed max-w-4xl space-y-6">
+          <div className="text-xl sm:text-2xl md:text-3xl font-normal leading-relaxed max-w-4xl mx-auto space-y-6">
             <motion.p
               className="font-space-grotesk relative"
               initial={{ opacity: 0, y: 10 }}
@@ -135,9 +135,33 @@ export default function Home() {
               transition={{ duration: 0.8, delay: 0.2 }}
             >
               Stories are the <span className="text-pastel-pink font-bold">heartbeat</span> of connection, shaping our
-              digital landscape. It’s not just about{" "}
+              digital landscape. It's not just about{" "}
               <span className="font-bold text-pastel-blue">what</span> we say, but{" "}
               <span className="font-bold text-pastel-green">how we say it</span>.
+              <HandDrawnUnderline className="text-pastel-pink bottom-0 left-0" />
+            </motion.p>
+
+            <motion.p
+              className="font-jetbrains-mono"
+              initial={{ opacity: 0, y: 10 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.4 }}
+            >
+              My focus? Crafting narratives that **resonate**, designing visuals that **captivate**, and developing
+              strategies that **engage**.
+            </motion.p>
+
+            <motion.p
+              className="font-space-grotesk relative"
+              initial={{ opacity: 0, y: 10 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.6 }}
+            >
+              Because when content speaks to the **soul**,{" "}
+              <span className="italic relative inline-block">
+                it ignites real change
+                <HandDrawnUnderline className="text-pastel-purple bottom-0 left-0" />
+              </span>
             </motion.p>
           </div>
         </motion.section>
