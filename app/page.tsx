@@ -91,14 +91,14 @@ export default function Home() {
               className="relative inline-block px-2"
               initial={{ backgroundSize: "0% 100%" }}
               animate={{ backgroundSize: "100% 100%" }}
-              transition={{ duration: 2, repeat: Infinity, repeatType: "reverse" }}
+              transition={{ duration: 3, ease: [0.42, 0, 0.58, 1], repeat: Infinity, repeatType: "reverse" }}
               style={{
                 backgroundImage: "linear-gradient(to right, #FFB6C1, #BAE1FF, #B0E57C)",
                 backgroundRepeat: "no-repeat",
                 backgroundPosition: "0 100%",
               }}
             >
-              𐚁 HOWDY,
+               𐚁 HOWDY,
             </motion.span>{" "}
             I'M STEPHEN—A{" "}
             <motion.span className="font-normal italic relative inline-block">
