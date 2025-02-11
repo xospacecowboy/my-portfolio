@@ -229,7 +229,7 @@ export default function Work() {
               transition={{ duration: 0.8, delay: 0.4 }}
             >
               My focus? Crafting narratives that **resonate**, designing visuals that **captivate**, and developing
-              strategies that **engage**.
+              strategies that engage**.
             </motion.p>
 
             <motion.p
@@ -238,7 +238,7 @@ export default function Work() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.6 }}
             >
-              Because when content speaks to the **soul**,{" "}
+              Because when content speaks to the soul,{" "}
               <span className="italic relative inline-block">
                 it ignites real change
                 <HandDrawnUnderline className="text-pastel-purple bottom-0 left-0" />
