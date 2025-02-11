@@ -98,13 +98,14 @@ export default function Home() {
               transition={{ duration: 1, delay: 0.5 }}
               style={{
                 backgroundImage: "linear-gradient(to right, #BAE1FF, #BAE1FF)",
-                backgroundRepeat: "no-repeat",
+                backgroundRepeat: "repeat-x",
                 backgroundPosition: "0 100%",
+                padding: "2px 5px",
               }}
             >
               SOCIAL MEDIA & CREATIVE PRO
             </motion.span>{" "}
-            HTX 📍 FREELANCING <span className="bg-pastel-green text-deep-grey px-1">ACROSS INDUSTRIES.</span>
+            HTX 📍 FREELANCING <span className="bg-pastel-green text-deep-grey px-1">ACROSS INDUSTRIES 🐎</span>
           </motion.h1>
 
           <motion.h2
