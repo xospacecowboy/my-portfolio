@@ -220,19 +220,85 @@ export default function Home() {
           {/* ✨ Dynamic Marquee with Wave Motion ✨ */}
           <div className="overflow-hidden mt-10 relative">
             <motion.div
-              className="text-lg sm:text-xl md:text-2xl font-medium uppercase flex space-x-6"
-              animate={{ x: ["100%", "-100%"], y: [0, -5, 0, 5, 0] }} // Adds a subtle wave effect
-              transition={{ repeat: Infinity, duration: 12, ease: "linear" }}
+              className="text-lg sm:text-xl md:text-2xl font-medium uppercase flex space-x-8 whitespace-nowrap"
+              initial="start"
+              animate="animate"
+              variants={{
+                start: {
+                  x: "0%",
+                },
+                animate: {
+                  x: "-50%",
+                },
+              }}
+              transition={{
+                x: {
+                  repeat: Infinity,
+                  repeatType: "loop",
+                  duration: 20,
+                  ease: "linear",
+                },
+              }}
             >
-              <span>✨ Magic</span>
-              <span>🎨 Art</span>
-              <span>📢 Marketing</span>
-              <span>💡 Creative</span>
-              <span>📺 Pop Culture</span>
-              <span>🎮 Gaming</span>
-              <span>🌐 Web Dev</span>
-              <span>✍ Social Media</span>
-              <span>🎭 Storytelling</span>
+              {[
+                "✨ Magic",
+                "🎨 Art",
+                "📢 Marketing",
+                "💡 Creative",
+                "📺 Pop Culture",
+                "🎮 Gaming",
+                "🌐 Web Dev",
+                "✍ Social Media",
+                "🎭 Storytelling",
+              ].map((text, index) => (
+                <motion.span
+                  key={index}
+                  animate={{
+                    y: [0, -15, 0, 15, 0],
+                  }}
+                  transition={{
+                    y: {
+                      repeat: Infinity,
+                      duration: 2,
+                      ease: "easeInOut",
+                      delay: index * 0.2, // Creates a wave effect by staggering the animations
+                    },
+                  }}
+                  className="inline-block px-4"
+                >
+                  {text}
+                </motion.span>
+              ))}
+              {/* Duplicate the items to create a seamless loop */}
+              {[
+                "✨ Magic",
+                "🎨 Art",
+                "📢 Marketing",
+                "💡 Creative",
+                "📺 Pop Culture",
+                "🎮 Gaming",
+                "🌐 Web Dev",
+                "✍ Social Media",
+                "🎭 Storytelling",
+              ].map((text, index) => (
+                <motion.span
+                  key={`duplicate-${index}`}
+                  animate={{
+                    y: [0, -15, 0, 15, 0],
+                  }}
+                  transition={{
+                    y: {
+                      repeat: Infinity,
+                      duration: 2,
+                      ease: "easeInOut",
+                      delay: index * 0.2, // Creates a wave effect by staggering the animations
+                    },
+                  }}
+                  className="inline-block px-4"
+                >
+                  {text}
+                </motion.span>
+              ))}
             </motion.div>
           </div>
         </section>
