@@ -87,7 +87,7 @@ export default function Home() {
     <motion.h1
       className="text-4xl sm:text-5xl md:text-6xl font-bold leading-tight mb-6 max-w-5xl text-left relative"
     >
-      {/* New HOWDY Effect (Matches DESIGN) */}
+      {/* HOWDY Effect */}
       <motion.span
         className="relative inline-block px-2 font-bold"
         whileHover={{ letterSpacing: "2px" }}
@@ -97,12 +97,12 @@ export default function Home() {
       </motion.span>{" "}
       I'M STEPHEN—A{" "}
       
-      {/* Gradient & Animation for SOCIAL MEDIA & CREATIVE PRO */}
+      {/* Gradient for SOCIAL MEDIA & CREATIVE PRO - Plays Once */}
       <motion.span
         className="font-normal italic relative inline-block px-2"
         initial={{ backgroundSize: "0% 100%" }}
         animate={{ backgroundSize: "100% 100%" }}
-        transition={{ duration: 3, repeat: Infinity, repeatType: "reverse" }}
+        transition={{ duration: 1.5, ease: "easeOut" }}
         style={{
           backgroundImage: "linear-gradient(to right, #B0E57C, #BAE1FF, #FFB6C1)",
           backgroundRepeat: "no-repeat",
@@ -114,13 +114,23 @@ export default function Home() {
       
       <span className="inline-block px-1">BASED IN HTX 📍</span>{" "}
       
-      {/* Subtle Floating Effect for FREELANCING ACROSS INDUSTRIES */}
-      <motion.span
-        className="relative px-3 py-1 bg-white text-deep-grey rounded-md shadow-lg"
-        animate={{ y: [0, -2, 0] }}
-        transition={{ repeat: Infinity, duration: 3, ease: "easeInOut" }}
-      >
-        FREELANCING ACROSS INDUSTRIES 🐎
+      {/* NEW EFFECT: FREELANCING ACROSS INDUSTRIES - Gradient & Underline */}
+      <motion.span className="relative px-3 py-1 inline-block">
+        <span
+          className="bg-gradient-to-r from-[#BAE1FF] via-[#FFB6C1] to-[#B0E57C] text-deep-grey px-3 py-1 rounded-md"
+        >
+          FREELANCING ACROSS INDUSTRIES 🐎
+        </span>
+        <span className="absolute left-0 bottom-0 w-full h-1">
+          <svg width="100%" height="10" viewBox="0 0 100 10" fill="none">
+            <path
+              d="M0 5C10 2 20 7 30 5C40 3 50 7 60 5C70 2 80 7 90 5C95 4 100 5 100 5"
+              stroke="#F4E285"
+              strokeWidth="2.5"
+              strokeLinecap="round"
+            />
+          </svg>
+        </span>
       </motion.span>
     </motion.h1>
 
@@ -149,13 +159,22 @@ export default function Home() {
       </motion.span>
     </motion.p>
 
-    {/* Purple Underline - Only Under "DESIGN" */}
+    {/* ✨ Squiggly Underline Instead of Straight Line */}
     <motion.div
-      className="w-28 h-1 bg-pastel-purple mt-1"
-      initial={{ scaleX: 0 }}
-      animate={{ scaleX: 1 }}
-      transition={{ duration: 0.8, delay: 2.2 }}
-    />
+      className="w-36 h-4 mt-2"
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      transition={{ duration: 1.5 }}
+    >
+      <svg width="100%" height="10" viewBox="0 0 100 10" fill="none">
+        <path
+          d="M0 5 C10 0, 20 10, 30 5 C40 0, 50 10, 60 5 C70 0, 80 10, 90 5 C95 3, 100 5, 100 5"
+          stroke="#BAE1FF"
+          strokeWidth="2.5"
+          strokeLinecap="round"
+        />
+      </svg>
+    </motion.div>
 
     {/* ✨ Dynamic Marquee with Wave Motion ✨ */}
     <div className="overflow-hidden mt-10 relative">
