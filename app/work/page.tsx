@@ -1,10 +1,37 @@
+"use client"
+
+import { useState, useEffect } from "react"
 import Link from "next/link"
 import { ArrowUpRight } from "lucide-react"
+import { motion, useAnimation } from "framer-motion"
 import Footer from "../../components/Footer"
+import { useMousePosition } from "../../hooks/useMousePosition"
 
 export default function Work() {
+  const [scrolled, setScrolled] = useState(false)
+  const mousePosition = useMousePosition()
+  const cursorControls = useAnimation()
+
+  useEffect(() => {
+    const handleScroll = () => setScrolled(window.scrollY > 50)
+    window.addEventListener("scroll", handleScroll)
+    return () => window.removeEventListener("scroll", handleScroll)
+  }, [])
+
+  useEffect(() => {
+    cursorControls.start({
+      x: mousePosition.x - 16,
+      y: mousePosition.y - 16,
+    })
+  }, [mousePosition, cursorControls])
+
   return (
-    <div className="bg-deep-grey text-white min-h-screen font-space-grotesk">
+    <div className="bg-deep-grey text-white min-h-screen font-space-grotesk overflow-x-hidden">
+      <motion.div
+        className="fixed w-8 h-8 rounded-full bg-pastel-blue mix-blend-difference pointer-events-none z-50"
+        animate={cursorControls}
+      />
+
       <header className="container mx-auto px-6 py-8">
         <Link href="/" className="text-2xl font-bold tracking-tighter">
           STEPHEN
