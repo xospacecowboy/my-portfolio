@@ -15,12 +15,19 @@ const HandDrawnUnderline = ({ className }: { className?: string }) => (
     preserveAspectRatio="none"
     fill="none"
     xmlns="http://www.w3.org/2000/svg"
+    style={{
+      bottom: '-5px',
+      left: 0,
+      zIndex: -1,
+      transform: 'translateZ(0)', // Force hardware acceleration
+    }}
   >
     <path
       d="M0 7.5C8 2.5 20 12.5 30 7.5C40 2.5 50 12.5 60 7.5C70 2.5 80 12.5 90 7.5C95 5 100 7.5 100 7.5"
       stroke="currentColor"
       strokeWidth="2.5"
       strokeLinecap="round"
+      vectorEffect="non-scaling-stroke" // Ensures consistent stroke width
     />
   </svg>
 )
@@ -216,23 +223,62 @@ export default function Home() {
             </motion.p>
           </section>
 
-          <section className="container mx-auto px-6 py-16">
-          <motion.h2
-            className="text-lg sm:text-xl md:text-2xl font-normal max-w-3xl text-left leading-relaxed mt-2 relative font-jetbrains-mono"
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.2 }}
-          >
-            FORMERLY @{" "}
-            <span className="relative">
-              APPLE 👨🏻‍💻, VERIFIEDWORKS AGENCY; MANAGED CLIENTS @SAMSUNGUS, ELECTRONIC ARTS,
-              <HandDrawnUnderline className="text-pastel-green bottom-0 left-0" />
-            </span>{" "}
-            LED SOCIAL & GAMING CAMPAIGNS FOR{" "}
-            <span className="border-b-2 border-dotted border-pastel-pink">
-              DISCORD, TWITCH, CYBERPUNK, & POKÉMON GO + MORE 🎮
-            </span>
-          </motion.h2>
+          <section className="container mx-auto px-6 py-8">
+            <motion.h2
+              className="text-lg sm:text-xl md:text-2xl font-normal max-w-3xl text-left leading-relaxed relative font-jetbrains-mono"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.2 }}
+            >
+              <motion.span
+                className="relative inline-block"
+                whileHover={{ letterSpacing: "1px" }}
+                transition={{ duration: 0.3 }}
+              >
+                FORMERLY @{" "}
+                <motion.span
+                  className="relative inline-block"
+                  style={{
+                    background: "linear-gradient(to right, #B0E57C, #BAE1FF)",
+                    WebkitBackgroundClip: "text",
+                    WebkitTextFillColor: "transparent",
+                    backgroundClip: "text",
+                  }}
+                >
+                  APPLE 👨🏻‍💻
+                </motion.span>
+              </motion.span>
+              ,{" "}
+              <motion.span
+                className="relative inline-block"
+                whileHover={{ scale: 1.05 }}
+              >
+                VERIFIEDWORKS AGENCY
+              </motion.span>
+              ; MANAGED CLIENTS{" "}
+              <motion.span
+                className="relative inline-block"
+                style={{
+                  background: "linear-gradient(to right, #FFB6C1, #BAE1FF)",
+                  WebkitBackgroundClip: "text",
+                  WebkitTextFillColor: "transparent",
+                  backgroundClip: "text",
+                }}
+              >
+                @SAMSUNGUS, ELECTRONIC ARTS
+              </motion.span>
+              ,{" "}
+              <span className="relative">
+                LED SOCIAL & GAMING CAMPAIGNS FOR{" "}
+                <motion.span
+                  className="border-b-2 border-dotted border-pastel-pink inline-block"
+                  whileHover={{ scale: 1.05 }}
+                >
+                  DISCORD, TWITCH, CYBERPUNK, & POKÉMON GO + MORE 🎮
+                </motion.span>
+                <HandDrawnUnderline className="text-pastel-purple" />
+              </span>
+            </motion.h2>
           </section>
 
           <section id="approach" className="container mx-auto px-6 py-16">
