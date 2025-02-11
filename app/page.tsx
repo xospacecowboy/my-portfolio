@@ -78,9 +78,9 @@ export default function Home() {
               backgroundPosition: "0 100%",
             }}
           >
-            SOCIAL MEDIA & CREATIVE PRO 📍
+            SOCIAL MEDIA & CREATIVE PRO
           </motion.span>{" "}
-          HTX, <br className="sm:hidden" />
+          📍HTX, <br className="sm:hidden" />
           <span className="bg-pastel-green text-deep-grey px-2 py-1 rounded-xl">
             FREELANCING ACROSS INDUSTRIES 🐎
           </span>
@@ -96,7 +96,7 @@ export default function Home() {
           FORMERLY @{" "}
           <span className="relative">
             APPLE 👨🏻‍💻, VERIFIEDWORKS AGENCY; MANAGED CLIENTS @SAMSUNGUS, ELECTRONIC ARTS,
-            <HandDrawnUnderline className="text-pastel-pink bottom-0 left-0" />
+            <HandDrawnUnderline className="text-pastel-pink bottom-1 left-0" />
           </span>{" "}
           LED SOCIAL & GAMING CAMPAIGNS FOR{" "}
           <span className="border-b-4 border-dotted border-pastel-purple">
@@ -104,19 +104,27 @@ export default function Home() {
           </span>
         </motion.h2>
 
-        {/* Explore My Work Button (Left-Aligned) */}
-        <div className="mt-10">
-          <Link href="/work">
-            <motion.button
-              className="bg-black border-4 border-pastel-blue text-white px-8 py-4 text-lg font-bold rounded-lg hover:bg-pastel-blue hover:text-black transition-all duration-300 relative group"
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-            >
-              <span className="relative z-10">Explore My Work</span>
-              <div className="absolute inset-0 bg-gradient-to-r from-pastel-pink via-pastel-purple to-pastel-blue opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-lg" />
-            </motion.button>
-          </Link>
-        </div>
+        <motion.div
+          className="container mx-auto px-6"
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.4 }}
+        >
+          <div className="w-full h-px bg-gradient-to-r from-transparent via-white/20 to-transparent my-8" />
+          <div className="flex justify-center">
+            <Link href="/work" className="inline-block">
+              <motion.button
+                className="bg-deep-grey text-white px-8 py-4 text-lg font-bold border border-pastel-blue hover:bg-pastel-blue hover:text-deep-grey transition-all duration-300 relative group"
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+              >
+                <span className="relative z-10">Explore My Work</span>
+                <div className="absolute inset-0 bg-gradient-to-r from-pastel-pink via-pastel-purple to-pastel-blue opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+              </motion.button>
+            </Link>
+          </div>
+          <div className="w-full h-px bg-gradient-to-r from-transparent via-white/20 to-transparent my-8" />
+        </motion.div>
 
         {/* Approach Section with New Effects */}
         <motion.section
