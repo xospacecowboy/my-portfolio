@@ -13,6 +13,7 @@
 body {
   color: rgb(var(--foreground-rgb));
   background: rgb(var(--background-rgb));
+  cursor: none;
 }
 
 html {
@@ -47,5 +48,9 @@ body {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   animation: gradient 15s ease infinite;
+}
+
+.backface-hidden {
+  backface-visibility: hidden;
 }
 
