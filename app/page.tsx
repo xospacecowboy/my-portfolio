@@ -93,7 +93,7 @@ export default function Home() {
         whileHover={{ letterSpacing: "2px" }}
         transition={{ duration: 0.3 }}
       >
-        𐚁 HOWDY,
+         𐚁 HOWDY,
       </motion.span>{" "}
       I'M STEPHEN—A{" "}
       
@@ -125,16 +125,13 @@ export default function Home() {
     {/* FULL-WIDTH DOTTED LINE BREAK */}
     <motion.div
       className="flex justify-center space-x-4 mt-6 mb-4"
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
-      transition={{ repeat: Infinity, duration: 2, ease: "easeInOut" }}
     >
       {[...Array(50)].map((_, i) => (
         <motion.span
           key={i}
           className="w-2 h-2 bg-white rounded-full"
           animate={{ y: [0, -2, 0] }}
-          transition={{ duration: 1, delay: i * 0.05, repeat: Infinity }}
+          transition={{ duration: 1, delay: i * 0.05, repeat: Infinity, ease: "easeInOut" }}
         />
       ))}
     </motion.div>
