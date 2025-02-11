@@ -85,7 +85,7 @@ export default function Home() {
       </header>
 
 
-      <main className="container mx-auto px-6 pt-40 pb-12">
+      <main className="container mx-auto px-6 pt-48 pb-12">
         {/* Title Section */}
         <motion.h1
           className="text-5xl font-bold leading-tight mb-8 relative text-left max-w-4xl"
@@ -115,7 +115,7 @@ export default function Home() {
 
         {/* Formerly Section */}
         <motion.h2
-          className="text-3xl sm:text-3xl font-medium font-jetbrains-mono max-w-3xl leading-snug mt-20 relative text-left"
+          className="text-3xl sm:text-3xl font-medium font-jetbrains-mono max-w-3xl leading-snug mt-28 relative text-left"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.2 }}
