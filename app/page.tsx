@@ -85,7 +85,7 @@ export default function Home() {
       <main className="pt-32">
   <section className="container mx-auto px-6 py-16 flex flex-col">
     <motion.h1
-      className="text-4xl sm:text-5xl md:text-6xl font-bold leading-tight mb-4 max-w-5xl text-left relative"
+      className="text-4xl sm:text-5xl md:text-6xl font-bold leading-tight mb-6 max-w-5xl text-left relative"
     >
       {/* HOWDY Effect - Matches DESIGN */}
       <motion.span
@@ -114,14 +114,14 @@ export default function Home() {
       
       <span className="inline-block px-1">BASED IN HTX 📍</span>{" "}
       
-      {/* Hand-Drawn Underline for "FREELANCING" */}
-      <span className="relative font-normal italic px-2">
-        FREELANCING <span className="not-italic font-bold">ACROSS INDUSTRIES</span> 🐎
+      {/* NEW HAND-DRAWN UNDERLINE FOR "FREELANCING ACROSS INDUSTRIES" */}
+      <span className="relative">
+        FREELANCING ACROSS INDUSTRIES 🐎
         <HandDrawnUnderline className="text-pastel-green bottom-0 left-0" />
       </span>
     </motion.h1>
 
-    <motion.p className="text-3xl sm:text-4xl md:text-5xl font-light italic max-w-5xl text-left mt-2 relative">
+    <motion.p className="text-2xl sm:text-3xl md:text-4xl font-light italic max-w-5xl text-left mt-4 relative">
       W/ A PASSION FOR{" "}
       <motion.span
         className="font-bold relative inline-block cursor-pointer"
