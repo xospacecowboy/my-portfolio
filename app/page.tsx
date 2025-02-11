@@ -83,7 +83,7 @@ export default function Home() {
       </header>
 
       <main className="pt-32">
-        <section className="container mx-auto px-6 py-16 flex flex-col">
+        <section className="w-full max-w-6xl mx-auto px-6 py-16 flex flex-col">
           <motion.h1
             className="text-3xl sm:text-4xl md:text-5xl font-bold leading-tight mb-6 max-w-3xl text-left"
             initial={{ opacity: 0, y: 20 }}
