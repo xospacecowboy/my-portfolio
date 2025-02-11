@@ -98,7 +98,7 @@ export default function Home() {
               transition={{ duration: 1, delay: 0.5 }}
               style={{
                 backgroundImage: "linear-gradient(to right, #BAE1FF, #BAE1FF)",
-                backgroundRepeat: "repeat-x",
+                backgroundRepeat: "no-repeat",
                 backgroundPosition: "0 100%",
               }}
             >
