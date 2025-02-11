@@ -83,105 +83,100 @@ export default function Home() {
       </header>
 
       <main className="pt-32">
-        <section className="container mx-auto px-6 py-16 flex flex-col">
-          <motion.h1
-            className="text-4xl sm:text-5xl md:text-6xl font-bold leading-tight mb-6 max-w-5xl text-left relative"
-          >
-            <motion.span
-              className="relative inline-block px-2"
-              initial={{ backgroundSize: "0% 100%" }}
-              animate={{ backgroundSize: "100% 100%" }}
-              transition={{ duration: 3, ease: "easeOut", repeat: Infinity, repeatType: "reverse" }}
-              style={{
-                backgroundImage: "linear-gradient(to right, #FFB6C1, #BAE1FF, #B0E57C)",
-                backgroundRepeat: "no-repeat",
-                backgroundPosition: "0 100%",
-              }}
-            >
-                𐚁 HOWDY,
-            </motion.span>{" "}
-            I'M STEPHEN—A{" "}
-            <motion.span className="font-normal italic relative inline-block">
-              SOCIAL MEDIA & CREATIVE PRO
-              <span className="absolute left-0 bottom-0 w-full h-1">
-                <svg width="100%" height="10" viewBox="0 0 100 10" fill="none">
-                  <path
-                    d="M0 5C10 2 20 7 30 5C40 3 50 7 60 5C70 2 80 7 90 5C95 4 100 5 100 5"
-                    stroke="#F4E285"
-                    strokeWidth="2.5"
-                    strokeLinecap="round"
-                  />
-                </svg>
-              </span>
-            </motion.span>{" "}
-            <span className="inline-block px-1">BASED IN HTX 📍</span>
-          </motion.h1>
+  <section className="container mx-auto px-6 py-16 flex flex-col">
+    <motion.h1
+      className="text-4xl sm:text-5xl md:text-6xl font-bold leading-tight mb-6 max-w-5xl text-left relative"
+    >
+      {/* Gradient Animation Behind HOWDY */}
+      <motion.span
+        className="relative inline-block px-2"
+        initial={{ backgroundSize: "0% 100%" }}
+        animate={{ backgroundSize: "100% 100%" }}
+        transition={{ duration: 30, ease: "easeInOut", repeat: Infinity }}
+        style={{
+          backgroundImage: "linear-gradient(to right, #FFB6C1, #BAE1FF, #B0E57C)",
+          backgroundRepeat: "no-repeat",
+          backgroundPosition: "0 100%",
+        }}
+      >
+        𐚁 HOWDY,
+      </motion.span>{" "}
+      I'M STEPHEN—A{" "}
+      {/* Hand-drawn underline for SOCIAL MEDIA & CREATIVE PRO */}
+      <motion.span className="font-normal italic relative inline-block">
+        SOCIAL MEDIA & CREATIVE PRO
+        <span className="absolute left-0 bottom-0 w-full h-2">
+          <svg width="100%" height="10" viewBox="0 0 100 10" fill="none">
+            <path
+              d="M0 5C10 2 20 7 30 5C40 3 50 7 60 5C70 2 80 7 90 5C95 4 100 5 100 5"
+              stroke="#F4E285"
+              strokeWidth="2.5"
+              strokeLinecap="round"
+            />
+          </svg>
+        </span>
+      </motion.span>{" "}
+      <span className="inline-block px-1">BASED IN HTX 📍</span>{" "}
+      {/* Merged FREELANCING across INDUSTRIES onto the same line */}
+      <motion.span
+        className="relative px-3 py-1 bg-gradient-to-r from-[#B0E57C] via-[#BAE1FF] to-[#FFB6C1] text-deep-grey rounded-md"
+      >
+        FREELANCING ACROSS INDUSTRIES 🐎
+      </motion.span>
+    </motion.h1>
 
-          <motion.h2
-            className="text-4xl font-bold leading-tight max-w-5xl text-left"
-          >
-            <motion.span
-              className="relative px-3 py-1 bg-gradient-to-r from-[#1A1A1A] via-[#3D3D3D] to-[#5A5A5A] text-white rounded-md cursor-pointer"
-              whileHover={{ scale: 1.05 }}
-              transition={{ duration: 0.3 }}
-            >
-              FREELANCING ACROSS INDUSTRIES
-            </motion.span>{" "}
-            <motion.span className="text-xl">🐎</motion.span>
-          </motion.h2>
+    <motion.p className="text-2xl sm:text-3xl md:text-4xl font-light italic max-w-5xl text-left mt-4 relative">
+      W/ A PASSION FOR{" "}
+      <motion.span
+        className="font-bold relative inline-block cursor-pointer"
+        whileHover={{ backgroundSize: "100% 100%" }}
+        transition={{ duration: 0.5 }}
+        style={{
+          backgroundImage: "linear-gradient(to right, #BAE1FF, #BAE1FF)",
+          backgroundRepeat: "no-repeat",
+          backgroundPosition: "0 100%",
+          backgroundSize: "0% 100%",
+        }}
+      >
+        STORYTELLING
+      </motion.span>{" "}
+      &{" "}
+      <motion.span
+        className="relative inline-block font-bold cursor-pointer"
+        whileHover={{ letterSpacing: "2px" }}
+        transition={{ duration: 0.3 }}
+      >
+        DESIGN
+      </motion.span>
+    </motion.p>
 
-          <motion.p className="text-xl sm:text-2xl md:text-3xl font-light italic max-w-5xl text-left mt-4 relative">
-            W/ A PASSION FOR{" "}
-            <motion.span
-              className="font-bold relative inline-block cursor-pointer"
-              whileHover={{ backgroundSize: "100% 100%" }}
-              transition={{ duration: 0.5 }}
-              style={{
-                backgroundImage: "linear-gradient(to right, #BAE1FF, #BAE1FF)",
-                backgroundRepeat: "no-repeat",
-                backgroundPosition: "0 100%",
-                backgroundSize: "0% 100%",
-              }}
-            >
-              STORYTELLING
-            </motion.span>{" "}
-            &{" "}
-            <motion.span
-              className="relative inline-block font-bold cursor-pointer"
-              whileHover={{ letterSpacing: "2px" }}
-              transition={{ duration: 0.3 }}
-            >
-              DESIGN
-            </motion.span>
-          </motion.p>
+    {/* Purple Underline - Only Under "DESIGN" */}
+    <motion.div
+      className="w-28 h-1 bg-pastel-purple mt-1"
+      initial={{ scaleX: 0 }}
+      animate={{ scaleX: 1 }}
+      transition={{ duration: 0.8, delay: 2.2 }}
+    />
 
-          {/* Purple Underline - Only Under "DESIGN" */}
-          <motion.div
-            className="w-28 h-1 bg-pastel-purple mt-1"
-            initial={{ scaleX: 0 }}
-            animate={{ scaleX: 1 }}
-            transition={{ duration: 0.8, delay: 2.2 }}
-          />
-
-          {/* ✨ Dynamic Marquee Text / Flipboard Animation ✨ */}
-          <div className="overflow-hidden whitespace-nowrap mt-10 relative">
-            <motion.div
-              className="text-lg sm:text-xl md:text-2xl font-medium uppercase flex space-x-6"
-              animate={{ x: ["100%", "-100%"] }}
-              transition={{ repeat: Infinity, duration: 10, ease: "linear" }}
-            >
-              <span>✨ Magic</span>
-              <span>🎨 Art</span>
-              <span>📢 Marketing</span>
-              <span>💡 Creative</span>
-              <span>📺 Pop Culture</span>
-              <span>🎮 Gaming</span>
-              <span>🌐 Web Dev</span>
-              <span>✍ Social Media</span>
-              <span>🎭 Storytelling</span>
-            </motion.div>
-          </div>
-        </section>
+    {/* ✨ Dynamic Marquee with Wave Motion ✨ */}
+    <div className="overflow-hidden mt-10 relative">
+      <motion.div
+        className="text-lg sm:text-xl md:text-2xl font-medium uppercase flex space-x-6"
+        animate={{ x: ["100%", "-100%"], y: [0, -5, 0, 5, 0] }} // Adds a subtle wave effect
+        transition={{ repeat: Infinity, duration: 12, ease: "linear" }}
+      >
+        <span>✨ Magic</span>
+        <span>🎨 Art</span>
+        <span>📢 Marketing</span>
+        <span>💡 Creative</span>
+        <span>📺 Pop Culture</span>
+        <span>🎮 Gaming</span>
+        <span>🌐 Web Dev</span>
+        <span>✍ Social Media</span>
+        <span>🎭 Storytelling</span>
+      </motion.div>
+    </div>
+  </section>
 
         <section className="container mx-auto px-6 py-16">
           <motion.h2
