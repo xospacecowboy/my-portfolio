@@ -88,7 +88,7 @@ export default function Home() {
       </header>
 
       <main className="pt-24">
-        <section className="container mx-auto px-6 py-16 flex flex-col space-y-12">
+        <section className="container mx-auto px-6 py-16 flex flex-col space-y-8">
           <motion.h1
             className="text-3xl sm:text-4xl md:text-5xl font-bold leading-tight mb-4 max-w-3xl text-left"
             initial={{ opacity: 0, y: 20 }}
@@ -103,6 +103,23 @@ export default function Home() {
             📍HOUSTON, FREELANCING{" "}
             <span className="bg-pastel-green text-deep-grey px-1">ACROSS INDUSTRIES.</span>
           </motion.h1>
+
+          <motion.h2
+            className="text-lg sm:text-xl md:text-2xl font-normal max-w-3xl text-left leading-relaxed mt-2 mb-4 relative font-jetbrains-mono"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.2 }}
+          >
+            FORMERLY @{" "}
+            <span className="relative">
+              APPLE 👨🏻‍💻, VERIFIEDWORKS AGENCY; MANAGED CLIENTS @SAMSUNGUS, ELECTRONIC ARTS,
+              <HandDrawnUnderline className="text-pastel-green bottom-0 left-0" />
+            </span>{" "}
+            LED SOCIAL & GAMING CAMPAIGNS FOR{" "}
+            <span className="border-b-2 border-dotted border-pastel-pink">
+              DISCORD, TWITCH, CYBERPUNK, & POKÉMON GO + MORE 🎮
+            </span>
+          </motion.h2>
         </section>
       </main>
 
@@ -126,44 +143,7 @@ export default function Home() {
         </p>
       </section>
 
-      <section id="partnerships" className="container mx-auto px-6 py-16 space-y-12">
-        <h3 className="text-xl font-medium mb-12 uppercase">Significant Partnerships 🤝</h3>
-        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-8 text-lg">
-          {[
-            "SAMSUNG",
-            "ELECTRONIC ARTS",
-            "EPIC GAMES",
-            "NIANTIC",
-            "JIMMY CHIN",
-            "TWITCH.tv",
-            "APPLE",
-            "ANINE BING",
-            "TSM",
-            "YARA SHAHIDI",
-            "MYTH",
-            "KHALID",
-            "NATIONAL GEOGRAPHIC",
-            "POKIMANE",
-            "META",
-            "DISCORD",
-          ].map((partner, index) => (
-            <motion.div
-              key={partner}
-              className="group cursor-pointer font-jetbrains-mono"
-              whileHover={{ scale: 1.1 }}
-              transition={{ type: "spring", stiffness: 400 }}
-            >
-              <Link href="/work">
-                {partner}
-                <ArrowUpRight className="inline-block ml-1 opacity-0 group-hover:opacity-100 transition-opacity" />
-              </Link>
-            </motion.div>
-          ))}
-        </div>
-      </section>
-
       <Footer />
     </div>
   )
 }
-
