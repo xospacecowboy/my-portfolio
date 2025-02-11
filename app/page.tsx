@@ -116,7 +116,7 @@ export default function Home() {
       
       {/* Hand-Drawn Underline for "FREELANCING" */}
       <span className="relative font-normal italic px-2">
-        FREELANCING <span className="not-italic font-bold">ACROSS INDUSTRIES</span> 🐎
+        FREELANCING <span className="font-normal italic relative inline-block px-2">ACROSS INDUSTRIES</span> 🐎
         <HandDrawnUnderline className="text-pastel-green bottom-0 left-0" />
       </span>
     </motion.h1>
