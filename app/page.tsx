@@ -6,7 +6,6 @@ import { motion, useAnimation } from "framer-motion"
 import Footer from "../components/Footer"
 import { useMousePosition } from "../hooks/useMousePosition"
 
-// Hand-drawn underline SVG
 const HandDrawnUnderline = ({ className }: { className?: string }) => (
   <svg
     className={`absolute pointer-events-none ${className}`}
@@ -59,9 +58,9 @@ export default function Home() {
       </header>
 
       <main className="container mx-auto px-6 py-12">
-        {/* Title Section with Hand-Drawn Effect */}
+        {/* Title Section */}
         <motion.h1
-          className="text-5xl font-bold leading-tight mb-8 relative"
+          className="text-5xl font-bold leading-tight mb-8 relative text-center md:text-left max-w-4xl mx-auto"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
@@ -70,16 +69,15 @@ export default function Home() {
           <span className="relative inline-block italic bg-gradient-to-r from-pastel-blue to-pastel-green bg-clip-text text-transparent">
             SOCIAL MEDIA & CREATIVE PRO
           </span>{" "}
-          HTX 📍 FREELANCING{" "}
-          <span className="relative inline-block px-2 py-1 bg-pastel-green text-deep-grey rounded-xl">
-            ACROSS INDUSTRIES 🐎
-            <HandDrawnUnderline className="text-black left-0 bottom-0" />
+          HTX 📍 <br className="sm:hidden" />
+          <span className="bg-pastel-green text-deep-grey px-2 py-1 rounded-xl">
+            FREELANCING ACROSS INDUSTRIES 🐎
           </span>
         </motion.h1>
 
-        {/* Subheading with Wavy Underline */}
+        {/* Formerly Section */}
         <motion.h2
-          className="text-xl font-light font-jetbrains-mono max-w-3xl leading-relaxed mt-2 relative"
+          className="text-lg font-light font-jetbrains-mono max-w-3xl leading-relaxed mt-2 relative mx-auto text-center md:text-left"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.2 }}
@@ -87,7 +85,7 @@ export default function Home() {
           FORMERLY @{" "}
           <span className="relative">
             APPLE 👨🏻‍💻, VERIFIEDWORKS AGENCY; MANAGED CLIENTS @SAMSUNGUS, ELECTRONIC ARTS,
-            <HandDrawnUnderline className="text-pastel-pink left-0 bottom-0" />
+            <HandDrawnUnderline className="text-pastel-pink bottom-0 left-0" />
           </span>{" "}
           LED SOCIAL & GAMING CAMPAIGNS FOR{" "}
           <span className="border-b-4 border-dotted border-pastel-purple">
@@ -95,8 +93,8 @@ export default function Home() {
           </span>
         </motion.h2>
 
-        {/* Call to Action Button */}
-        <div className="mt-10">
+        {/* Explore My Work Button (Centered) */}
+        <div className="mt-10 flex justify-center">
           <Link href="/work">
             <motion.button
               className="bg-black border-4 border-pastel-blue text-white px-8 py-4 text-lg font-bold rounded-lg hover:bg-pastel-blue hover:text-black transition-all duration-300 relative group"
@@ -109,24 +107,53 @@ export default function Home() {
           </Link>
         </div>
 
-        {/* Section Divider */}
-        <div className="w-full h-1 bg-gradient-to-r from-transparent via-white/20 to-transparent my-10" />
+        {/* Approach Section with New Effects */}
+        <motion.section
+          id="approach"
+          className="container mx-auto px-6 py-16 text-center md:text-left"
+          initial={{ opacity: 0, y: 50 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+        >
+          <h3 className="text-xl font-medium mb-8 uppercase">Approach</h3>
+          <div className="text-xl sm:text-2xl md:text-3xl font-normal leading-relaxed max-w-4xl mx-auto space-y-6">
+            <motion.p
+              className="font-space-grotesk relative"
+              initial={{ opacity: 0, y: 10 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.2 }}
+            >
+              Stories are the <span className="text-pastel-pink font-bold">heartbeat</span> of connection, shaping our
+              digital landscape. It's not just about{" "}
+              <span className="font-bold text-pastel-blue">what</span> we say, but{" "}
+              <span className="font-bold text-pastel-green">how we say it</span>.
+              <HandDrawnUnderline className="text-pastel-pink bottom-0 left-0" />
+            </motion.p>
 
-        {/* Partnerships Section */}
-        <section className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-6 text-lg font-bold tracking-wide">
-          {["APPLE", "SAMSUNG", "ELECTRONIC ARTS", "DISCORD", "TWITCH", "CYBERPUNK", "POKÉMON GO", "VERIFIEDWORKS"].map(
-            (partner, index) => (
-              <motion.div
-                key={partner}
-                className="bg-deep-grey border-4 border-white/20 p-4 rounded-xl flex items-center justify-center text-center hover:bg-white/10 transition-all duration-300 cursor-pointer"
-                whileHover={{ scale: 1.05, rotate: -1.5 }}
-                whileTap={{ scale: 0.95 }}
-              >
-                {partner}
-              </motion.div>
-            )
-          )}
-        </section>
+            <motion.p
+              className="font-jetbrains-mono"
+              initial={{ opacity: 0, y: 10 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.4 }}
+            >
+              My focus? Crafting narratives that **resonate**, designing visuals that **captivate**, and developing
+              strategies that **engage**.
+            </motion.p>
+
+            <motion.p
+              className="font-space-grotesk relative"
+              initial={{ opacity: 0, y: 10 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.6 }}
+            >
+              Because when content speaks to the **soul**,{" "}
+              <span className="italic relative inline-block">
+                it ignites real change
+                <HandDrawnUnderline className="text-pastel-purple bottom-0 left-0" />
+              </span>
+            </motion.p>
+          </div>
+        </motion.section>
       </main>
 
       <Footer />
