@@ -84,28 +84,79 @@ export default function Home() {
 
       <main className="pt-24">
         <section className="container mx-auto px-6 py-16 flex flex-col">
-          <motion.h1
-            className="text-3xl sm:text-4xl md:text-5xl font-bold leading-tight mb-4 max-w-3xl text-left"
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-          >
-            𐚁 HOWDY, I'M STEPHEN—A{" "}
-            <motion.span
-              className="font-normal italic relative inline-block"
-              initial={{ backgroundSize: "0 100%" }}
-              animate={{ backgroundSize: "100% 100%" }}
-              transition={{ duration: 1, delay: 0.5 }}
-              style={{
-                backgroundImage: "linear-gradient(to right, #BAE1FF, #BAE1FF)",
-                backgroundRepeat: "no-repeat",
-                backgroundPosition: "0 100%",
-              }}
-            >
-              SOCIAL MEDIA & CREATIVE PRO
-            </motion.span>{" "}
-            HTX 📍 FREELANCING <span className="bg-pastel-green text-deep-grey px-1">ACROSS INDUSTRIES 🐎</span>
-          </motion.h1>
+        <main className="pt-24">
+  <section className="container mx-auto px-6 py-16 flex flex-col">
+    <motion.h1
+      className="text-3xl sm:text-4xl md:text-5xl font-bold leading-tight mb-4 max-w-3xl text-left"
+      initial={{ opacity: 0, y: 20 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.8 }}
+    >
+      𐚁 HOWDY, I'M STEPHEN—A{" "}
+      <motion.span
+        className="font-normal italic relative inline-block"
+        initial={{ backgroundSize: "0 100%" }}
+        animate={{ backgroundSize: "100% 100%" }}
+        transition={{ duration: 1, delay: 0.5 }}
+        style={{
+          backgroundImage: "linear-gradient(to right, #BAE1FF, #BAE1FF)",
+          backgroundRepeat: "no-repeat",
+          backgroundPosition: "0 100%",
+        }}
+      >
+        SOCIAL MEDIA & CREATIVE PRO
+      </motion.span>{" "}
+      <motion.span
+        className="inline-block mx-2"
+        initial={{ scale: 0.8, opacity: 0 }}
+        animate={{ scale: 1, opacity: 1 }}
+        transition={{ duration: 0.5, delay: 1 }}
+      >
+        HTX 📍
+      </motion.span>{" "}
+      <motion.span
+        className="bg-gradient-to-r from-pastel-green via-pastel-yellow to-pastel-pink text-deep-grey px-2 py-1 rounded-lg"
+        initial={{ opacity: 0, scale: 0.9 }}
+        animate={{ opacity: 1, scale: 1 }}
+        transition={{ duration: 0.6, delay: 1.2 }}
+      >
+        FREELANCING ACROSS INDUSTRIES 🐎
+      </motion.span>
+    </motion.h1>
+
+    <motion.p
+      className="text-xl sm:text-2xl md:text-3xl font-light italic max-w-3xl text-left mt-4 relative"
+      initial={{ opacity: 0, y: 10 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.8, delay: 1.5 }}
+    >
+      W/ A PASSION FOR{" "}
+      <motion.span
+        className="font-bold relative inline-block"
+        initial={{ backgroundSize: "0 100%" }}
+        animate={{ backgroundSize: "100% 100%" }}
+        transition={{ duration: 1, delay: 1.8 }}
+        style={{
+          backgroundImage: "linear-gradient(to right, #BAE1FF, #BAE1FF)",
+          backgroundRepeat: "no-repeat",
+          backgroundPosition: "0 100%",
+        }}
+      >
+        STORYTELLING
+      </motion.span>{" "}
+      &{" "}
+      <motion.span className="relative inline-block font-bold">
+        DESIGN
+        <motion.div
+          className="absolute bottom-0 left-0 w-full h-1 bg-pastel-purple"
+          initial={{ scaleX: 0 }}
+          animate={{ scaleX: 1 }}
+          transition={{ duration: 0.8, delay: 2 }}
+        />
+      </motion.span>
+    </motion.p>
+  </section>
+</main>
 
           <motion.h2
             className="text-lg sm:text-xl md:text-2xl font-normal max-w-3xl text-left leading-relaxed mt-2 relative font-jetbrains-mono"
