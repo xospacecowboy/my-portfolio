@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from "react"
 import Link from "next/link"
+import { ArrowUpRight } from "lucide-react"
 import { motion, useAnimation } from "framer-motion"
 import Footer from "../components/Footer"
 import { useMousePosition } from "../hooks/useMousePosition"
@@ -27,7 +28,45 @@ const HandDrawnUnderline = ({ className }: { className?: string }) => (
   </svg>
 )
 
-export default function Home() {
+const portfolioItems = [
+  {
+    title: "Creative Strategy 🎨",
+    description:
+      "Redefining Electronic Arts' public image through purpose-driven campaigns and influencer collaborations. Increased brand sentiment and gained 4MM+ new followers.",
+    link: "https://drive.google.com/file/d/1kuw0kRWxzysufPdO0n9gEWzm7anrpuwW/view?usp=sharing",
+    color: "text-pastel-blue",
+  },
+  {
+    title: "Community Building 🌟",
+    description:
+      "Developed a Discord platform to engage and retain gaming audiences. Led community management and created a space with 5,000+ unique sign-ups.",
+    link: "#",
+    color: "text-pastel-pink",
+  },
+  {
+    title: "Talent & Celebrity 🤝",
+    description:
+      "Negotiated 300+ creator partnerships, working with Twitch streamers, musicians, and actors to amplify digital campaigns.",
+    link: "#",
+    color: "text-pastel-green",
+  },
+  {
+    title: "Experiential Marketing 🎭",
+    description:
+      "Led Samsung’s PAX East activation, partnering with top gaming influencers to drive product engagement and capture 200+ brand assets.",
+    link: "#",
+    color: "text-pastel-yellow",
+  },
+  {
+    title: "Influencer Strategy 🚀",
+    description:
+      "Built and scaled an influencer program for Samsung US, contracting 90 creators to generate 5,262+ unique content pieces, reaching 229M+ impressions.",
+    link: "https://www.youtube.com/watch?v=o3aLdZK_9TI",
+    color: "text-pastel-orange",
+  },
+]
+
+export default function Work() {
   const [scrolled, setScrolled] = useState(false)
   const mousePosition = useMousePosition()
   const cursorControls = useAnimation()
@@ -46,13 +85,13 @@ export default function Home() {
   }, [mousePosition, cursorControls])
 
   return (
-    <div className="bg-deep-grey text-white min-h-screen font-space-grotesk overflow-x-hidden">
+    <div className="bg-deep-grey text-white min-h-screen font-space-grotesk overflow-x-hidden pt-32">
       <motion.div
         className="fixed w-8 h-8 rounded-full bg-pastel-blue mix-blend-difference pointer-events-none z-50"
         animate={cursorControls}
       />
 
-<header
+      <header
         className={`fixed top-0 left-0 right-0 z-40 transition-all duration-300 ${scrolled ? "bg-deep-grey/90 backdrop-blur-sm" : ""}`}
       >
         <div className="container mx-auto px-6 py-4 flex justify-between items-center">
@@ -84,11 +123,10 @@ export default function Home() {
         </div>
       </header>
 
-
-      <main className="container mx-auto px-6 pt-48 pb-12">
-        {/* Title Section */}
+      <main className="container mx-auto px-6 pt-64 pb-12">
+        {/* Title Section with New Animations */}
         <motion.h1
-          className="text-5xl font-bold leading-tight mb-8 relative text-left max-w-4xl"
+          className="text-5xl font-bold leading-tight mb-16 mt-64 relative text-left max-w-4xl"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
@@ -107,15 +145,23 @@ export default function Home() {
           >
             SOCIAL MEDIA & CREATIVE PRO
           </motion.span>{" "}
-          📍HTX, <br className="sm:hidden" />
-          <span className="bg-pastel-green text-deep-grey px-2 py-1 rounded-xl">
+          📍HTX,
+          <br className="sm:hidden" />
+
+          {/* New Animation for "Freelancing Across Industries" */}
+          <motion.span
+            className="inline-block px-2 py-1 text-deep-grey text-5xl font-bold"
+            initial={{ opacity: 0, skewX: "-10deg", scale: 0.9 }}
+            animate={{ opacity: 1, skewX: "0deg", scale: 1 }}
+            transition={{ duration: 0.8, ease: "easeOut" }}
+          >
             FREELANCING ACROSS INDUSTRIES 🐎
-          </span>
+          </motion.span>
         </motion.h1>
 
-        {/* Formerly Section */}
+        {/* Formerly Section with Extra Space */}
         <motion.h2
-          className="text-3xl sm:text-3xl font-medium font-jetbrains-mono max-w-3xl leading-snug mt-28 relative text-left"
+          className="text-3xl sm:text-3xl font-medium font-jetbrains-mono max-w-3xl leading-snug mt-40 relative text-left"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.2 }}
@@ -132,12 +178,12 @@ export default function Home() {
         </motion.h2>
 
         <motion.div
-          className="container mx-auto px-6"
+          className="container mx-auto px-6 mt-16"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.4 }}
         >
-          <div className="w-full h-px bg-gradient-to-r from-transparent via-white/20 to-transparent my-8" />
+          <div className="w-full h-px bg-gradient-to-r from-transparent via-white/20 to-transparent my-16 mb-16" />
           <div className="flex justify-center">
             <Link href="/work" className="inline-block">
               <motion.button
@@ -150,7 +196,7 @@ export default function Home() {
               </motion.button>
             </Link>
           </div>
-          <div className="w-full h-px bg-gradient-to-r from-transparent via-white/20 to-transparent my-8" />
+          <div className="w-full h-px bg-gradient-to-r from-transparent via-white/20 to-transparent my-16" />
         </motion.div>
 
         {/* Approach Section with New Effects */}
