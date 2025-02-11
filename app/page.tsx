@@ -87,7 +87,7 @@ export default function Home() {
     <motion.h1
       className="text-4xl sm:text-5xl md:text-6xl font-bold leading-tight mb-6 max-w-5xl text-left relative"
     >
-      {/* HOWDY Effect - Now Matches DESIGN */}
+      {/* HOWDY Effect - Matches DESIGN */}
       <motion.span
         className="relative inline-block px-2 font-bold"
         whileHover={{ letterSpacing: "2px" }}
@@ -114,18 +114,11 @@ export default function Home() {
       
       <span className="inline-block px-1">BASED IN HTX 📍</span>{" "}
       
-      {/* NEW SUBTLE SHINE EFFECT ON FREELANCING ACROSS INDUSTRIES */}
-      <motion.span
-        className="relative px-3 py-1 inline-block text-deep-grey overflow-hidden"
-        whileHover={{
-          scale: 1.05,
-          background: "linear-gradient(to right, rgba(255,255,255,0.1), rgba(255,255,255,0.3), rgba(255,255,255,0.1))",
-          backgroundSize: "200% 100%",
-          transition: { duration: 0.5, ease: "easeInOut" },
-        }}
-      >
+      {/* NEW HAND-DRAWN UNDERLINE FOR "FREELANCING ACROSS INDUSTRIES" */}
+      <span className="relative">
         FREELANCING ACROSS INDUSTRIES 🐎
-      </motion.span>
+        <HandDrawnUnderline className="text-pastel-green bottom-0 left-0" />
+      </span>
     </motion.h1>
 
     <motion.p className="text-2xl sm:text-3xl md:text-4xl font-light italic max-w-5xl text-left mt-4 relative">
