@@ -89,94 +89,78 @@ export default function Home() {
 
       <main className="pt-24">
         <section className="container mx-auto px-6 py-16 flex flex-col space-y-12">
-        <motion.h1
-        className="text-3xl sm:text-4xl md:text-5xl font-bold leading-tight mb-6 max-w-3xl text-left"
-        initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.8 }}
-          >
-          HOWDY, I’M{" "}
-          <span className="font-normal italic relative inline-block">
-          STEPHEN—A SOCIAL MEDIA & CREATIVE PRO 📍
-          <HandDrawnUnderline className="text-pastel-blue bottom-0 left-0" />
-          </span>{" "}
-           HOUSTON, FREELANCING{" "}
-          <span className="bg-pastel-green text-deep-grey px-1">ACROSS INDUSTRIES.</span>
-          </motion.h1>
-          <motion.h2
-            className="text-lg sm:text-xl md:text-2xl font-normal max-w-3xl text-left leading-relaxed mt-4 mb-8 relative font-jetbrains-mono"
+          <motion.h1
+            className="text-2xl sm:text-3xl md:text-4xl font-bold leading-tight mb-6 max-w-2xl text-left"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.2 }}
+            transition={{ duration: 0.8 }}
           >
-            FORMERLY @{" "}
-            <span className="relative">
-              APPLE 👨🏻‍💻, VERFIEDWORKS AGENCY; MANAGED CLIENTS @SAMSUNGUS, ELECTRONIC ARTS,
-              <HandDrawnUnderline className="text-pastel-green bottom-0 left-0" />
+            HOWDY, I’M{" "}
+            <span className="font-normal italic relative inline-block">
+              STEPHEN—A SOCIAL MEDIA & CREATIVE PRO 📍
+              <HandDrawnUnderline className="text-pastel-blue bottom-0 left-0" />
             </span>{" "}
-             LED SOCIAL & GAMING CAMPAIGNS FOR{" "}
-            <span className="border-b-2 border-dotted border-pastel-pink">
-              DISCORD, TWITCH, CYBERPUNK, & POKÉMON GO + MORE 🎮
-            </span>
-          </motion.h2>
-        </section>
-
-        <section id="approach" className="container mx-auto px-6 py-12 space-y-12">
-        <h3 className="text-xl font-medium mb-8 uppercase">Approach</h3>
-        <p className="text-2xl sm:text-3xl md:text-4xl font-normal leading-relaxed max-w-4xl relative font-jetbrains-mono">
-        Stories shape how we connect,{" "}
-       <span className="relative inline-block">
-        not just what we consume 🎭
-       <HandDrawnCircle className="text-pastel-purple -top-1/4 -left-1/4 w-150 h-150" />
-       </span>.  
-    The right message, told the right way, reaches people where they are and makes them feel seen.  
-    I focus on crafting{" "}
-       <span className="italic relative bg-pastel-red text-deep-grey px-1">
-      compelling narratives, immersive visuals, and strategic copy
-      </span>{" "}  
-      that resonate with communities in meaningful ways. Because when content feels personal,{" "}
-      <span className="italic relative bg-pastel-red text-deep-grey px-1">
-      it creates real impact.
-     </span>
-      </p>
-        </section>
-
-        <section id="partnerships" className="container mx-auto px-6 py-16 space-y-12">
-          <h3 className="text-xl font-medium mb-12 uppercase">Significant Partnerships 🤝</h3>
-          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-8 text-lg">
-            {[
-              "SAMSUNG",
-              "ELECTRONIC ARTS",
-              "EPIC GAMES",
-              "NIANTIC",
-              "JIMMY CHIN",
-              "TWITCH.tv",
-              "APPLE",
-              "ANINE BING",
-              "TSM",
-              "YARA SHAHIDI",
-              "MYTH",
-              "KHALID",
-              "NATIONAL GEOGRAPHIC",
-              "POKIMANE",
-              "META",
-              "DISCORD",
-            ].map((partner, index) => (
-              <motion.div
-                key={partner}
-                className="group cursor-pointer font-jetbrains-mono"
-                whileHover={{ scale: 1.1 }}
-                transition={{ type: "spring", stiffness: 400 }}
-              >
-                <Link href="/work">
-                  {partner}
-                  <ArrowUpRight className="inline-block ml-1 opacity-0 group-hover:opacity-100 transition-opacity" />
-                </Link>
-              </motion.div>
-            ))}
-          </div>
+            HOUSTON, FREELANCING{" "}
+            <span className="bg-pastel-green text-deep-grey px-1">ACROSS INDUSTRIES.</span>
+          </motion.h1>
         </section>
       </main>
+
+      <section id="approach" className="container mx-auto px-6 py-12 space-y-12">
+        <h3 className="text-xl font-medium mb-8 uppercase">Approach</h3>
+        <p className="text-2xl sm:text-3xl md:text-4xl font-normal leading-relaxed max-w-4xl relative font-jetbrains-mono">
+          Stories shape how we connect,{" "}
+          <span className="relative inline-block">
+            not just what we consume 🎭
+            <HandDrawnCircle className="text-pastel-purple -top-1/4 -left-1/4 w-150 h-150" />
+          </span>.  
+          The right message, told the right way, reaches people where they are and makes them feel seen.  
+          I focus on crafting{" "}
+          <span className="italic relative bg-pastel-red text-deep-grey px-1">
+            compelling narratives, immersive visuals, and strategic copy
+          </span>{" "}  
+          that resonate with communities in meaningful ways. Because when content feels personal,{" "}
+          <span className="italic relative bg-pastel-red text-deep-grey px-1">
+            it creates real impact.
+          </span>
+        </p>
+      </section>
+
+      <section id="partnerships" className="container mx-auto px-6 py-16 space-y-12">
+        <h3 className="text-xl font-medium mb-12 uppercase">Significant Partnerships 🤝</h3>
+        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-8 text-lg">
+          {[
+            "SAMSUNG",
+            "ELECTRONIC ARTS",
+            "EPIC GAMES",
+            "NIANTIC",
+            "JIMMY CHIN",
+            "TWITCH.tv",
+            "APPLE",
+            "ANINE BING",
+            "TSM",
+            "YARA SHAHIDI",
+            "MYTH",
+            "KHALID",
+            "NATIONAL GEOGRAPHIC",
+            "POKIMANE",
+            "META",
+            "DISCORD",
+          ].map((partner, index) => (
+            <motion.div
+              key={partner}
+              className="group cursor-pointer font-jetbrains-mono"
+              whileHover={{ scale: 1.1 }}
+              transition={{ type: "spring", stiffness: 400 }}
+            >
+              <Link href="/work">
+                {partner}
+                <ArrowUpRight className="inline-block ml-1 opacity-0 group-hover:opacity-100 transition-opacity" />
+              </Link>
+            </motion.div>
+          ))}
+        </div>
+      </section>
 
       <Footer />
     </div>
