@@ -216,6 +216,25 @@ export default function Home() {
             </motion.p>
           </section>
 
+          <section className="container mx-auto px-6 py-16">
+          <motion.h2
+            className="text-lg sm:text-xl md:text-2xl font-normal max-w-3xl text-left leading-relaxed mt-2 relative font-jetbrains-mono"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.2 }}
+          >
+            FORMERLY @{" "}
+            <span className="relative">
+              APPLE 👨🏻‍💻, VERIFIEDWORKS AGENCY; MANAGED CLIENTS @SAMSUNGUS, ELECTRONIC ARTS,
+              <HandDrawnUnderline className="text-pastel-green bottom-0 left-0" />
+            </span>{" "}
+            LED SOCIAL & GAMING CAMPAIGNS FOR{" "}
+            <span className="border-b-2 border-dotted border-pastel-pink">
+              DISCORD, TWITCH, CYBERPUNK, & POKÉMON GO + MORE 🎮
+            </span>
+          </motion.h2>
+          </section>
+
           <section id="approach" className="container mx-auto px-6 py-16">
             <h3 className="text-xl font-medium mb-8 uppercase">Approach</h3>
             <div className="text-xl sm:text-2xl md:text-3xl font-normal leading-relaxed max-w-4xl relative space-y-6">
