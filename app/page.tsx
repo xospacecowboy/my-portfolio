@@ -184,12 +184,7 @@ export default function Home() {
             </span>
           </motion.h2>
 
-          <motion.div
-            className="container mx-auto px-6 mt-16"
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.4 }}
-          >
+          <div className="container mx-auto px-6 mt-16">
             <div className="w-full h-px bg-gradient-to-r from-transparent via-white/20 to-transparent my-16" />
             <div className="flex justify-center">
               <Link href="/work" className="inline-block">
@@ -204,15 +199,12 @@ export default function Home() {
               </Link>
             </div>
             <div className="w-full h-px bg-gradient-to-r from-transparent via-white/20 to-transparent my-16" />
-          </motion.div>
+          </div>
         </section>
 
-        <motion.section
+        <section
           id="approach"
           className="container mx-auto px-6 py-16"
-          initial={{ opacity: 0, y: 50 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
         >
           <h3 className="text-xl font-medium mb-8 uppercase">Approach</h3>
           <div className="text-xl sm:text-2xl md:text-3xl font-normal leading-relaxed max-w-4xl relative space-y-6">
@@ -265,14 +257,11 @@ export default function Home() {
               </span>
             </motion.p>
           </div>
-        </motion.section>
+        </section>
 
-        <motion.section
+        <section
           id="partnerships"
           className="container mx-auto px-6 py-16"
-          initial={{ opacity: 0, y: 50 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.2 }}
         >
           <h3 className="text-xl font-medium mb-8 uppercase">Featured Partnerships</h3>
           <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-6 text-sm font-jetbrains-mono">
@@ -311,7 +300,7 @@ export default function Home() {
               </motion.div>
             ))}
           </div>
-        </motion.section>
+        </section>
       </main>
       <Footer />
     </div>
