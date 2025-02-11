@@ -87,7 +87,7 @@ export default function Home() {
     <motion.h1
       className="text-4xl sm:text-5xl md:text-6xl font-bold leading-tight mb-6 max-w-5xl text-left relative"
     >
-      {/* HOWDY Effect */}
+      {/* HOWDY Effect - Now Matches DESIGN */}
       <motion.span
         className="relative inline-block px-2 font-bold"
         whileHover={{ letterSpacing: "2px" }}
@@ -114,12 +114,14 @@ export default function Home() {
       
       <span className="inline-block px-1">BASED IN HTX 📍</span>{" "}
       
-      {/* NEW SURPRISE EFFECT: GLITCH HOVER ON FREELANCING ACROSS INDUSTRIES */}
+      {/* NEW SUBTLE SHINE EFFECT ON FREELANCING ACROSS INDUSTRIES */}
       <motion.span
-        className="relative px-3 py-1 inline-block text-deep-grey"
+        className="relative px-3 py-1 inline-block text-deep-grey overflow-hidden"
         whileHover={{
-          textShadow: "3px 3px 0px #FFB6C1, -3px -3px 0px #BAE1FF",
-          transition: { duration: 0.3, yoyo: Infinity },
+          scale: 1.05,
+          background: "linear-gradient(to right, rgba(255,255,255,0.1), rgba(255,255,255,0.3), rgba(255,255,255,0.1))",
+          backgroundSize: "200% 100%",
+          transition: { duration: 0.5, ease: "easeInOut" },
         }}
       >
         FREELANCING ACROSS INDUSTRIES 🐎
