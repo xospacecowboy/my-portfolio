@@ -104,7 +104,7 @@ export default function Home() {
             <span className="bg-pastel-green text-deep-grey px-1">MARKETING CONSULTANT</span>.
           </motion.h1>
           <motion.h2
-            className="text-lg sm:text-xl md:text-2xl font-normal max-w-3xl text-left leading-relaxed mb-8 relative font-jetbrains-mono"
+            className="text-lg sm:text-xl md:text-2xl font-normal max-w-3xl text-left leading-relaxed mt-4 mb-8 relative font-jetbrains-mono"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
