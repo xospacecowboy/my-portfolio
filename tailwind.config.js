@@ -11,6 +11,7 @@ module.exports = {
       fontFamily: {
         "space-grotesk": ["Space Grotesk", "sans-serif"],
         "jetbrains-mono": ["JetBrains Mono", "monospace"],
+        "dotgothic16": ["DotGothic16", "sans-serif"],
       },
       colors: {
         "deep-grey": "#1E1E1E",
@@ -62,4 +63,3 @@ module.exports = {
   },
   plugins: [require("tailwindcss-animate")],
 }
-

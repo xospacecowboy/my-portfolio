@@ -1,10 +1,11 @@
 "use client"
 
-import { useState } from "react"
+// ===================================
+// Imports and Dependencies
+// ===================================
 import Link from "next/link"
 import { motion } from "framer-motion"
 import Footer from "@/components/Footer"
-import { useMousePosition } from "@/hooks/useMousePosition"
 
 const projects = [
   {
@@ -29,18 +30,8 @@ const projects = [
 ]
 
 export default function CreativeStrategyPage() {
-  const [hoveredProject, setHoveredProject] = useState<number | null>(null)
-  const mousePosition = useMousePosition()
-
   return (
-    <div className="bg-deep-grey text-white min-h-screen font-space-grotesk cursor-none">
-      <motion.div
-        className="fixed z-50 pointer-events-none w-8 h-8"
-        animate={{ x: mousePosition.x - 16, y: mousePosition.y - 16 }}
-      >
-        <img src="/cursor.png" alt="Custom Cursor" className="w-full h-full" />
-      </motion.div>
-
+    <div className="bg-deep-grey text-white min-h-screen font-space-grotesk">
       <header className="container mx-auto px-6 py-8">
         <Link href="/work" className="text-2xl font-bold tracking-tighter hover:text-pastel-blue transition-colors">
           ← Back to Work
@@ -63,8 +54,6 @@ export default function CreativeStrategyPage() {
             <motion.div
               key={project.title}
               className="relative overflow-hidden"
-              onMouseEnter={() => setHoveredProject(index)}
-              onMouseLeave={() => setHoveredProject(null)}
               whileHover={{ scale: 1.05 }}
               transition={{ duration: 0.3 }}
             >
@@ -75,7 +64,7 @@ export default function CreativeStrategyPage() {
               </div>
               <motion.div
                 className="absolute inset-0 bg-gradient-to-r from-pastel-pink via-pastel-purple to-pastel-blue opacity-0"
-                animate={{ opacity: hoveredProject === index ? 0.2 : 0 }}
+                animate={{ opacity: 0.2 }}
                 transition={{ duration: 0.3 }}
               />
             </motion.div>
@@ -87,4 +76,3 @@ export default function CreativeStrategyPage() {
     </div>
   )
 }
-

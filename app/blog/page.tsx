@@ -1,11 +1,16 @@
 "use client"
 
+// ===================================
+// Imports and Dependencies
+// ===================================
 import { useState } from "react"
 import Link from "next/link"
 import { motion } from "framer-motion"
 import Footer from "@/components/Footer"
-import { useMousePosition } from "@/hooks/useMousePosition"
 
+// ===================================
+// Blog Posts Data
+// ===================================
 const blogPosts = [
   {
     title: "The Art of Creative Storytelling in Social Media",
@@ -37,30 +42,35 @@ const blogPosts = [
   },
 ]
 
+// ===================================
+// Main Blog Page Component
+// ===================================
 export default function BlogPage() {
+  // State Management
   const [hoveredPost, setHoveredPost] = useState<number | null>(null)
-  const mousePosition = useMousePosition()
 
   return (
-    <div className="bg-deep-grey text-white min-h-screen font-space-grotesk cursor-none">
-      <motion.div
-        className="fixed z-50 pointer-events-none w-8 h-8"
-        animate={{ x: mousePosition.x - 16, y: mousePosition.y - 16 }}
-      >
-        <img src="/cursor.png" alt="Custom Cursor" className="w-full h-full" />
-      </motion.div>
-
+    <div className="bg-deep-grey text-white min-h-screen font-space-grotesk">
+      {/* ===================================
+          Header Section
+          =================================== */}
       <header className="container mx-auto px-6 py-8">
         <Link href="/" className="text-2xl font-bold tracking-tighter hover:text-pastel-blue transition-colors">
           @OXYTOCINS
         </Link>
       </header>
 
+      {/* ===================================
+          Main Content Section
+          =================================== */}
       <main className="container mx-auto px-6 py-12">
         <h1 className="text-5xl font-bold mb-12 bg-clip-text text-transparent bg-gradient-to-r from-pastel-pink via-pastel-purple to-pastel-blue">
           Blog
         </h1>
 
+        {/* ===================================
+            Blog Posts Grid
+            =================================== */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
           {blogPosts.map((post, index) => (
             <motion.div
@@ -94,8 +104,10 @@ export default function BlogPage() {
         </div>
       </main>
 
+      {/* ===================================
+          Footer Section
+          =================================== */}
       <Footer />
     </div>
   )
 }
-

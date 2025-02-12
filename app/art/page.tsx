@@ -1,12 +1,16 @@
 "use client"
 
+// ===================================
+// Imports and Dependencies
+// ===================================
 import { useState } from "react"
 import Link from "next/link"
 import { motion } from "framer-motion"
 import Footer from "@/components/Footer"
-import { useMousePosition } from "@/hooks/useMousePosition"
 
-// This is a placeholder for your art projects. You'll need to replace this with your actual data.
+// ===================================
+// Art Projects Data
+// ===================================
 const artProjects = [
   { id: 1, title: "Abstract Composition", category: "Painting", imageUrl: "/placeholder.svg?height=300&width=300" },
   { id: 2, title: "Digital Landscape", category: "Digital Art", imageUrl: "/placeholder.svg?height=300&width=300" },
@@ -20,25 +24,27 @@ const artProjects = [
   // Add more projects as needed
 ]
 
+// ===================================
+// Main Art Page Component
+// ===================================
 export default function ArtPage() {
+  // State Management
   const [hoveredProject, setHoveredProject] = useState<number | null>(null)
-  const mousePosition = useMousePosition()
 
   return (
-    <div className="bg-deep-grey text-white min-h-screen font-space-grotesk cursor-none">
-      <motion.div
-        className="fixed z-50 pointer-events-none w-8 h-8"
-        animate={{ x: mousePosition.x - 16, y: mousePosition.y - 16 }}
-      >
-        <img src="/cursor.png" alt="Custom Cursor" className="w-full h-full" />
-      </motion.div>
-
+    <div className="bg-deep-grey text-white min-h-screen font-space-grotesk">
+      {/* ===================================
+          Header Section
+          =================================== */}
       <header className="container mx-auto px-6 py-8">
         <Link href="/" className="text-2xl font-bold tracking-tighter hover:text-pastel-blue transition-colors">
           @OXYTOCINS
         </Link>
       </header>
 
+      {/* ===================================
+          Main Content Section
+          =================================== */}
       <main className="container mx-auto px-6 py-12">
         <h1 className="text-5xl font-bold mb-12 bg-clip-text text-transparent bg-gradient-to-r from-pastel-pink via-pastel-purple to-pastel-blue">
           Artistic Portfolio
@@ -49,6 +55,9 @@ export default function ArtPage() {
           development.
         </p>
 
+        {/* ===================================
+            Art Projects Grid
+            =================================== */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
           {artProjects.map((project, index) => (
             <motion.div
@@ -78,8 +87,10 @@ export default function ArtPage() {
         </div>
       </main>
 
+      {/* ===================================
+          Footer Section
+          =================================== */}
       <Footer />
     </div>
   )
 }
-
