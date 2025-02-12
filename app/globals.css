@@ -49,6 +49,7 @@ body {
 .gradient-text {
   background: linear-gradient(45deg, #ffb3ba, #bffcc6, #bae1ff, #ffc6ff);
   background-size: 300% 300%;
+  background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   animation: gradient 15s ease infinite;
