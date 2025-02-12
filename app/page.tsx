@@ -55,29 +55,6 @@ const HandDrawnUnderline = ({ className }: { className?: string }) => (
   </svg>
 )
 
-const GreenSquiggle = () => (
-  <svg className="w-full h-8 my-8" viewBox="0 0 200 20" xmlns="http://www.w3.org/2000/svg">
-    <path
-      d="M0 10C20 5 40 15 60 10C80 5 100 15 120 10C140 5 160 15 180 10C190 7.5 200 10 200 10"
-      fill="none"
-      stroke="#BFFCC6"
-      strokeWidth="3"
-      strokeLinecap="round"
-    >
-      <animate
-        attributeName="d"
-        dur="5s"
-        repeatCount="indefinite"
-        values="
-          M0 10C20 5 40 15 60 10C80 5 100 15 120 10C140 5 160 15 180 10C190 7.5 200 10 200 10;
-          M0 10C20 15 40 5 60 10C80 15 100 5 120 10C140 15 160 5 180 10C190 12.5 200 10 200 10;
-          M0 10C20 5 40 15 60 10C80 5 100 15 120 10C140 5 160 15 180 10C190 7.5 200 10 200 10
-        "
-      />
-    </path>
-  </svg>
-)
-
 const RandomFont = ({ children }: { children: React.ReactNode }) => {
   const [isAltFont, setIsAltFont] = useState(false)
 
@@ -281,7 +258,7 @@ export default function Home() {
               animate={{ backgroundSize: "100% 100%" }}
               transition={{ duration: 1.5, ease: "easeOut" }}
               style={{
-                backgroundImage: "linear-gradient(to right, #B0E57C, #BAE1FF, #FFB6C1)",
+                backgroundImage: "linear-gradient(to right, #BFFCC6, #BAE1FF, #FFB6C1)",
                 backgroundRepeat: "no-repeat",
                 backgroundPosition: "0 100%",
               }}
@@ -295,10 +272,30 @@ export default function Home() {
             </span>
           </motion.h1>
 
-          {/* ===================================
-              Green Squiggle Section
-              =================================== */}
-          <GreenSquiggle />
+          {/* Stats Section */}
+          <section className="mt-16 mb-16">
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-1">
+              {[
+                { number: "10+", label: "Years Experience" },
+                { number: "50+", label: "Brand Partnerships" },
+                { number: "100M+", label: "Social Impressions" },
+                { number: "∞", label: "Creative Possibilities" },
+              ].map((stat, index) => (
+                <motion.div
+                  key={stat.label}
+                  className="text-center px-2"
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.5, delay: 0.3 + index * 0.1 }}
+                >
+                  <div className="text-2xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-pastel-pink to-pastel-blue mb-1">
+                    {stat.number}
+                  </div>
+                  <div className="text-xs text-white/60 font-jetbrains-mono">{stat.label}</div>
+                </motion.div>
+              ))}
+            </div>
+          </section>
 
           {/* ===================================
               About Section
