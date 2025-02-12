@@ -1,112 +1,104 @@
 "use client"
 
-// ===================================
-// Imports and Dependencies
-// ===================================
-import { useState } from "react"
-import Link from "next/link"
+import { useState, useEffect } from "react"
 import { motion } from "framer-motion"
-import Footer from "@/components/Footer"
+import Header from "../../components/Header"
+import Footer from "../../components/Footer"
+import { getBlogPosts, staticBlogPosts, type BlogPost } from "@/lib/notion"
+import Link from "next/link"
 
-// ===================================
-// Blog Posts Data
-// ===================================
-const blogPosts = [
-  {
-    title: "The Art of Creative Storytelling in Social Media",
-    date: "May 15, 2023",
-    slug: "creative-storytelling",
-    excerpt: "Exploring how narrative techniques can elevate your social media content...",
-    category: "Social Media",
-  },
-  {
-    title: "Maximizing Impact with Influencer Collaborations",
-    date: "June 2, 2023",
-    slug: "influencer-collaborations",
-    excerpt: "Tips and strategies for successful partnerships with content creators...",
-    category: "Influencer Marketing",
-  },
-  {
-    title: "Emerging Trends in Digital Marketing for 2023",
-    date: "June 20, 2023",
-    slug: "digital-marketing-trends-2023",
-    excerpt: "A look at the latest innovations shaping the digital marketing landscape...",
-    category: "Digital Marketing",
-  },
-  {
-    title: "Building Authentic Brand Voices on Social Platforms",
-    date: "July 5, 2023",
-    slug: "authentic-brand-voices",
-    excerpt: "Strategies for developing a genuine and resonant brand personality online...",
-    category: "Branding",
-  },
-]
-
-// ===================================
-// Main Blog Page Component
-// ===================================
 export default function BlogPage() {
-  // State Management
-  const [hoveredPost, setHoveredPost] = useState<number | null>(null)
+  const [posts, setPosts] = useState<BlogPost[]>(staticBlogPosts)
+  const [error, setError] = useState<string | null>(null)
+
+  // Fetch posts on mount
+  useEffect(() => {
+    getBlogPosts()
+      .then(newPosts => {
+        console.log('Posts fetched:', newPosts.length)
+        setPosts(newPosts)
+      })
+      .catch(err => {
+        console.error('Error in blog page:', err)
+        setError(err.message)
+      })
+  }, [])
 
   return (
-    <div className="bg-deep-grey text-white min-h-screen font-space-grotesk">
-      {/* ===================================
-          Header Section
-          =================================== */}
-      <header className="container mx-auto px-6 py-8">
-        <Link href="/" className="text-2xl font-bold tracking-tighter hover:text-pastel-blue transition-colors">
-          @OXYTOCINS
-        </Link>
-      </header>
+    <div className="bg-deep-grey text-white min-h-screen">
+      <Header />
 
-      {/* ===================================
-          Main Content Section
-          =================================== */}
-      <main className="container mx-auto px-6 py-12">
-        <h1 className="text-5xl font-bold mb-12 bg-clip-text text-transparent bg-gradient-to-r from-pastel-pink via-pastel-purple to-pastel-blue">
-          Blog
-        </h1>
+      <main className="container mx-auto px-6 pt-32">
+        {/* Hero Section */}
+        <motion.section 
+          className="pb-12"
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5 }}
+        >
+          <h1 className="text-6xl md:text-7xl font-bold font-dotgothic16 mb-6">
+            THOUGHTS & <br />
+            <span className="bg-clip-text text-transparent bg-gradient-to-r from-pastel-pink via-pastel-purple to-pastel-blue">
+              INSIGHTS
+            </span>
+          </h1>
+          <div className="text-xl text-white/80 font-jetbrains-mono max-w-2xl">
+            Exploring creativity, technology, and the intersection of art and business. 
+            Join me as I share insights from my journey in the digital landscape.
+          </div>
+        </motion.section>
 
-        {/* ===================================
-            Blog Posts Grid
-            =================================== */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
-          {blogPosts.map((post, index) => (
-            <motion.div
-              key={post.slug}
-              className="relative overflow-hidden"
-              onMouseEnter={() => setHoveredPost(index)}
-              onMouseLeave={() => setHoveredPost(null)}
-              whileHover={{ scale: 1.05 }}
-              transition={{ duration: 0.3 }}
-            >
-              <Link href={`/blog/${post.slug}`}>
-                <div className="bg-white/5 p-8 rounded-lg h-full flex flex-col justify-between">
-                  <div>
-                    <span className="text-xs font-bold text-pastel-green mb-2 block">{post.category}</span>
-                    <h2 className="text-2xl font-bold mb-2">{post.title}</h2>
-                    <p className="text-sm text-gray-400 mb-4">{post.date}</p>
-                    <p className="font-jetbrains-mono text-sm">{post.excerpt}</p>
+        {/* Error Message */}
+        {error && (
+          <div className="mb-8 p-4 bg-red-500/10 border border-red-500/20 rounded-lg">
+            <div className="text-red-400 font-jetbrains-mono text-sm">Error loading posts: {error}</div>
+          </div>
+        )}
+
+        {/* Blog Posts Grid */}
+        <section className="pb-16">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            {posts.map((post, index) => (
+              <Link 
+                href={`/blog/${post.slug}`} 
+                key={post.slug}
+              >
+                <motion.article
+                  className="group relative overflow-hidden rounded-lg bg-white/[0.02] border border-white/[0.05] transition-all duration-300 hover:bg-white/[0.05] h-[280px] flex flex-col"
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.5, delay: index * 0.1 }}
+                  whileHover={{ scale: 1.02 }}
+                >
+                  <div className="p-6 flex flex-col flex-grow">
+                    <div className="text-xs font-bold text-pastel-green mb-3 font-jetbrains-mono">
+                      {post.category}
+                    </div>
+                    <h2 className="text-xl font-bold mb-2 bg-clip-text text-transparent bg-gradient-to-r from-pastel-pink to-pastel-blue line-clamp-2">
+                      {post.title}
+                    </h2>
+                    <time className="text-xs text-white/60 font-jetbrains-mono mb-3" dateTime={post.date}>
+                      {new Date(post.date).toLocaleDateString('en-US', {
+                        year: 'numeric',
+                        month: 'long',
+                        day: 'numeric'
+                      })}
+                    </time>
+                    <div className="font-jetbrains-mono text-sm text-white/80 mb-4 line-clamp-2">
+                      {post.excerpt}
+                    </div>
+                    <div className="text-pastel-blue font-jetbrains-mono text-sm mt-auto">
+                      Read more →
+                    </div>
                   </div>
-                  <div className="mt-4">
-                    <span className="text-pastel-blue hover:underline">Read more →</span>
-                  </div>
-                </div>
-                <motion.div
-                  className="absolute inset-0 bg-gradient-to-r from-pastel-pink via-pastel-purple to-pastel-blue opacity-0"
-                  animate={{ opacity: hoveredPost === index ? 0.2 : 0 }}
-                  transition={{ duration: 0.3 }}
-                />
+                  <div className="absolute inset-0 bg-gradient-to-r from-pastel-pink via-pastel-purple to-pastel-blue opacity-0 transition-opacity duration-300 group-hover:opacity-20" />
+                </motion.article>
               </Link>
-            </motion.div>
-          ))}
-        </div>
+            ))}
+          </div>
+        </section>
       </main>
 
-      {/* ===================================
-          Footer Section
-          =================================== */}
       <Footer />
     </div>
   )

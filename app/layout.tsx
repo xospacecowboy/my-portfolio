@@ -4,12 +4,16 @@ import { Space_Grotesk, DotGothic16 } from "next/font/google"
 import type React from "react"
 
 const spaceGrotesk = Space_Grotesk({ subsets: ["latin"] })
-const dotGothic16 = DotGothic16({ weight: "400", subsets: ["latin"] })
+const dotGothic16 = DotGothic16({ 
+  weight: "400", 
+  subsets: ["latin"],
+  variable: '--font-dotgothic16'
+})
 
 export const metadata = {
   title: "Stephen Beardslee - Strategic Social Media Leader",
   description: "Digital Marketing & Social Media Professional based in Houston",
-    generator: 'v0.dev'
+  generator: 'v0.dev'
 }
 
 export default function RootLayout({
@@ -19,11 +23,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={`${spaceGrotesk.className} ${dotGothic16.variable}`}>{children}</body>
+      <body className={`${spaceGrotesk.className} ${dotGothic16.className}`}>{children}</body>
     </html>
   )
 }
-
-
-
-import './globals.css'

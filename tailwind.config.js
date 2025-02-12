@@ -16,9 +16,9 @@ module.exports = {
       colors: {
         "deep-grey": "#1E1E1E",
         "pastel-red": "#FF6B6B",
-        "pastel-pink": "#FFB3BA",
-        "pastel-purple": "#BFACE2",
-        "pastel-blue": "#BAE1FF",
+        "pastel-pink": "#FFB5E8",
+        "pastel-purple": "#B28DFF",
+        "pastel-blue": "#85E3FF",
         "pastel-green": "#BFFCC6",
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
@@ -61,5 +61,5 @@ module.exports = {
       },
     },
   },
-  plugins: [require("tailwindcss-animate")],
+  plugins: [require("tailwindcss-animate"), require('@tailwindcss/line-clamp')],
 }

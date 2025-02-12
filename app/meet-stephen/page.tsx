@@ -21,63 +21,114 @@ export default function MeetStephen() {
 
       <main className="container mx-auto px-6 pt-32">
         {/* Hero Section */}
-        <section className="relative py-20">
-          <div className="grid md:grid-cols-2 gap-12 items-center">
-            <div className="space-y-6">
-              <motion.h1 
-                className="text-6xl md:text-7xl font-bold font-dotgothic16"
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5 }}
-              >
-                MEET <br />
-                <GradientText>STEPHEN</GradientText>
-              </motion.h1>
-              <motion.p
-                className="text-xl text-white/80 font-jetbrains-mono max-w-lg"
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: 0.2 }}
-              >
-                Strategic social media leader based in Houston, crafting transformative digital experiences.
-              </motion.p>
-            </div>
-            <motion.div 
-              className="relative h-[500px] rounded-2xl overflow-hidden"
-              initial={{ opacity: 0, scale: 0.95 }}
-              animate={{ opacity: 1, scale: 1 }}
-              transition={{ duration: 0.5, delay: 0.3 }}
-            >
-              <Image
-                src="/headshot.jpg"
-                alt="Stephen Beardslee"
-                fill
-                className="object-cover"
-                priority
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-deep-grey via-transparent to-transparent" />
-            </motion.div>
+        <section className="pb-12">
+          <h1 className="text-6xl md:text-7xl font-bold font-dotgothic16 mb-6">
+            MEET <br />
+            <GradientText>STEPHEN</GradientText>
+          </h1>
+          <div className="text-xl text-white/80 font-jetbrains-mono max-w-2xl">
+            Strategic social media leader based in Houston, crafting transformative digital experiences.
           </div>
         </section>
 
-        {/* Skills Grid */}
-        <section className="py-0">
+        {/* Profile Section */}
+        <section className="grid md:grid-cols-2 gap-12 pb-16">
+          {/* Image Column */}
+          <motion.div
+            initial={{ opacity: 0, x: -20 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.5 }}
+            className="relative aspect-square rounded-lg overflow-hidden"
+          >
+            <Image
+              src="/headshot.jpg"
+              alt="Stephen Beardslee"
+              fill
+              className="object-cover"
+              priority
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-deep-grey/80 to-transparent" />
+          </motion.div>
+
+          {/* Content Column */}
+          <motion.div
+            initial={{ opacity: 0, x: 20 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.5, delay: 0.2 }}
+            className="space-y-6"
+          >
+            <div className="space-y-4">
+              <div className="text-2xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-pastel-pink to-pastel-blue">
+                Background
+              </div>
+              <div className="text-white/80 font-jetbrains-mono space-y-4">
+                <div>
+                  With over a decade of experience in creative and social media, I've had the privilege of working with some of the world's most innovative brands.
+                </div>
+                <div>
+                  My journey began at Apple, where I honed my skills in creative storytelling and customer experience. Since then, I've led successful campaigns and strategies for various tech and gaming companies.
+                </div>
+              </div>
+            </div>
+
+            <div className="space-y-4">
+              <div className="text-2xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-pastel-blue to-pastel-purple">
+                Approach
+              </div>
+              <div className="text-white/80 font-jetbrains-mono space-y-4">
+                <div>
+                  I believe in creating authentic connections through strategic storytelling and innovative design. Every project is an opportunity to push creative boundaries while delivering measurable results.
+                </div>
+                <div>
+                  My work combines data-driven insights with creative intuition to craft experiences that resonate with audiences and drive engagement.
+                </div>
+              </div>
+            </div>
+
+            <div className="space-y-4">
+              <div className="text-2xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-pastel-purple to-pastel-pink">
+                Beyond Work
+              </div>
+              <div className="text-white/80 font-jetbrains-mono space-y-4">
+                <div>
+                  When I'm not crafting digital experiences, you'll find me exploring new creative mediums, experimenting with digital art, or staying up-to-date with the latest trends in technology and design.
+                </div>
+                <div>
+                  I'm always excited to connect with fellow creatives and explore new opportunities for collaboration.
+                </div>
+              </div>
+            </div>
+          </motion.div>
+        </section>
+
+        {/* Skills Section */}
+        <section className="pb-16">
+          <div className="text-3xl font-bold mb-8 bg-clip-text text-transparent bg-gradient-to-r from-pastel-pink to-pastel-blue">
+            Skills & Expertise
+          </div>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
             {[
-              { title: "Artist", color: "text-pastel-pink", desc: "Exploring various mediums" },
-              { title: "Designer", color: "text-pastel-blue", desc: "Crafting visual identities" },
-              { title: "Developer", color: "text-pastel-green", desc: "Building digital experiences" },
-              { title: "Strategist", color: "text-pastel-yellow", desc: "Leading social initiatives" },
+              "Artist",
+              "Designer",
+              "Developer",
+              "Strategist",
+              "Creative Strategy",
+              "Social Media",
+              "Brand Development",
+              "Content Creation",
+              "Campaign Management",
+              "Digital Marketing",
+              "Team Leadership",
+              "Project Management"
             ].map((skill, index) => (
               <motion.div
-                key={skill.title}
-                className="bg-white/5 p-6 rounded-lg border border-white/10 group hover:bg-white/10 transition-all duration-300"
+                key={skill}
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
+                className="bg-white/[0.02] border border-white/[0.05] rounded-lg p-4 font-jetbrains-mono text-sm text-center hover:bg-white/[0.05] transition-colors"
               >
-                <h3 className={`text-xl font-bold mb-2 ${skill.color}`}>{skill.title}</h3>
-                <p className="text-sm text-white/60 font-jetbrains-mono">{skill.desc}</p>
+                {skill}
               </motion.div>
             ))}
           </div>
@@ -96,17 +147,17 @@ export default function MeetStephen() {
                 <GradientText>Professional Journey</GradientText>
               </h2>
               <div className="space-y-6 text-lg text-white/80 font-jetbrains-mono">
-                <p>
+                <div>
                   With a background in global social media management at <GradientText>Electronic Arts</GradientText> and
                   experience as a social strategist and gaming consultant at <GradientText>Cashmere Agency</GradientText>,
                   Stephen has worked with major brands like <GradientText>Google, Meta, and Twitch</GradientText>.
-                </p>
-                <p>
+                </div>
+                <div>
                   Stephen's approach focuses on creating <GradientText>transformative content</GradientText> that is relevant,
                   meaningful, entertaining, and inspiring. He believes that{" "}
                   <GradientText>good stories are the key to good content</GradientText> and strives to extract meaningful
                   narratives from every idea.
-                </p>
+                </div>
               </div>
             </div>
 
@@ -115,13 +166,13 @@ export default function MeetStephen() {
                 <GradientText>Creative Vision</GradientText>
               </h2>
               <div className="space-y-6 text-lg text-white/80 font-jetbrains-mono">
-                <p>
+                <div>
                   Beyond his professional endeavors, Stephen is an{" "}
                   <GradientText>accomplished artist and graphic designer</GradientText>. His creative work spans various
                   mediums, from traditional painting to digital design. As an{" "}
                   <GradientText>emerging web developer</GradientText>, Stephen combines his artistic vision with technical
                   skills to create engaging and innovative digital experiences.
-                </p>
+                </div>
               </div>
             </div>
           </motion.div>

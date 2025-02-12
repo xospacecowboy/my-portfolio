@@ -182,7 +182,7 @@ export default function Home() {
           </Link>
           <nav className="flex items-center space-x-8">
             <Link href="/work" className="text-sm hover:text-pastel-blue transition-colors font-jetbrains-mono">
-              PORTFOLIO
+              WORK
             </Link>
             <Link href="/art" className="text-sm hover:text-pastel-blue transition-colors font-jetbrains-mono">
               ART
@@ -199,7 +199,7 @@ export default function Home() {
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
             >
-              MAIL
+              @
             </motion.a>
           </nav>
         </div>
@@ -300,7 +300,7 @@ export default function Home() {
           {/* ===================================
               About Section
               =================================== */}
-          <motion.p className="text-2xl sm:text-3xl md:text-4xl font-light italic max-w-5xl text-left mt-4 relative">
+          <motion.div className="text-2xl sm:text-3xl md:text-4xl font-light italic max-w-5xl text-left mt-4 relative">
             <RandomFont>W/ A PASSION FOR</RandomFont>{" "}
             <motion.span
               className="font-bold relative inline-block cursor-pointer"
@@ -376,12 +376,12 @@ export default function Home() {
               ENGAGE
             </motion.span>
             .
-          </motion.p>
+          </motion.div>
 
           {/* ===================================
               Approach Section
               =================================== */}
-          <motion.p className="text-lg sm:text-xl md:text-2xl font-normal max-w-5xl text-left mt-3 [&>span]:leading-tight">
+          <motion.div className="text-lg sm:text-xl md:text-2xl font-normal max-w-5xl text-left mt-3 [&>span]:leading-tight">
             <span className="font-dotgothic16 block space-y-5">
               <div>
                 I create{" "}
@@ -485,7 +485,7 @@ export default function Home() {
                 ✨
               </div>
             </span>
-          </motion.p>
+          </motion.div>
 
           {/* ===================================
               TL;DR Section
@@ -619,7 +619,7 @@ export default function Home() {
               Let's Work Together Section
               =================================== */}
           <section className="container mx-auto px-6 pt-8 pb-16">
-            <motion.p className="text-2xl sm:text-3xl md:text-4xl font-normal max-w-5xl mx-auto text-center leading-relaxed mb-12">
+            <motion.div className="text-2xl sm:text-3xl md:text-4xl font-normal max-w-5xl mx-auto text-center leading-relaxed mb-12">
               <span className="font-dotgothic16 block">
                 <span className="block mb-3">
                   I AM{" "}
@@ -687,7 +687,7 @@ export default function Home() {
                   </motion.span>
                 </span>
               </span>
-            </motion.p>
+            </motion.div>
 
             <motion.form 
               className="max-w-lg mx-auto"

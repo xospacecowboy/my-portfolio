@@ -32,7 +32,7 @@ export default function Header() {
         </Link>
         <nav className="flex items-center space-x-8">
           <Link href="/work" className="text-sm hover:text-pastel-blue transition-colors font-jetbrains-mono">
-            PORTFOLIO
+            WORK
           </Link>
           <Link href="/art" className="text-sm hover:text-pastel-blue transition-colors font-jetbrains-mono">
             ART
@@ -49,7 +49,7 @@ export default function Header() {
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
           >
-            MAIL
+            @
           </motion.a>
         </nav>
       </div>
