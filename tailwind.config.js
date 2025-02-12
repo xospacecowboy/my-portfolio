@@ -11,7 +11,6 @@ module.exports = {
       fontFamily: {
         "space-grotesk": ["Space Grotesk", "sans-serif"],
         "jetbrains-mono": ["JetBrains Mono", "monospace"],
-        "pragmatica-extended": ["Pragmatica Extended", "sans-serif"], // Add your new font here
       },
       colors: {
         "deep-grey": "#1E1E1E",

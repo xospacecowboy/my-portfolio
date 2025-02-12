@@ -1,6 +1,5 @@
 import Link from "next/link"
-import { Linkedin, Instagram } from "lucide-react"
-import Image from "next/image" // Import Image component from next/image
+import { Linkedin, Twitter, Instagram } from "lucide-react"
 
 export default function Footer() {
   return (
@@ -9,23 +8,23 @@ export default function Footer() {
         <div className="flex flex-col md:flex-row justify-between items-center">
           <div className="mb-6 md:mb-0">
             <Link href="/" className="text-2xl font-bold tracking-tighter">
-              HOME
+              @OXYTOCINS
             </Link>
           </div>
           <nav className="flex space-x-6 mb-6 md:mb-0">
             <Link href="/work" className="hover:text-pastel-blue transition-colors">
-              PORTFOLIO
+              Work
             </Link>
             <Link href="/meet-stephen" className="hover:text-pastel-blue transition-colors">
-              ABOUT
+              Meet Stephen
             </Link>
             <a href="mailto:beardslee.stephen@icloud.com" className="hover:text-pastel-blue transition-colors">
-              MAIL
+              Contact
             </a>
           </nav>
           <div className="flex space-x-4">
             <a
-              href="https://www.linkedin.com/in/stephen-beardslee/"
+              href="https://www.linkedin.com/in/stephenbeardslee/"
               target="_blank"
               rel="noopener noreferrer"
               className="hover:text-pastel-blue transition-colors"
@@ -33,15 +32,15 @@ export default function Footer() {
               <Linkedin className="w-6 h-6" />
             </a>
             <a
-              href="https://www.threads.net/@oxytocins"
+              href="https://twitter.com/yourtwitterhandle"
               target="_blank"
               rel="noopener noreferrer"
               className="hover:text-pastel-blue transition-colors"
             >
-              <Image src="/icons/threads.svg" alt="Threads" width={24} height={24} />
+              <Twitter className="w-6 h-6" />
             </a>
             <a
-              href="https://www.instagram.com/oxytocins/"
+              href="https://www.instagram.com/yourinstagramhandle/"
               target="_blank"
               rel="noopener noreferrer"
               className="hover:text-pastel-blue transition-colors"

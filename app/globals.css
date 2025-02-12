@@ -30,6 +30,10 @@ body {
   font-family: "JetBrains Mono", monospace;
 }
 
+.font-dotgothic16 {
+  font-family: "DotGothic16", sans-serif;
+}
+
 @keyframes gradient {
   0% {
     background-position: 0% 50%;
@@ -52,5 +56,21 @@ body {
 
 .backface-hidden {
   backface-visibility: hidden;
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+.float {
+  animation: float 4s ease-in-out infinite;
 }
 
