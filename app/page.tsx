@@ -101,7 +101,7 @@ export default function Home() {
                 whileHover={{ letterSpacing: "2px" }}
                 transition={{ duration: 0.3 }}
               >
-                  𐚁 HOWDY,
+                   𐚁 HOWDY,
               </motion.span>{" "}
               I'M STEPHEN—A{" "}
               
@@ -397,7 +397,7 @@ export default function Home() {
                 <motion.div
                   key={skill}
                   className="bg-deep-grey border border-white/20 p-4 rounded-lg flex items-center justify-center text-center transition-colors duration-300 cursor-pointer"
-                  whileHover={{ background: "linear-gradient(to right, #B0E57C, #BAE1FF, #FFB6C1)" }}
+                  whileHover={{ background: "linear-gradient(to right, #B0E57C, #BAE1FF, #FFB6C1)", color: "#1a1a1a" }}
                 >
                   {skill}
                 </motion.div>
