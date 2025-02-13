@@ -46,12 +46,12 @@ export default function MeetStephen() {
               </div>
               <div className="text-white/80 font-jetbrains-mono space-y-4">
                 <p>
-                  With over 10 years of experience in social media management and digital marketing,
-                  I've developed a keen eye for creating content that resonates with audiences and
+                  With over 7 years of experience in social media management and digital marketing,
+                  Stephen has developed a keen eye for creating content that resonates with audiences and
                   drives engagement.
                 </p>
                 <p>
-                  My approach combines data-driven insights with creative storytelling to build
+                  His approach combines data-driven insights with creative storytelling to build
                   meaningful connections between brands and their communities.
                 </p>
               </div>
@@ -63,10 +63,10 @@ export default function MeetStephen() {
               </div>
               <div className="text-white/80 font-jetbrains-mono space-y-4">
                 <p>
-                  I believe in creating authentic connections through strategic storytelling and innovative design. Every project is an opportunity to push creative boundaries while delivering measurable results.
+                  Stephen believes in creating authentic connections through strategic storytelling and innovative design. Every project is an opportunity to push creative boundaries while delivering measurable results.
                 </p>
                 <p>
-                  My work combines data-driven insights with creative intuition to craft experiences that resonate with audiences and drive engagement.
+                  His work combines data-driven insights with creative intuition to craft experiences that resonate with audiences and drive engagement.
                 </p>
               </div>
             </div>
@@ -77,10 +77,10 @@ export default function MeetStephen() {
               </div>
               <div className="text-white/80 font-jetbrains-mono space-y-4">
                 <p>
-                  When I'm not crafting digital experiences, you'll find me exploring new creative mediums, experimenting with digital art, or staying up-to-date with the latest trends in technology and design.
+                  When he's not crafting digital experiences, you'll find Stephen exploring new creative mediums, experimenting with digital art/web dev, or staying up-to-date with the latest trends in gaming, technology and design.
                 </p>
                 <p>
-                  I'm always excited to connect with fellow creatives and explore new opportunities for collaboration.
+                  He's always excited to connect with fellow creatives and explore new opportunities for collaboration.
                 </p>
               </div>
             </div>

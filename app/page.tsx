@@ -157,7 +157,7 @@ export default function Home() {
     },
     {
       company: "Pokémon GO",
-      role: "Partnered with Samsung and Niantic for Community Day events featuring select creators",
+      role: "Partnered w/ Samsung and Niantic for Community Day events ft. popular creators",
       icon: "🐣",
       color: "text-pastel-green",
       bgGradient: "from-pastel-pink to-pastel-green"
