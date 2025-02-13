@@ -90,14 +90,14 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
-        <link rel="icon" type="image/png" href="/favicon.png?v=2" />
-        <link rel="shortcut icon" type="image/png" href="/favicon.png?v=2" />
-        <link rel="apple-touch-icon" type="image/png" href="/favicon.png?v=2" />
-        <meta property="og:image:url" content="https://oxytocins.me/social.png?v=2" />
+        <link rel="icon" type="image/png" href="/icon.png" />
+        <link rel="shortcut icon" type="image/png" href="/icon.png" />
+        <link rel="apple-touch-icon" type="image/png" href="/icon.png" />
+        <meta property="og:image:url" content="https://oxytocins.me/share.png" />
         <meta property="og:image:width" content="1200" />
         <meta property="og:image:height" content="630" />
         <meta property="og:image:alt" content="Stephen Beardslee Portfolio" />
-        <meta name="twitter:image" content="https://oxytocins.me/social.png?v=2" />
+        <meta name="twitter:image" content="https://oxytocins.me/share.png" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="theme-color" content="#000000" />
       </head>
