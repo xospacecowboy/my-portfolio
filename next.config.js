@@ -5,8 +5,16 @@ const nextConfig = {
     NOTION_DATABASE_ID: process.env.NOTION_DATABASE_ID,
   },
   images: {
-    domains: [],
-    unoptimized: true,
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: '**',
+      },
+    ],
+    minimumCacheTTL: 60,
+    dangerouslyAllowSVG: true,
+    contentDispositionType: 'attachment',
+    formats: ['image/avif', 'image/webp'],
   },
 }
 
