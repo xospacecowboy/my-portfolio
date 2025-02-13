@@ -19,23 +19,19 @@ const projectData = {
   images: [
     {
       src: "/work/social-media-campaign/image1.jpg",
-      alt: "Campaign Overview",
-      caption: "Overview of the social media platforms and visual direction"
+      alt: "Campaign Overview"
     },
     {
-      src: "/work/social-media-campaign/image2.png",
-      alt: "Content Examples",
-      caption: "Example of high-performing social media content"
+      src: "/work/social-media-campaign/image2.jpg",
+      alt: "Content Examples"
     },
     {
-      src: "/work/social-media-campaign/image3.png",
-      alt: "Community Engagement",
-      caption: "Community engagement and player-first messaging"
+      src: "/work/social-media-campaign/image3.jpg",
+      alt: "Community Engagement"
     },
     {
       src: "/work/social-media-campaign/image4.jpg",
-      alt: "Campaign Results",
-      caption: "Visual representation of look and feel of the campaign"
+      alt: "Campaign Results"
     }
   ]
 }
@@ -138,13 +134,6 @@ export default function ProjectPage() {
                   quality={90}
                   className="object-cover"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent">
-                  <div className="absolute bottom-0 p-4">
-                    <div className="text-sm text-white/80 font-jetbrains-mono">
-                      {image.caption}
-                    </div>
-                  </div>
-                </div>
               </motion.div>
             ))}
           </div>

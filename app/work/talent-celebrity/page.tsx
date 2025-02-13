@@ -19,23 +19,19 @@ const projectData = {
   images: [
     {
       src: "/work/talent-celebrity/image1.jpg",
-      alt: "Talent Partnerships",
-      caption: "Curated content with high profile Twitch streamers"
+      alt: "Talent Partnerships"
     },
     {
       src: "/work/talent-celebrity/image2.jpg",
-      alt: "Contract Management",
-      caption: "Oversaw in-person activations with celebrity talent @ TwitchCon"
+      alt: "Contract Management"
     },
     {
-      src: "/work/talent-celebrity/image3.png",
-      alt: "Campaign Execution",
-      caption: "Production and content assistant for high-profile campaigns"
+      src: "/work/talent-celebrity/image3.jpg",
+      alt: "Campaign Execution"
     },
     {
-      src: "/work/talent-celebrity/image4.png",
-      alt: "Partnership Results",
-      caption: "Managed talent relationships across a variety of creators"
+      src: "/work/talent-celebrity/image4.jpg",
+      alt: "Partnership Results"
     }
   ]
 }
@@ -174,15 +170,11 @@ export default function ProjectPage() {
                   src={image.src}
                   alt={image.alt}
                   fill
+                  sizes="(max-width: 768px) 100vw, 50vw"
+                  priority={index < 2}
+                  quality={90}
                   className="object-cover"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent">
-                  <div className="absolute bottom-0 p-4">
-                    <div className="text-sm text-white/80 font-jetbrains-mono">
-                      {image.caption}
-                    </div>
-                  </div>
-                </div>
               </motion.div>
             ))}
           </div>

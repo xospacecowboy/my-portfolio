@@ -18,24 +18,20 @@ const projectData = {
   results: "Generated over 1M+ social impressions with 95% positive sentiment, successfully positioning Galaxy devices as legitimate gaming platforms while establishing lasting partnerships with key gaming influencers.",
   images: [
     {
-      src: "/work/gaming-activation/image1.jpeg",
-      alt: "PAX East Booth Setup",
-      caption: "PokemonGO Creators at PAX East 2020"
+      src: "/work/gaming-activation/image1.jpg",
+      alt: "PAX East Booth Setup"
     },
     {
-      src: "/work/gaming-activation/image2.png",
-      alt: "Influencer Interactions",
-      caption: "#TeamGalaxy influencers engaging with attendees"
+      src: "/work/gaming-activation/image2.jpg",
+      alt: "Influencer Interactions"
     },
     {
-      src: "/work/gaming-activation/image3.png",
-      alt: "Product Showcase",
-      caption: "Fan meet and greet"
+      src: "/work/gaming-activation/image3.jpg",
+      alt: "Product Showcase"
     },
     {
-      src: "/work/gaming-activation/image4.png",
-      alt: "Event Highlights",
-      caption: "Capturing key moments and community engagement"
+      src: "/work/gaming-activation/image4.jpg",
+      alt: "Event Highlights"
     }
   ]
 }
@@ -137,13 +133,6 @@ export default function ProjectPage() {
                   priority={index === 0}
                   className="object-cover w-full h-full"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent">
-                  <div className="absolute bottom-0 p-4">
-                    <div className="text-sm text-white/80 font-jetbrains-mono">
-                      {image.caption}
-                    </div>
-                  </div>
-                </div>
               </motion.div>
             ))}
           </div>

@@ -22,14 +22,20 @@ const projectData = {
   },
   images: [
     {
-      src: "/work/influencer-program/image1.png",
-      alt: "Program Overview",
-      caption: "Partnerned with creators across a variety of interests and games"
+      src: "/work/influencer-program/image1.jpg",
+      alt: "Program Overview"
     },
     {
       src: "/work/influencer-program/image2.jpg",
-      alt: "Content Production",
-      caption: "Produced live events and managed partnership negotiations"
+      alt: "Content Creation"
+    },
+    {
+      src: "/work/influencer-program/image3.jpg",
+      alt: "Campaign Results"
+    },
+    {
+      src: "/work/influencer-program/image4.jpg",
+      alt: "Partnership Highlights"
     }
   ]
 }
@@ -157,13 +163,6 @@ export default function InfluencerProgramPage() {
                   fill
                   className="object-cover"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent">
-                  <div className="absolute bottom-0 p-4">
-                    <div className="text-sm text-white/80 font-jetbrains-mono">
-                      {image.caption}
-                    </div>
-                  </div>
-                </div>
               </motion.div>
             ))}
           </div>
