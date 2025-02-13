@@ -49,7 +49,7 @@ export const metadata: Metadata = {
     card: 'summary',
     title: 'Stephen Beardslee - @oxytocins - Portfolio',
     description: 'Creative strategist and social media leader specializing in digital marketing, brand development, and innovative social campaigns.',
-    image: 'https://ik.imagekit.io/oxytocins/social.png',
+    images: 'https://ik.imagekit.io/oxytocins/social.png',
     creator: '@oxytocins',
     site: '@oxytocins'
   },
