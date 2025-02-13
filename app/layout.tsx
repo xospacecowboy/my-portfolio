@@ -20,7 +20,7 @@ const dotGothic16 = DotGothic16({
 export const metadata: Metadata = {
   metadataBase: new URL('https://oxytocins.me'),
   title: {
-    default: "Stephen Beardslee - Creative Strategist & Social Media Leader",
+    default: "@oxytocins - Stephen Beardslee - Creative Strategist & Social Media Leader",
     template: "%s | Stephen Beardslee"
   },
   description: "Creative strategist and social media leader specializing in digital marketing, brand development, and innovative social campaigns.",
@@ -29,31 +29,34 @@ export const metadata: Metadata = {
     "Roberto Beardslee",
     "Creative Strategist",
     "Social Media Manager",
-  ],
-  icons: [
-    { rel: 'icon', url: '/favicon.png' },
-    { rel: 'apple-touch-icon', url: '/favicon.png' },
-    { rel: 'shortcut icon', url: '/favicon.png' }
+    "Digital Marketing",
+    "Brand Development",
+    "Social Media Strategy"
   ],
   openGraph: {
-    title: "Stephen Beardslee - Creative Strategist & Social Media Leader",
-    description: "Creative strategist and social media leader specializing in digital marketing, brand development, and innovative social campaigns.",
+    type: 'website',
     url: 'https://oxytocins.me',
-    siteName: 'Stephen Beardslee',
+    title: '@oxytocins - Stephen Beardslee - Creative Strategist & Social Media Leader',
+    description: 'Creative strategist and social media leader specializing in digital marketing, brand development, and innovative social campaigns.',
     images: [{
-      url: 'https://oxytocins.me/social.png',
+      url: 'https://opengraph.b-cdn.net/production/images/9ce06c31-916e-44cf-b066-db58997e936d.png?token=grQGwuG57WAHlLm2ZSvROXbW--gLBCujGHPwHFB3_xc&height=630&width=1200&expires=33275484785',
       width: 1200,
       height: 630,
-      alt: 'Stephen Beardslee'
+      alt: 'Stephen Beardslee - Creative Strategist'
     }],
-    locale: 'en_US',
-    type: 'website',
   },
   twitter: {
     card: 'summary_large_image',
-    title: "Stephen Beardslee - Creative Strategist & Social Media Leader",
-    description: "Creative strategist and social media leader specializing in digital marketing, brand development, and innovative social campaigns.",
-    images: ['https://oxytocins.me/social.png'],
+    title: '@oxytocins - Stephen Beardslee - Creative Strategist & Social Media Leader',
+    description: 'Creative strategist and social media leader specializing in digital marketing, brand development, and innovative social campaigns.',
+    images: ['https://opengraph.b-cdn.net/production/images/9ce06c31-916e-44cf-b066-db58997e936d.png?token=grQGwuG57WAHlLm2ZSvROXbW--gLBCujGHPwHFB3_xc&height=630&width=1200&expires=33275484785'],
+    creator: '@oxytocins',
+    site: '@oxytocins'
+  },
+  icons: {
+    icon: '/favicon.png',
+    shortcut: '/favicon.png',
+    apple: '/favicon.png',
   },
   manifest: '/manifest.json'
 }
