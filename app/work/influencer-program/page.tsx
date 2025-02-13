@@ -29,14 +29,6 @@ const projectData = {
       src: "/work/influencer-program/image2.jpg",
       alt: "Content Creation"
     },
-    {
-      src: "/work/influencer-program/image3.jpg",
-      alt: "Campaign Results"
-    },
-    {
-      src: "/work/influencer-program/image4.jpg",
-      alt: "Partnership Highlights"
-    }
   ]
 }
 
