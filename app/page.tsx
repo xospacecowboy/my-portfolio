@@ -249,7 +249,15 @@ export default function Home() {
             </motion.span>{" "}
             <span className="inline-block px-1">BASED IN HTX 📍</span>{" "}
             <span className="relative">
-              FREELANCING <span className="font-italic">ACROSS INDUSTRIES</span> 🐎
+              DIGITAL COWBOY & <span className="font-italic">CREATIVE FOR HIRE.</span> 
+              <br />
+              <motion.span
+                className="relative inline-block font-bold cursor-pointer hover:bg-clip-text hover:text-transparent hover:bg-gradient-to-r hover:from-pastel-pink hover:via-pastel-purple hover:to-pastel-blue"
+                whileHover={{ scale: 1.05 }}
+                transition={{ duration: 0.2 }}
+              >
+                LET'S RIDE
+              </motion.span> 🐎
               <HandDrawnUnderline className="text-pastel-green bottom-0 left-0" />
             </span>
           </motion.h1>

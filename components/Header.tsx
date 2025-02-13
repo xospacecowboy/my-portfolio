@@ -53,7 +53,7 @@ export default function Header() {
               </Link>
             ))}
             <motion.a
-              href="mailto:beardslee.stephen@icloud.com"
+              href="mailto:howdy@oxytocins.me"
               className="bg-white text-deep-grey px-4 py-2 text-sm font-medium hover:bg-pastel-blue hover:text-white transition-colors relative overflow-hidden font-jetbrains-mono"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
