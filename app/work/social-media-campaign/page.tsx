@@ -133,6 +133,9 @@ export default function ProjectPage() {
                   src={image.src}
                   alt={image.alt}
                   fill
+                  sizes="(max-width: 768px) 100vw, 50vw"
+                  priority={index < 2}
+                  quality={90}
                   className="object-cover"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent">
