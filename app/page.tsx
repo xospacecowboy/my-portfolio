@@ -9,6 +9,7 @@ import Link from "next/link"
 import Footer from "@/components/Footer"
 import Header from "@/components/Header"
 import emailjs from '@emailjs/browser'
+import { useMounted, useIsMobile } from "@/hooks/useMounted"
 
 // ===================================
 // Utility Functions
@@ -72,22 +73,12 @@ const RandomFont = ({ children }: { children: React.ReactNode }) => {
 // ===================================
 export default function Home() {
   // State Management
-  const [isScrolled, setIsScrolled] = useState(false)
+  const mounted = useMounted();
+  const isMobile = useIsMobile();
   const [rotate, setRotate] = useState({ x: 0, y: 0, index: -1 })
   const [isSubmitting, setIsSubmitting] = useState(false)
   const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle')
-  const [isMobile, setIsMobile] = useState(false);
-  const [mounted, setMounted] = useState(false);
-
-  useEffect(() => {
-    setMounted(true);
-    const checkMobile = () => {
-      setIsMobile(window.innerWidth < 768);
-    };
-    checkMobile();
-    window.addEventListener('resize', checkMobile);
-    return () => window.removeEventListener('resize', checkMobile);
-  }, []);
+  const [isScrolled, setIsScrolled] = useState(false)
 
   useEffect(() => {
     const handleScroll = () => {
@@ -446,7 +437,7 @@ export default function Home() {
                   willChange: 'transform'
                 }}
                 animate={{
-                  x: window.innerWidth >= 768 ? [-20, -1 * (experiences.length * 280)] : 0
+                  x: mounted && !isMobile ? [-20, -1 * (experiences.length * 280)] : 0
                 }}
                 transition={{
                   duration: 40,
