@@ -200,8 +200,9 @@ export default function Home() {
               <RandomFont>𐚁 HOWDY,</RandomFont>
             </motion.span>{" "}
             <span className="relative inline-block">
+              {/* AKA Button - Only visible on desktop */}
               <motion.div
-                className="absolute md:-top-12 -top-20 left-1/2 -translate-x-1/2 whitespace-nowrap"
+                className="absolute md:-top-12 -top-20 left-1/2 -translate-x-1/2 whitespace-nowrap hidden md:block"
                 initial={{ y: 0 }}
                 animate={{ y: [-2, 2, -2] }}
                 transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
@@ -215,20 +216,23 @@ export default function Home() {
                   <span className="bg-clip-text text-transparent bg-gradient-to-r from-pastel-pink to-pastel-blue">
                     AKA @OXYTOCINS
                   </span>
-                  {/* Dotted line connector - hidden on mobile */}
-                  <motion.div 
-                    className="absolute w-px h-8 left-1/2 bottom-0 translate-y-full -translate-x-1/2 hidden md:block"
-                    style={{
-                      background: "linear-gradient(to bottom, rgba(255,255,255,0.2) 50%, transparent 50%)",
-                      backgroundSize: "1px 8px"
-                    }}
-                    initial={{ scaleY: 0 }}
-                    animate={{ scaleY: 1 }}
-                    transition={{ duration: 0.3, delay: 0.8 }}
-                  />
                 </motion.div>
               </motion.div>
               I'M STEPHEN
+            </span>
+            {/* Mobile AKA text */}
+            <span className="md:hidden">
+              <span className="font-dotgothic16">
+                {" "}(
+                <motion.span
+                  className="bg-clip-text text-transparent bg-gradient-to-r from-pastel-pink via-pastel-purple to-pastel-blue"
+                  animate={{ backgroundPosition: ["0% 50%", "100% 50%", "0% 50%"] }}
+                  transition={{ duration: 3, repeat: Infinity, ease: "linear" }}
+                >
+                  AKA @OXYTOCINS
+                </motion.span>
+                )
+              </span>
             </span>—A{" "}
             <motion.span
               className="font-normal italic relative inline-block px-2"
