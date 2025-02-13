@@ -91,6 +91,10 @@ export default function RootLayout({
     <html lang="en">
       <head>
         <link rel="icon" type="image/png" href="/favicon.png" />
+        <link rel="shortcut icon" type="image/png" href="/favicon.png" />
+        <link rel="apple-touch-icon" type="image/png" href="/favicon.png" />
+        <meta property="og:image" content="https://oxytocins.me/social.png" />
+        <meta name="twitter:image" content="https://oxytocins.me/social.png" />
         <meta name="theme-color" content="#000000" />
       </head>
       <body className={`${spaceGrotesk.className} ${dotGothic16.className}`}>
