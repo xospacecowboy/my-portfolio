@@ -681,10 +681,10 @@ export default function Home() {
                 try {
                   const form = e.currentTarget
                   await emailjs.sendForm(
-                    'YOUR_SERVICE_ID', // Add your EmailJS service ID
-                    'YOUR_TEMPLATE_ID', // Add your EmailJS template ID
+                    'service_f50b8oo', // Add your EmailJS service ID
+                    'template_v0nhr1g', // Add your EmailJS template ID
                     form,
-                    'YOUR_PUBLIC_KEY' // Add your EmailJS public key
+                    'X42nvZuQ7Z1lWq-iv' // Add your EmailJS public key
                   )
                   setSubmitStatus('success')
                   form.reset()
