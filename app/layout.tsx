@@ -23,7 +23,7 @@ export const metadata: Metadata = {
     default: "Stephen Beardslee - Creative Strategist & Social Media Leader",
     template: "%s | Stephen Beardslee"
   },
-  description: "Creative strategist and social media leader specializing in digital marketing, brand development, and innovative social campaigns. Known as Roberto Beardslee.",
+  description: "Creative strategist and social media leader specializing in digital marketing, brand development, and innovative social campaigns.",
   keywords: [
     "Stephen Beardslee",
     "Roberto Beardslee",
@@ -40,6 +40,11 @@ export const metadata: Metadata = {
     "Digital Marketing Professional"
   ],
   creator: "Stephen Beardslee",
+  icons: {
+    icon: [{ url: '/icon.png', type: 'image/png' }],
+    shortcut: [{ url: '/icon.png', type: 'image/png' }],
+    apple: [{ url: '/icon.png', type: 'image/png' }]
+  },
   openGraph: {
     type: "website",
     locale: "en_US",
@@ -47,20 +52,18 @@ export const metadata: Metadata = {
     title: "Stephen Beardslee - Creative Strategist & Social Media Leader",
     description: "Creative strategist and social media leader specializing in digital marketing, brand development, and innovative social campaigns.",
     siteName: "Stephen Beardslee Portfolio",
-    images: [
-      {
-        url: "https://oxytocins.me/social.png",
-        width: 1200,
-        height: 630,
-        alt: "Stephen Beardslee Portfolio"
-      }
-    ]
+    images: [{
+      url: '/share.png',
+      width: 1200,
+      height: 630,
+      alt: "Stephen Beardslee Portfolio"
+    }]
   },
   twitter: {
     card: "summary_large_image",
     title: "Stephen Beardslee - Creative Strategist & Social Media Leader",
     description: "Creative strategist and social media leader specializing in digital marketing, brand development, and innovative social campaigns.",
-    images: ["https://oxytocins.me/social.png"],
+    images: ['/share.png'],
     creator: "@oxytocins"
   },
   robots: {
@@ -68,18 +71,10 @@ export const metadata: Metadata = {
     follow: true,
     googleBot: {
       index: true,
-      follow: true,
-      'max-video-preview': -1,
-      'max-image-preview': 'large',
-      'max-snippet': -1,
-    },
+      follow: true
+    }
   },
-  verification: {
-    google: "bb273e4956707383",
-  },
-  alternates: {
-    canonical: "https://oxytocins.me",
-  }
+  canonical: "https://oxytocins.me"
 }
 
 export default function RootLayout({
@@ -90,15 +85,6 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
-        <link rel="icon" type="image/png" href="/icon.png" />
-        <link rel="shortcut icon" type="image/png" href="/icon.png" />
-        <link rel="apple-touch-icon" type="image/png" href="/icon.png" />
-        <meta property="og:image:url" content="https://oxytocins.me/share.png" />
-        <meta property="og:image:width" content="1200" />
-        <meta property="og:image:height" content="630" />
-        <meta property="og:image:alt" content="Stephen Beardslee Portfolio" />
-        <meta name="twitter:image" content="https://oxytocins.me/share.png" />
-        <meta name="twitter:card" content="summary_large_image" />
         <meta name="theme-color" content="#000000" />
       </head>
       <body className={`${spaceGrotesk.className} ${dotGothic16.className}`}>
