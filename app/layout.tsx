@@ -90,8 +90,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
-        <link rel="icon" href="/oxytocinslogo-2.svg" type="image/svg+xml" />
-        <link rel="alternate icon" href="/oxytocinslogo-2.svg" type="image/svg+xml" />
+        <link rel="icon" type="image/png" href="/favicon.png" />
         <meta name="theme-color" content="#000000" />
       </head>
       <body className={`${spaceGrotesk.className} ${dotGothic16.className}`}>
