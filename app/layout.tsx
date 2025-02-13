@@ -74,7 +74,9 @@ export const metadata: Metadata = {
       follow: true
     }
   },
-  canonical: "https://oxytocins.me"
+  alternates: {
+    canonical: "https://oxytocins.me"
+  }
 }
 
 export default function RootLayout({
