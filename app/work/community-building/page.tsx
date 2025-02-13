@@ -18,24 +18,20 @@ const projectData = {
   results: "Successfully drove over 5,000+ unique sign-ups for EA's community and 10K+ original sign-ups across multiple Discord servers, reinforcing long-term engagement through dynamic community interactions.",
   images: [
     {
-      src: "/work/community-building/image1.jpg ",
-      alt: "Discord Community Overview",
-      caption: "Produced live-streams with popular streamers"
+      src: "/work/community-building/image1.jpg",
+      alt: "Discord Community Overview"
     },
     {
       src: "/work/community-building/image2.jpg",
-      alt: "Community Events",
-      caption: "Highlights from community events and curated programming"
+      alt: "Community Events"
     },
     {
       src: "/work/community-building/image3.jpg",
-      alt: "Engagement Metrics",
-      caption: "Overview of platform mission and growth"
+      alt: "Engagement Metrics"
     },
     {
       src: "/work/community-building/image4.jpg",
-      alt: "Community Impact",
-      caption: "Captilized on viral moments to increase community engagement"
+      alt: "Community Impact"
     }
   ]
 }
@@ -133,15 +129,11 @@ export default function ProjectPage() {
                   src={image.src}
                   alt={image.alt}
                   fill
+                  sizes="(max-width: 768px) 100vw, 50vw"
+                  priority={index < 2}
+                  quality={90}
                   className="object-cover"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent">
-                  <div className="absolute bottom-0 p-4">
-                    <div className="text-sm text-white/80 font-jetbrains-mono">
-                      {image.caption}
-                    </div>
-                  </div>
-                </div>
               </motion.div>
             ))}
           </div>
