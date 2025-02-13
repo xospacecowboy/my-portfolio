@@ -69,7 +69,7 @@ export const metadata: Metadata = {
     },
   },
   verification: {
-    google: "your-google-verification-code", // You'll need to add this
+    google: "bb273e4956707383",
   },
   alternates: {
     canonical: "https://oxytocins.me",
