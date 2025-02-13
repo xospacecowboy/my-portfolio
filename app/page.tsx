@@ -356,36 +356,30 @@ export default function Home() {
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ delay: 1 }}
                   >
-                    <p className="text-xl sm:text-2xl text-neutral-300 font-light leading-relaxed max-w-3xl font-dotgothic16">
-                      Where{" "}
-                      <motion.span whileHover={{ color: "#ff69b4" }}>design</motion.span>,{" "}
-                      <motion.span whileHover={{ color: "#9370db" }}>storytelling</motion.span>, and{" "}
-                      <motion.span whileHover={{ color: "#87ceeb" }}>strategy</motion.span> come together 
-                      to create experiences that captivate, resonate, and leave a mark. Whether through 
-                      a campaign, or a brand, my work isn't about ideas, it's about making them{" "}
+                    <p className="text-xl sm:text-2xl text-neutral-300 font-light leading-normal max-w-3xl font-dotgothic16">
+                      And I've got the{" "}
+                      <motion.span whileHover={{ color: "#ff69b4" }}>creative drive</motion.span>{" "}
+                      to keep pace. My work blends{" "}
+                      <motion.span whileHover={{ color: "#9370db" }}>design</motion.span>,{" "}
+                      <motion.span whileHover={{ color: "#87ceeb" }}>storytelling</motion.span>, and{" "}
+                      <motion.span whileHover={{ color: "#98fb98" }}>strategy</motion.span>{" "}
+                      to craft experiences that don't just capture attention—they make a{" "}
                       <motion.span
                         className="font-medium"
                         whileHover={{ scale: 1.2, rotate: 360 }}
                         transition={{ duration: 0.5 }}
                       >
-                        felt
-                      </motion.span>
-                      . Because when creativity, when done right, 
-                      never rides alone.{" "}
-                      <motion.span
-                        animate={{ 
-                          scale: [1, 1.2, 1],
-                          rotate: [0, 14, -8, 14, -4, 10, 0]
-                        }}
-                        transition={{ 
-                          duration: 2,
-                          repeat: Infinity,
-                          repeatDelay: 1
-                        }}
-                        className="inline-block"
-                      >
-                        🐎
-                      </motion.span>
+                        lasting
+                      </motion.span>{" "}
+                      impact.{" "}
+                      <span className="block mt-2">
+                        Whether shaping a brand or building a campaign, I don't just generate ideas—I bring them to{" "}
+                        <motion.span whileHover={{ color: "#dda0dd" }}>life</motion.span>{" "}
+                        in ways that resonate, move, and endure.{" "}
+                      </span>
+                      <span className="block mt-2">
+                        Because creativity, when done right, never rides alone.
+                      </span>
                     </p>
 
                     <motion.div
