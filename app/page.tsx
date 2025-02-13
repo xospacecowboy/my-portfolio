@@ -3,11 +3,12 @@
 // ===================================
 // Imports and Dependencies
 // ===================================
-import { useState, useEffect, useCallback, MouseEvent } from "react"
+import { useState, useEffect, useCallback, MouseEvent, FormEvent } from "react"
 import Link from "next/link"
 import { motion } from "framer-motion"
 import Footer from "@/components/Footer"
 import Header from "@/components/Header"
+import emailjs from '@emailjs/browser'
 
 // ===================================
 // Utility Functions
@@ -73,6 +74,8 @@ export default function Home() {
   // State Management
   const [isScrolled, setIsScrolled] = useState(false)
   const [rotate, setRotate] = useState({ x: 0, y: 0, index: -1 })
+  const [isSubmitting, setIsSubmitting] = useState(false)
+  const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle')
 
   useEffect(() => {
     const handleScroll = () => {
@@ -670,6 +673,28 @@ export default function Home() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5 }}
+              onSubmit={async (e: FormEvent<HTMLFormElement>) => {
+                e.preventDefault()
+                setIsSubmitting(true)
+                setSubmitStatus('idle')
+
+                try {
+                  const form = e.currentTarget
+                  await emailjs.sendForm(
+                    'YOUR_SERVICE_ID', // Add your EmailJS service ID
+                    'YOUR_TEMPLATE_ID', // Add your EmailJS template ID
+                    form,
+                    'YOUR_PUBLIC_KEY' // Add your EmailJS public key
+                  )
+                  setSubmitStatus('success')
+                  form.reset()
+                } catch (error) {
+                  console.error('Error sending email:', error)
+                  setSubmitStatus('error')
+                } finally {
+                  setIsSubmitting(false)
+                }
+              }}
             >
               <div className="mb-6">
                 <motion.input
@@ -683,6 +708,7 @@ export default function Home() {
                   whileFocus={{ scale: 1.02 }}
                   transition={{ duration: 0.2 }}
                   required
+                  disabled={isSubmitting}
                 />
               </div>
               <div className="mb-6">
@@ -690,13 +716,14 @@ export default function Home() {
                   type="email"
                   id="email"
                   name="email"
-                  placeholder="o.xytocins@icloud.com"
+                  placeholder="Your Email"
                   className="w-full px-4 py-3 bg-white/5 border border-white/20 rounded-lg text-white placeholder-white/50
                     focus:outline-none focus:ring-2 focus:ring-pastel-blue focus:border-transparent
                     transition-all duration-300"
                   whileFocus={{ scale: 1.02 }}
                   transition={{ duration: 0.2 }}
                   required
+                  disabled={isSubmitting}
                 />
               </div>
               <div className="mb-6">
@@ -711,6 +738,7 @@ export default function Home() {
                   whileFocus={{ scale: 1.02 }}
                   transition={{ duration: 0.2 }}
                   required
+                  disabled={isSubmitting}
                 ></motion.textarea>
               </div>
               <motion.button
@@ -719,13 +747,26 @@ export default function Home() {
                   border border-white/20 relative group overflow-hidden"
                 whileHover={{ scale: 1.02 }}
                 whileTap={{ scale: 0.98 }}
+                disabled={isSubmitting}
               >
-                <span className="relative z-10 font-jetbrains-mono">Send Message →</span>
+                <span className="relative z-10 font-jetbrains-mono">
+                  {isSubmitting ? 'Sending...' : 'Send Message →'}
+                </span>
                 <motion.div 
                   className="absolute inset-0 bg-gradient-to-r from-pastel-pink via-pastel-purple to-pastel-blue opacity-0 group-hover:opacity-100 transition-all duration-300"
                   whileHover={{ scale: 1.1 }}
                 />
               </motion.button>
+              {submitStatus === 'success' && (
+                <p className="mt-4 text-pastel-green text-sm text-center">
+                  Message sent successfully! I'll get back to you soon.
+                </p>
+              )}
+              {submitStatus === 'error' && (
+                <p className="mt-4 text-pastel-pink text-sm text-center">
+                  Oops! Something went wrong. Please try again or email me directly.
+                </p>
+              )}
             </motion.form>
           </section>
         </section>
