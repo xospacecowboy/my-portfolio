@@ -264,16 +264,24 @@ export default function Home() {
 
           {/* Stats Section */}
           <section className="mt-12 md:mt-16 mb-20">
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-1">
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-1 md:gap-1 gap-y-12">
               {[
-                { number: "7+", label: "Years Experience" },
+                { 
+                  number: "7+", 
+                  label: "Years\nExperience",
+                  className: "whitespace-pre-line md:whitespace-normal"
+                },
                 { number: "100+", label: "Influencer Partnerships" },
-                { number: "200M+", label: "Social Impressions" },
+                { 
+                  number: "200M+", 
+                  label: "Social\nImpressions",
+                  className: "whitespace-pre-line md:whitespace-normal"
+                },
                 { number: "∞", label: "Creative Possibilities" },
               ].map((stat, index) => (
                 <motion.div
                   key={stat.label}
-                  className="text-center px-2"
+                  className={`text-center px-2 ${stat.className || ''}`}
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.5, delay: 0.3 + index * 0.1 }}
@@ -367,8 +375,7 @@ export default function Home() {
                       <motion.span
                         animate={{ 
                           scale: [1, 1.2, 1],
-                          rotate: [0, 360, 720],
-                          y: [0, -10, 0]
+                          rotate: [0, 14, -8, 14, -4, 10, 0]
                         }}
                         transition={{ 
                           duration: 2,
@@ -428,12 +435,12 @@ export default function Home() {
             
             <div className="relative overflow-hidden">
               <motion.div 
-                className="flex gap-4 py-4"
+                className="flex gap-4 py-4 md:animate-none animate-scroll"
                 style={{
                   willChange: 'transform'
                 }}
                 animate={{
-                  x: [-20, -1 * (experiences.length * 280)]
+                  x: window.innerWidth >= 768 ? [-20, -1 * (experiences.length * 280)] : 0
                 }}
                 transition={{
                   duration: 40,
@@ -446,18 +453,18 @@ export default function Home() {
                   <div
                     key={`${exp.company}-${index}`}
                     className="flex-none w-64 h-40 perspective-1000 overflow-hidden rounded-xl"
-                    onMouseMove={(e) => onMouseMove(e, index)}
-                    onMouseLeave={onMouseLeave}
+                    onMouseMove={(e) => window.innerWidth >= 768 ? onMouseMove(e, index) : null}
+                    onMouseLeave={window.innerWidth >= 768 ? onMouseLeave : null}
                   >
                     <motion.div
                       className="relative h-full w-full transition-all duration-300 group rounded-xl overflow-hidden"
                       style={{
-                        transform: rotate.index === index 
+                        transform: window.innerWidth >= 768 && rotate.index === index 
                           ? `perspective(1000px) rotateX(${rotate.x}deg) rotateY(${rotate.y}deg) scale3d(1, 1, 1)`
                           : 'perspective(1000px) rotateX(0deg) rotateY(0deg) scale3d(1, 1, 1)',
                         transition: 'all 400ms cubic-bezier(0.03, 0.98, 0.52, 0.99) 0s',
                       }}
-                      whileHover={{ scale: 1.05 }}
+                      whileHover={{ scale: window.innerWidth >= 768 ? 1.05 : 1 }}
                     >
                       <div className={`h-full w-full rounded-xl p-6 select-none
                         bg-gradient-to-tr from-deep-black via-deep-grey to-deep-black border border-white/10
@@ -485,7 +492,7 @@ export default function Home() {
               </motion.div>
             </div>
 
-            <motion.div className="mt-8" whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
+            <motion.div className="mt-8 md:mt-8 mb-16 md:mb-8" whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
               <Link href="/work" className="inline-block">
                 <span className="bg-clip-text text-transparent bg-gradient-to-r from-pastel-pink via-pastel-purple to-pastel-blue text-lg font-bold hover:underline">
                   Explore My Work →
@@ -495,7 +502,7 @@ export default function Home() {
           </motion.section>
 
           {/* Animated Dot Wave Divider */}
-          <div className="relative pt-3 pb-12 overflow-hidden">
+          <div className="relative py-4 md:py-8 overflow-hidden">
             <motion.div 
               className="flex justify-center items-center gap-4"
               initial={{ opacity: 0 }}
@@ -594,7 +601,11 @@ export default function Home() {
                   <motion.span
                     initial={{ rotate: 0 }}
                     animate={{ rotate: [0, 14, -8, 14, -4, 10, 0] }}
-                    transition={{ duration: 2, repeat: Infinity, repeatDelay: 1 }}
+                    transition={{ 
+                      duration: 2,
+                      repeat: Infinity,
+                      repeatDelay: 1
+                    }}
                     className="inline-block"
                   >
                     👋

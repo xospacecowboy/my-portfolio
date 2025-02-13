@@ -75,6 +75,26 @@ body {
   animation: float 4s ease-in-out infinite;
 }
 
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(calc(-280px * 8)); /* Adjust based on number of cards */
+  }
+}
+
+.animate-scroll {
+  animation: scroll 25s linear infinite;
+  will-change: transform;
+}
+
+@media (min-width: 768px) {
+  .animate-scroll {
+    animation: none;
+  }
+}
+
 /* Blog Post Markdown Styles */
 .blog-content {
   @apply text-lg text-white/80 leading-relaxed;
