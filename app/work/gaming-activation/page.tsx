@@ -18,22 +18,22 @@ const projectData = {
   results: "Generated over 1M+ social impressions with 95% positive sentiment, successfully positioning Galaxy devices as legitimate gaming platforms while establishing lasting partnerships with key gaming influencers.",
   images: [
     {
-      src: "/work/gaming-activation/image1.jpg",
+      src: "/work/gaming-activation/image1.jpeg",
       alt: "PAX East Booth Setup",
-      caption: "Custom-designed Samsung gaming booth at PAX East 2020"
+      caption: "PokemonGO Creators at PAX East 2020"
     },
     {
-      src: "/work/gaming-activation/image2.jpg",
+      src: "/work/gaming-activation/image2.png",
       alt: "Influencer Interactions",
       caption: "#TeamGalaxy influencers engaging with attendees"
     },
     {
-      src: "/work/gaming-activation/image3.jpg",
+      src: "/work/gaming-activation/image3.png",
       alt: "Product Showcase",
-      caption: "Interactive Galaxy gaming demonstrations"
+      caption: "Fan meet and greet"
     },
     {
-      src: "/work/gaming-activation/image4.jpg",
+      src: "/work/gaming-activation/image4.png",
       alt: "Event Highlights",
       caption: "Capturing key moments and community engagement"
     }

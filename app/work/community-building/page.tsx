@@ -18,24 +18,24 @@ const projectData = {
   results: "Successfully drove over 5,000+ unique sign-ups for EA's community and 10K+ original sign-ups across multiple Discord servers, reinforcing long-term engagement through dynamic community interactions.",
   images: [
     {
-      src: "/work/community-building/image1.jpg",
+      src: "/work/community-building/image1.png",
       alt: "Discord Community Overview",
-      caption: "EA's Discord community structure and engagement strategies"
+      caption: "Produced live-streams with popular streamers"
     },
     {
-      src: "/work/community-building/image2.jpg",
+      src: "/work/community-building/image2.png",
       alt: "Community Events",
-      caption: "Highlights from community events and AMAs"
+      caption: "Highlights from community events and curated programming"
     },
     {
-      src: "/work/community-building/image3.jpg",
+      src: "/work/community-building/image3.png",
       alt: "Engagement Metrics",
-      caption: "Growth and engagement statistics across communities"
+      caption: "Overview of platform mission and growth"
     },
     {
-      src: "/work/community-building/image4.jpg",
+      src: "/work/community-building/image4.png",
       alt: "Community Impact",
-      caption: "Community feedback and success stories"
+      caption: "Captilized on viral moments to increase community engagement"
     }
   ]
 }

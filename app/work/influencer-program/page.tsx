@@ -1,12 +1,11 @@
 "use client"
 
 import { motion } from "framer-motion"
-import Image from "next/image"
 import Link from "next/link"
+import Image from "next/image"
 import Header from "@/components/Header"
 import Footer from "@/components/Footer"
 
-// Project specific data
 const projectData = {
   title: "Influencer Program Development",
   category: "Program Strategy",
@@ -16,26 +15,21 @@ const projectData = {
   challenge: "Creating a scalable, high-impact influencer strategy that fosters long-term partnerships while maximizing content output and effectively driving both brand awareness and product sales.",
   solution: "Led a structured influencer program that centralized partnerships and streamlined content production, negotiating and managing 90 long-term contracts while optimizing content strategy for maximum impact.",
   results: "Generated 229.1+ million impressions and 26.1+ million engagements across influencer channels in one year, amplifying Samsung's brand presence through sustained creator collaborations.",
+  video: {
+    url: "https://www.youtube.com/embed/Na-iOW5I5Iw",
+    title: "#TeamGalaxy House Rules Hero Sizzle",
+    description: "Role: Producer, Talent Manager, Device Expert"
+  },
   images: [
     {
-      src: "/work/influencer-program/image1.jpg",
+      src: "/work/influencer-program/image1.png",
       alt: "Program Overview",
-      caption: "Samsung's centralized influencer program structure"
+      caption: "Partnerned with creators across a variety of interests and games"
     },
     {
       src: "/work/influencer-program/image2.jpg",
       alt: "Content Production",
-      caption: "Examples of creator content and campaigns"
-    },
-    {
-      src: "/work/influencer-program/image3.jpg",
-      alt: "Program Metrics",
-      caption: "Performance dashboard showing key program metrics"
-    },
-    {
-      src: "/work/influencer-program/image4.jpg",
-      alt: "Partnership Success",
-      caption: "Long-term partnership highlights and results"
+      caption: "Produced live events and managed partnership negotiations"
     }
   ]
 }
@@ -48,7 +42,7 @@ function GradientText({ children, className = "" }: { children: React.ReactNode;
   )
 }
 
-export default function ProjectPage() {
+export default function InfluencerProgramPage() {
   return (
     <div className="bg-deep-grey text-white min-h-screen">
       <Header />
@@ -115,11 +109,39 @@ export default function ProjectPage() {
           </div>
         </section>
 
+        {/* Video Showcase */}
+        <section className="pb-16">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5 }}
+            className="space-y-6"
+          >
+            <h2 className="text-2xl font-bold">
+              <GradientText>Selected Works</GradientText>
+            </h2>
+            <div className="relative pb-[56.25%] h-0 rounded-lg overflow-hidden">
+              <iframe
+                src={projectData.video.url}
+                title={projectData.video.title}
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowFullScreen
+                className="absolute top-0 left-0 w-full h-full rounded-lg"
+              />
+            </div>
+            <div className="space-y-2">
+              <div className="text-lg text-white/80 font-jetbrains-mono">
+                {projectData.video.title}
+              </div>
+              <div className="text-sm text-white/60 font-jetbrains-mono">
+                {projectData.video.description}
+              </div>
+            </div>
+          </motion.div>
+        </section>
+
         {/* Image Gallery */}
         <section className="pb-16">
-          <h2 className="text-3xl font-bold mb-8">
-            <GradientText>Gallery</GradientText>
-          </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {projectData.images.map((image, index) => (
               <motion.div

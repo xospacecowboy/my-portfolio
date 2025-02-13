@@ -1,10 +1,11 @@
 "use client"
 
 import { motion } from "framer-motion"
-import Image from "next/image"
 import Link from "next/link"
+import Script from "next/script"
 import Header from "@/components/Header"
 import Footer from "@/components/Footer"
+import { useEffect } from "react"
 
 // Project specific data
 const projectData = {
@@ -16,28 +17,109 @@ const projectData = {
   challenge: "Developing innovative creative strategies that maintain brand consistency while scaling content production across multiple platforms, from mobile gaming initiatives to community programs.",
   solution: "Curated the first-of-its-kind Team Galaxy Gaming collective and developed comprehensive EA community initiatives, managing end-to-end program creation from talent acquisition to post-production.",
   results: "Successfully launched multiple gaming initiatives and executed 10+ product activations including live events, experiential activations, and social campaigns, while establishing efficient content workflows and creative frameworks.",
-  images: [
+  credits: {
+    roles: ["Producer", "Designer", "Copywriter", "Talent Manager"],
+    disclaimer: "This is a small sample across all creative work produced for these initiatives."
+  },
+  socialPosts: [
     {
-      src: "/work/creative-direction/image1.jpg",
-      alt: "Campaign Overview",
-      caption: "#TeamGalaxy and EA community program highlights"
+      type: "youtube",
+      url: "https://www.youtube.com/embed/ixbKgcLu-9Y",
+      title: "Samsung Creator Collective",
+      width: "full"
     },
     {
-      src: "/work/creative-direction/image2.jpg",
-      alt: "Content Production",
-      caption: "Behind-the-scenes of content creation and production"
+      type: "instagram",
+      url: "https://www.instagram.com/p/Ckq2o7JJYTg/embed",
+      title: "Samsung Gaming"
     },
     {
-      src: "/work/creative-direction/image3.jpg",
-      alt: "Platform Launches",
-      caption: "Discord and TikTok platform launch campaigns"
+      type: "twitter",
+      id: "1338221155753185280",
+      author: "maudegarrett",
+      title: "Maude Garrett Post"
     },
     {
-      src: "/work/creative-direction/image4.jpg",
-      alt: "Creative Process",
-      caption: "Creative workflow and asset management systems"
+      type: "tiktok",
+      url: "https://www.tiktok.com/embed/v2/7190473244279934254",
+      title: "EA Gaming Community"
+    },
+    {
+      type: "instagram",
+      url: "https://www.instagram.com/p/CilKvBdpWrm/embed",
+      title: "Community Event"
+    },
+    {
+      type: "twitter",
+      id: "1287130451371466752",
+      author: "ImTheMyth",
+      title: "Myth Samsung"
+    },
+    {
+      type: "tiktok",
+      url: "https://www.tiktok.com/embed/v2/7179288062940335406",
+      title: "EA Gaming Highlights"
+    },
+    {
+      type: "instagram",
+      url: "https://www.instagram.com/p/CbtO5PGsiE-/embed",
+      title: "Gaming Initiative"
+    },
+    {
+      type: "twitter",
+      id: "1328844665039118337",
+      author: "maudegarrett",
+      title: "Maude Garrett Gaming"
+    },
+    {
+      type: "tiktok",
+      url: "https://www.tiktok.com/embed/v2/7189341579885153579",
+      title: "EA Gaming Community"
+    },
+    {
+      type: "instagram",
+      url: "https://www.instagram.com/p/CJHrc4fgREf/embed",
+      title: "Samsung Gaming"
+    },
+    {
+      type: "twitter",
+      id: "1290709505991376896",
+      author: "jimkchin",
+      title: "Jimmy Chin Post"
+    },
+    {
+      type: "instagram",
+      url: "https://www.instagram.com/p/CdrHalFFfKg/embed",
+      title: "Community Event"
+    },
+    {
+      type: "twitter",
+      id: "1349511625238188032",
+      author: "jimkchin",
+      title: "Jimmy Chin Samsung"
+    },
+    {
+      type: "instagram",
+      url: "https://www.instagram.com/p/Ci-bvCOM8xL/embed",
+      title: "Gaming Content"
+    },
+    {
+      type: "instagram",
+      url: "https://www.instagram.com/p/CeoyiUBMHkO/embed",
+      title: "Gaming Initiative"
     }
   ]
+}
+
+// Add Twitter widget type
+declare global {
+  interface Window {
+    twttr: {
+      widgets: {
+        load: () => void;
+      };
+    };
+  }
 }
 
 function GradientText({ children, className = "" }: { children: React.ReactNode; className?: string }) {
@@ -49,9 +131,44 @@ function GradientText({ children, className = "" }: { children: React.ReactNode;
 }
 
 export default function ProjectPage() {
+  useEffect(() => {
+    // Function to load Twitter widgets
+    const loadTwitterWidgets = () => {
+      if (typeof window !== 'undefined' && window.twttr) {
+        window.twttr.widgets.load();
+      }
+    };
+
+    // Check if script is already loaded
+    const existingScript = document.getElementById('twitter-widget-script');
+    if (!existingScript) {
+      // Create and load Twitter script
+      const script = document.createElement('script');
+      script.id = 'twitter-widget-script';
+      script.src = 'https://platform.twitter.com/widgets.js';
+      script.onload = loadTwitterWidgets;
+      document.body.appendChild(script);
+    } else {
+      // If script is already loaded, just load the widgets
+      loadTwitterWidgets();
+    }
+
+    // Cleanup
+    return () => {
+      const script = document.getElementById('twitter-widget-script');
+      if (script) {
+        script.remove();
+      }
+    };
+  }, []);
+
   return (
     <div className="bg-deep-grey text-white min-h-screen">
       <Header />
+      
+      {/* Instagram and TikTok embed scripts */}
+      <Script src="https://www.instagram.com/embed.js" strategy="lazyOnload" />
+      <Script src="https://www.tiktok.com/embed.js" strategy="lazyOnload" />
 
       <main className="container mx-auto px-6 pt-32">
         {/* Hero Section */}
@@ -115,36 +232,91 @@ export default function ProjectPage() {
           </div>
         </section>
 
-        {/* Image Gallery */}
+        {/* Social Media Showcase */}
         <section className="pb-16">
-          <h2 className="text-3xl font-bold mb-8">
-            <GradientText>Gallery</GradientText>
-          </h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {projectData.images.map((image, index) => (
-              <motion.div
-                key={image.src}
-                className="relative aspect-video rounded-lg overflow-hidden"
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
-              >
-                <Image
-                  src={image.src}
-                  alt={image.alt}
-                  fill
-                  className="object-cover"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent">
-                  <div className="absolute bottom-0 p-4">
-                    <div className="text-sm text-white/80 font-jetbrains-mono">
-                      {image.caption}
-                    </div>
-                  </div>
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5 }}
+          >
+            <h2 className="text-2xl font-bold mb-4">
+              <GradientText>Social Media Showcase</GradientText>
+            </h2>
+
+            {/* Credits and Disclaimer */}
+            <div className="mb-8">
+              <div className="text-white/80 font-jetbrains-mono text-sm mb-2">
+                {projectData.credits.disclaimer}
+              </div>
+              <div className="flex flex-wrap gap-2">
+                {projectData.credits.roles.map((role, index) => (
+                  <span 
+                    key={role}
+                    className="text-xs font-jetbrains-mono px-3 py-1 rounded-full bg-white/10 text-white/60"
+                  >
+                    {role}
+                  </span>
+                ))}
+              </div>
+            </div>
+            
+            {/* Featured YouTube Video */}
+            <div className="mb-12">
+              {projectData.socialPosts.filter(post => post.type === "youtube").map((post, index) => (
+                <div key={post.url} className="relative pb-[56.25%] h-0 rounded-lg overflow-hidden">
+                  <iframe
+                    src={post.url}
+                    title={post.title}
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowFullScreen
+                    className="absolute top-0 left-0 w-full h-full rounded-lg"
+                  />
                 </div>
-              </motion.div>
-            ))}
-          </div>
+              ))}
+            </div>
+
+            {/* Social Media Grid */}
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {projectData.socialPosts.filter(post => post.type !== "youtube").map((post, index) => (
+                <motion.div
+                  key={post.url || post.id}
+                  className="relative rounded-lg overflow-hidden min-h-[400px] bg-black/10"
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.5, delay: index * 0.1 }}
+                >
+                  {post.type === "twitter" ? (
+                    <div className="p-4">
+                      <blockquote
+                        className="twitter-tweet"
+                        data-theme="dark"
+                        data-dnt="true"
+                        data-conversation="none"
+                      >
+                        <a 
+                          href={`https://twitter.com/${post.author}/status/${post.id}?ref_src=twsrc%5Etfw`}
+                        >
+                          Loading tweet...
+                        </a>
+                      </blockquote>
+                    </div>
+                  ) : (
+                    <div className="aspect-[4/5]">
+                      <iframe
+                        src={post.url}
+                        title={post.title}
+                        className="w-full h-full"
+                        allowFullScreen
+                        scrolling="no"
+                        frameBorder="0"
+                        allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"
+                      />
+                    </div>
+                  )}
+                </motion.div>
+              ))}
+            </div>
+          </motion.div>
         </section>
 
         {/* Back to Work */}

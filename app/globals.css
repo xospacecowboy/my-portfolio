@@ -141,3 +141,26 @@ body {
 .blog-content hr {
   @apply my-8 border-white/20;
 }
+
+/* Twitter Container Styles */
+.tweet-container {
+  min-height: 400px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.tweet-container iframe {
+  width: 100% !important;
+  margin: 0 !important;
+}
+
+/* Twitter Embed Styles */
+.twitter-tweet {
+  margin: 0 !important;
+}
+
+.twitter-tweet iframe {
+  width: 100% !important;
+  min-width: unset !important;
+}

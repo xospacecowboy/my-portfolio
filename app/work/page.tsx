@@ -12,14 +12,14 @@ const workProjects = [
   {
     title: "Social-First Brand Growth",
     description: "Revitalized EA’s brand through strategy, social innovation, and influencers, driving 4MM+ new followers and a surge in positive sentiment.",
-    image: "/work/project-1.png",
+    image: "/work/project-1.jpg",
     link: "/work/social-media-campaign",
     category: "Creative Strategy"
   },
   {
     title: "Experiential Gaming Activation",
     description: "Partnered with Samsung and #TeamGalaxy at PAX East 2020, engaging top gaming influencers to amplify mobile initiatives through activations and content.",
-    image: "/work/project-2.jpg",
+    image: "/work/project-2.png",
     link: "/work/gaming-activation",
     category: "Influencer Marketing"
   },
@@ -115,6 +115,38 @@ export default function WorkPage() {
               </Link>
             ))}
           </div>
+        </section>
+
+        {/* Featured Video Section */}
+        <section className="pb-16">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5 }}
+          >
+            <h2 className="text-3xl font-bold mb-6">
+              <span className="bg-clip-text text-transparent bg-gradient-to-r from-pastel-pink via-pastel-purple to-pastel-blue">
+                NOW PLAYING
+              </span>
+            </h2>
+            <div className="space-y-2 mb-6">
+              <div className="text-lg text-white/80 font-jetbrains-mono">
+                Samsung Galaxy S21 Ultra Launch Campaign featuring Jimmy Chin
+              </div>
+              <div className="text-sm text-white/60 font-jetbrains-mono">
+                Role: Producer, Writer, Talent & Client Liaison
+              </div>
+            </div>
+            <div className="relative pb-[56.25%] h-0 rounded-lg overflow-hidden">
+              <iframe
+                src="https://www.youtube.com/embed/NjsGLNrgXhw"
+                title="Jimmy Chin x Samsung Galaxy S21 Ultra"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowFullScreen
+                className="absolute top-0 left-0 w-full h-full rounded-lg"
+              />
+            </div>
+          </motion.div>
         </section>
       </main>
 

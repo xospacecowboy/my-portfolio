@@ -20,22 +20,22 @@ const projectData = {
     {
       src: "/work/talent-celebrity/image1.jpg",
       alt: "Talent Partnerships",
-      caption: "High-profile celebrity collaborations and campaign moments"
+      caption: "Curated content with high profile Twitch streamers"
     },
     {
       src: "/work/talent-celebrity/image2.jpg",
       alt: "Contract Management",
-      caption: "Overview of talent management systems and processes"
+      caption: "Oversaw in-person activations with celebrity talent @ TwitchCon"
     },
     {
-      src: "/work/talent-celebrity/image3.jpg",
+      src: "/work/talent-celebrity/image3.png",
       alt: "Campaign Execution",
-      caption: "Behind-the-scenes of talent campaign production"
+      caption: "Production and content assistant for high-profile campaigns"
     },
     {
-      src: "/work/talent-celebrity/image4.jpg",
+      src: "/work/talent-celebrity/image4.png",
       alt: "Partnership Results",
-      caption: "Key metrics and success stories from talent partnerships"
+      caption: "Managed talent relationships across a variety of creators"
     }
   ]
 }
