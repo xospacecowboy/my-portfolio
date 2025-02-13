@@ -3,6 +3,7 @@ import "../styles/grid-pattern.css"
 import { Space_Grotesk, DotGothic16 } from "next/font/google"
 import type React from "react"
 import { Metadata } from 'next'
+import { GoogleAnalytics } from '@next/third-parties/google'
 
 const spaceGrotesk = Space_Grotesk({ subsets: ["latin"] })
 const dotGothic16 = DotGothic16({ 
@@ -88,7 +89,10 @@ export default function RootLayout({
         <link rel="alternate icon" href="/oxytocinslogo.png" type="image/png" />
         <meta name="theme-color" content="#000000" />
       </head>
-      <body className={`${spaceGrotesk.className} ${dotGothic16.className}`}>{children}</body>
+      <body className={`${spaceGrotesk.className} ${dotGothic16.className}`}>
+        {children}
+        <GoogleAnalytics gaId="G-ZH28TT3LE0" />
+      </body>
     </html>
   )
 }
