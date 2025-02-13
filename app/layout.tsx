@@ -30,24 +30,22 @@ export const metadata: Metadata = {
     "Creative Strategist",
     "Social Media Manager",
   ],
-  icons: {
-    icon: '/favicon.png',
-    shortcut: '/favicon.png',
-    apple: '/favicon.png',
-  },
+  icons: [
+    { rel: 'icon', url: '/favicon.png' },
+    { rel: 'apple-touch-icon', url: '/favicon.png' },
+    { rel: 'shortcut icon', url: '/favicon.png' }
+  ],
   openGraph: {
     title: "Stephen Beardslee - Creative Strategist & Social Media Leader",
     description: "Creative strategist and social media leader specializing in digital marketing, brand development, and innovative social campaigns.",
     url: 'https://oxytocins.me',
     siteName: 'Stephen Beardslee',
-    images: [
-      {
-        url: '/social.png',
-        width: 1200,
-        height: 630,
-        alt: 'Stephen Beardslee',
-      }
-    ],
+    images: [{
+      url: 'https://oxytocins.me/social.png',
+      width: 1200,
+      height: 630,
+      alt: 'Stephen Beardslee'
+    }],
     locale: 'en_US',
     type: 'website',
   },
@@ -55,7 +53,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: "Stephen Beardslee - Creative Strategist & Social Media Leader",
     description: "Creative strategist and social media leader specializing in digital marketing, brand development, and innovative social campaigns.",
-    images: ['/social.png'],
+    images: ['https://oxytocins.me/social.png'],
   },
   manifest: '/manifest.json'
 }
