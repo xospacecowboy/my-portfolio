@@ -24,6 +24,7 @@ export default function Header() {
     { href: "/work", label: "WORK" },
     { href: "/art", label: "ART" },
     { href: "/blog", label: "BLOG" },
+    { href: "/game", label: "COSMIC QUEST" },
     { href: "/meet-stephen", label: "ABOUT" },
   ]
 

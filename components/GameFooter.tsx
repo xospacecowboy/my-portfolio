@@ -17,9 +17,9 @@ const ThreadsIcon = () => (
   </svg>
 )
 
-export default function Footer() {
+export default function GameFooter() {
   return (
-    <footer className="bg-deep-grey text-white py-6">
+    <footer className="bg-black text-white py-6">
       <div className="container mx-auto px-6">
         <div className="flex flex-col space-y-4">
           <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
