@@ -719,7 +719,7 @@ export default function Home() {
                   type="email"
                   id="email"
                   name="email"
-                  placeholder="Your Email"
+                  placeholder="o.xytocins@icloud.com"
                   className="w-full px-4 py-3 bg-white/5 border border-white/20 rounded-lg text-white placeholder-white/50
                     focus:outline-none focus:ring-2 focus:ring-pastel-blue focus:border-transparent
                     transition-all duration-300"
