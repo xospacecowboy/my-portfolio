@@ -447,8 +447,8 @@ export default function Home() {
                   <div
                     key={`${exp.company}-${index}`}
                     className="flex-none w-64 h-40 perspective-1000 overflow-hidden rounded-xl"
-                    onMouseMove={(e) => window.innerWidth >= 768 ? onMouseMove(e, index) : null}
-                    onMouseLeave={window.innerWidth >= 768 ? onMouseLeave : null}
+                    onMouseMove={(e) => window.innerWidth >= 768 ? onMouseMove(e, index) : undefined}
+                    onMouseLeave={window.innerWidth >= 768 ? onMouseLeave : undefined}
                   >
                     <motion.div
                       className="relative h-full w-full transition-all duration-300 group rounded-xl overflow-hidden"
