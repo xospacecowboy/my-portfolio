@@ -115,6 +115,47 @@ export default function ProjectPage() {
           </div>
         </section>
 
+        {/* Video Section */}
+        <div className="mb-16">
+          <div className="bg-deep-grey/40 rounded-lg overflow-hidden">
+            <div className="h-1 w-full bg-gradient-to-r from-pastel-pink via-pastel-purple to-pastel-blue" />
+            <div className="p-8">
+              <div className="flex flex-col gap-6">
+                <div>
+                  <h2 className="text-3xl font-bold mb-4 font-dotgothic16">
+                    <span className="bg-clip-text text-transparent bg-gradient-to-r from-pastel-pink to-pastel-blue">
+                      NOW PLAYING
+                    </span>
+                  </h2>
+                  <div className="space-y-2 mb-6">
+                    <div className="text-lg text-white/80 font-jetbrains-mono">
+                      Samsung Galaxy S21 Ultra Launch Campaign featuring Jimmy Chin
+                    </div>
+                    <div className="text-sm text-white/60 font-jetbrains-mono flex items-center gap-2">
+                      <span>🎬 Producer</span>
+                      <span className="text-white/20">•</span>
+                      <span>✍️ Writer</span>
+                      <span className="text-white/20">•</span>
+                      <span>🤝 Talent Manager</span>
+                    </div>
+                  </div>
+                  <div className="relative rounded-lg overflow-hidden bg-black/20">
+                    <div className="relative pb-[56.25%] h-0">
+                      <iframe
+                        src="https://www.youtube.com/embed/NjsGLNrgXhw"
+                        title="Jimmy Chin x Samsung Galaxy S21 Ultra"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowFullScreen
+                        className="absolute top-0 left-0 w-full h-full rounded-lg"
+                      />
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
         {/* Image Gallery */}
         <section className="pb-16">
           <h2 className="text-3xl font-bold mb-8">
