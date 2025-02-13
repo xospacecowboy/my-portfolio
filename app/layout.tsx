@@ -4,6 +4,7 @@ import { Space_Grotesk, DotGothic16 } from "next/font/google"
 import type React from "react"
 import { Metadata } from 'next'
 import { GoogleAnalytics } from '@next/third-parties/google'
+import { AnalyticsWrapper } from '../components/AnalyticsWrapper'
 
 const spaceGrotesk = Space_Grotesk({ subsets: ["latin"] })
 const dotGothic16 = DotGothic16({ 
@@ -90,7 +91,9 @@ export default function RootLayout({
         <meta name="theme-color" content="#000000" />
       </head>
       <body className={`${spaceGrotesk.className} ${dotGothic16.className}`}>
-        {children}
+        <AnalyticsWrapper>
+          {children}
+        </AnalyticsWrapper>
         <GoogleAnalytics gaId="G-ZH28TT3LE0" />
       </body>
     </html>

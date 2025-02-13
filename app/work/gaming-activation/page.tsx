@@ -5,6 +5,8 @@ import Image from "next/image"
 import Link from "next/link"
 import Header from "@/components/Header"
 import Footer from "@/components/Footer"
+import { useEffect } from 'react';
+import { useAnalytics } from '../../../hooks/useAnalytics';
 
 // Project specific data
 const projectData = {
@@ -45,6 +47,12 @@ function GradientText({ children, className = "" }: { children: React.ReactNode;
 }
 
 export default function ProjectPage() {
+  const { trackProjectView } = useAnalytics();
+
+  useEffect(() => {
+    trackProjectView('Gaming Activation');
+  }, [trackProjectView]);
+
   return (
     <div className="bg-deep-grey text-white min-h-screen">
       <Header />
