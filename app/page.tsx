@@ -229,7 +229,7 @@ export default function Home() {
                   animate={{ backgroundPosition: ["0% 50%", "100% 50%", "0% 50%"] }}
                   transition={{ duration: 3, repeat: Infinity, ease: "linear" }}
                 >
-                  AKA @OXYTOCINS
+                AKA @OXYTOCINS
                 </motion.span>
                 )
               </span>
@@ -255,7 +255,7 @@ export default function Home() {
           </motion.h1>
 
           {/* Stats Section */}
-          <section className="mt-16 mb-16">
+          <section className="mt-8 md:mt-16 mb-16">
             <div className="grid grid-cols-2 md:grid-cols-4 gap-1">
               {[
                 { number: "7+", label: "Years Experience" },
