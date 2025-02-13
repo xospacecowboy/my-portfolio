@@ -67,23 +67,25 @@ export default function RootLayout({
     <html lang="en">
       <head>
         <meta name="theme-color" content="#000000" />
+        <Script
+          src={`https://www.googletagmanager.com/gtag/js?id=G-ZH28TT3LE0`}
+          strategy="beforeInteractive"
+        />
+        <Script id="google-analytics" strategy="beforeInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-ZH28TT3LE0', {
+              page_path: window.location.pathname,
+            });
+          `}
+        </Script>
       </head>
       <body className={`${spaceGrotesk.className} ${dotGothic16.className}`}>
         <AnalyticsWrapper>
           {children}
         </AnalyticsWrapper>
-        <Script
-          src={`https://www.googletagmanager.com/gtag/js?id=G-ZH28TT3LE0`}
-          strategy="afterInteractive"
-        />
-        <Script id="google-analytics" strategy="afterInteractive">
-          {`
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
-            gtag('config', 'G-ZH28TT3LE0');
-          `}
-        </Script>
       </body>
     </html>
   )
