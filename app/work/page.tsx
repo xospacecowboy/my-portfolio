@@ -2,8 +2,8 @@
 
 import { useState } from "react"
 import Link from "next/link"
-import Image from "next/image"
-import { motion } from "framer-motion"
+import { motion } from "framer-motion";
+import Image from "next/image";
 import Footer from "@/components/Footer"
 import Header from "@/components/Header"
 
@@ -74,9 +74,78 @@ export default function WorkPage() {
             <GradientText>WORKS</GradientText>
           </h1>
           <div className="text-xl text-white/80 font-jetbrains-mono max-w-2xl">
-            A showcase of my professional projects, highlighting my expertise in web development, design, and creative problem-solving.
+          A showcase of my professional projects, highlighting my expertise in social media management, client relationship, community engaement, design, and creative problem-solving.
           </div>
         </section>
+
+        {/* Featured Project Card */}
+        <div className="mb-2 w-full">
+          <div className="bg-deep-grey/40 rounded-lg overflow-hidden">
+            <div className="h-1 w-full bg-gradient-to-r from-pastel-pink via-pastel-purple to-pastel-blue" />
+            <div className="p-8">
+              <div className="flex flex-col gap-6">
+                <div>
+                  <div className="flex items-baseline gap-4 mb-2">
+                    <h3 className="text-xl font-bold font-dotgothic16">
+                      <span className="bg-clip-text text-transparent bg-gradient-to-r from-pastel-pink to-pastel-blue">
+                        Portfolio Design & Development
+                      </span>
+                    </h3>
+                  </div>
+                  <div className="flex items-center gap-2 mb-4">
+                    <span className="text-sm text-neutral-400 font-jetbrains-mono">✨ You're looking at it!</span>
+                    <motion.span
+                      animate={{ rotate: [0, 14, -8, 0] }}
+                      transition={{ duration: 0.5, repeat: Infinity, repeatDelay: 2 }}
+                      className="inline-block"
+                    >
+                      👋
+                    </motion.span>
+                  </div>
+                  <p className="text-neutral-300 max-w-3xl font-light leading-relaxed">
+                    Welcome to my digital playground! 🎨 Built from scratch with modern tech and lots of love, 
+                    this portfolio showcases the perfect blend of <span className="text-pastel-pink">minimalist design</span> and{" "}
+                    <span className="text-pastel-blue">playful interactions</span>. From gradient animations to 
+                    cyberpunk-inspired elements, every detail has been crafted to create an engaging experience. 
+                    It's not just a portfolio—it's a vibe ✨
+                  </p>
+                </div>
+                <div className="space-y-3">
+                  <div className="text-sm text-neutral-400 font-jetbrains-mono flex items-center gap-2">
+                    <span>🛠️ Built with</span>
+                    <div className="h-px flex-grow bg-gradient-to-r from-neutral-400/20 to-transparent" />
+                  </div>
+                  <div className="flex flex-wrap gap-2">
+                    {[
+                      ["Next.js 14", "⚡"],
+                      ["Tailwind CSS", "🎨"],
+                      ["Framer Motion", "✨"],
+                      ["TypeScript", "🔷"],
+                      ["UI/UX Design", "🎯"],
+                      ["Design System", "🎪"]
+                    ].map(([tag, emoji]) => (
+                      <span
+                        key={tag}
+                        className="px-3 py-1.5 bg-deep-grey rounded text-sm text-neutral-300 font-jetbrains-mono border border-white/5 flex items-center gap-2 hover:border-white/20 transition-colors"
+                      >
+                        {emoji} {tag}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Samples Header */}
+        <div className="mb-4">
+          <h2 className="text-4xl font-bold font-dotgothic16">
+            <span className="bg-clip-text text-transparent bg-gradient-to-r from-pastel-pink to-pastel-blue">
+              SAMPLES
+            </span>
+          </h2>
+        </div>
 
         {/* Work Grid */}
         <section className="pb-16">

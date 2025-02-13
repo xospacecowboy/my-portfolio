@@ -263,7 +263,7 @@ export default function Home() {
           </motion.h1>
 
           {/* Stats Section */}
-          <section className="mt-8 md:mt-16 mb-16">
+          <section className="mt-12 md:mt-16 mb-20">
             <div className="grid grid-cols-2 md:grid-cols-4 gap-1">
               {[
                 { number: "7+", label: "Years Experience" },
@@ -290,210 +290,134 @@ export default function Home() {
           {/* ===================================
               About Section
               =================================== */}
-          <motion.div className="text-2xl sm:text-3xl md:text-4xl font-light italic max-w-5xl text-left mt-4 relative">
-            <RandomFont>W/ A PASSION FOR</RandomFont>{" "}
-            <motion.span
-              className="font-bold relative inline-block cursor-pointer"
-              whileHover={{ backgroundSize: "100% 100%" }}
-              transition={{ duration: 0.5 }}
-              style={{
-                backgroundImage: "linear-gradient(to right, #BAE1FF, #BAE1FF)",
-                backgroundRepeat: "no-repeat",
-                backgroundPosition: "0 100%",
-                backgroundSize: "0% 100%",
+          <div className="relative w-full mb-8">
+            {/* Background gradient blur */}
+            <motion.div 
+              className="absolute inset-0 bg-gradient-to-r from-pastel-pink/10 via-pastel-purple/10 to-pastel-blue/10 blur-3xl"
+              animate={{ 
+                scale: [1, 1.1, 1],
+                rotate: [0, 5, -5, 0]
               }}
-            >
-              STORYTELLING
-            </motion.span>{" "}
-            &{" "}
-            <motion.span
-              className="relative inline-block font-bold cursor-pointer"
-              whileHover={{ letterSpacing: "2px" }}
-              transition={{ duration: 0.3 }}
-            >
-              DESIGN
-            </motion.span>
-            , I{" "}
-            <motion.span
-              className="font-bold relative inline-block cursor-pointer"
-              whileHover={{ scale: 1.05 }}
-              transition={{ duration: 0.3 }}
-            >
-              CRAFT
-            </motion.span>{" "}
-            DIGITAL{" "}
-            <motion.span
-              className="relative inline-block font-bold cursor-pointer"
-              whileHover={{ backgroundSize: "100% 100%" }}
-              transition={{ duration: 0.5 }}
-              style={{
-                backgroundImage: "linear-gradient(to right, #BAE1FF, #BAE1FF)",
-                backgroundRepeat: "no-repeat",
-                backgroundPosition: "0 100%",
-                backgroundSize: "0% 100%",
+              transition={{
+                duration: 10,
+                repeat: Infinity,
+                ease: "linear"
               }}
-            >
-              EXPERIENCES
-            </motion.span>{" "}
-            THAT{" "}
-            <motion.span
-              className="relative inline-block font-bold cursor-pointer"
-              whileHover={{ letterSpacing: "2px" }}
-              transition={{ duration: 0.3 }}
-            >
-              CONNECT
-            </motion.span>
-            ,{" "}
-            <motion.span
-              className="font-bold relative inline-block cursor-pointer"
-              whileHover={{ scale: 1.05 }}
-              transition={{ duration: 0.3 }}
-            >
-              INSPIRE
-            </motion.span>{" "}
-            &{" "}
-            <motion.span
-              className="relative inline-block font-bold cursor-pointer"
-              whileHover={{ backgroundSize: "100% 100%" }}
-              transition={{ duration: 0.5 }}
-              style={{
-                backgroundImage: "linear-gradient(to right, #BAE1FF, #BAE1FF)",
-                backgroundRepeat: "no-repeat",
-                backgroundPosition: "0 100%",
-                backgroundSize: "0% 100%",
-              }}
-            >
-              ENGAGE
-            </motion.span>
-            .
-          </motion.div>
+            />
 
-          {/* ===================================
-              Approach Section
-              =================================== */}
-          <motion.div className="text-lg sm:text-xl md:text-2xl font-normal max-w-5xl text-left mt-3 [&>span]:leading-tight">
-            <span className="font-dotgothic16 block space-y-5">
-              <div>
-                I create{" "}
-                <motion.span
-                  className="bg-clip-text text-transparent bg-gradient-to-r from-pastel-pink via-pastel-purple to-pastel-blue"
-                  animate={{ backgroundPosition: ["0% 50%", "100% 50%", "0% 50%"] }}
-                  transition={{ duration: 3, repeat: Infinity, ease: "linear" }}
-                >
-                  DIGITAL MAGIC 
-                </motion.span>{" "}
-                — 
-              </div>
-
-              <div className="space-y-1.5">
-                Where{" "}
-                <motion.span
-                  className="font-bold relative inline-block cursor-pointer"
-                  whileHover={{ letterSpacing: "2px" }}
-                  transition={{ duration: 0.3 }}
-                >
-                  design
-                </motion.span>
-                ,{" "}
-                <motion.span
-                  className="font-bold relative inline-block cursor-pointer"
-                  whileHover={{ backgroundSize: "100% 100%" }}
-                  transition={{ duration: 0.5 }}
-                  style={{
-                    backgroundImage: "linear-gradient(to right, #BAE1FF, #BAE1FF)",
-                    backgroundRepeat: "no-repeat",
-                    backgroundPosition: "0 100%",
-                    backgroundSize: "0% 100%",
-                  }}
-                >
-                  storytelling
-                </motion.span>
-                , and{" "}
-                <motion.span
-                  className="font-bold relative inline-block cursor-pointer"
-                  whileHover={{ scale: 1.05 }}
-                  transition={{ duration: 0.3 }}
-                >
-                  strategy
-                </motion.span>{" "}
-                weave together to craft
-                <br />
-                experiences that{" "}
-                <motion.span
-                  className="bg-clip-text text-transparent bg-gradient-to-r from-pastel-pink to-pastel-blue"
-                  animate={{ backgroundPosition: ["0% 50%", "100% 50%", "0% 50%"] }}
-                  transition={{ duration: 3, repeat: Infinity, ease: "linear" }}
-                >
-                  captivate
-                </motion.span>
-                ,{" "}
-                <motion.span
-                  className="bg-clip-text text-transparent bg-gradient-to-r from-pastel-blue to-pastel-green"
-                  animate={{ backgroundPosition: ["0% 50%", "100% 50%", "0% 50%"] }}
-                  transition={{ duration: 3, repeat: Infinity, ease: "linear" }}
-                >
-                  resonate
-                </motion.span>
-                , and{" "}
-                <motion.span
-                  className="bg-clip-text text-transparent bg-gradient-to-r from-pastel-green to-pastel-pink"
-                  animate={{ backgroundPosition: ["0% 50%", "100% 50%", "0% 50%"] }}
-                  transition={{ duration: 3, repeat: Infinity, ease: "linear" }}
-                >
-                  inspire
-                </motion.span>
-                . Whether through
-                <br />
-                a campaign, my work is about turning ideas into something you can{" "}
-                <motion.span
-                  className="relative inline-block"
-                  whileHover={{
-                    scale: 1.1,
-                    transition: { duration: 0.2 }
-                  }}
-                >
-                  <span className="text-pastel-green">FEEL</span>
-                  <motion.span
-                    className="absolute -bottom-1 left-0 w-full h-0.5 bg-pastel-green"
-                    initial={{ scaleX: 0 }}
-                    whileHover={{ scaleX: 1 }}
+            {/* Content */}
+            <motion.div 
+              className="relative"
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ duration: 0.5 }}
+            >
+              <div className="space-y-6">
+                <div className="relative">
+                  <motion.div 
+                    className="text-5xl sm:text-6xl font-bold"
+                    whileHover={{ scale: 1.05 }}
                     transition={{ duration: 0.2 }}
-                  />
-                </motion.span>
-                .
-              </div>
-              
-              <div>
-                Because when creativity meets intention, it doesn't just make an impact—
-                <motion.span
-                  className="italic bg-clip-text text-transparent bg-gradient-to-r from-pastel-blue via-pastel-green to-pastel-pink"
-                  animate={{ backgroundPosition: ["0% 50%", "100% 50%", "0% 50%"] }}
-                  transition={{ duration: 3, repeat: Infinity, ease: "linear" }}
-                >
-                  it casts a spell that lingers.
-                </motion.span>
-                ✨
-              </div>
-            </span>
-          </motion.div>
+                  >
+                    BIG{" "}
+                    <motion.span 
+                      className="relative inline-block"
+                      animate={{ 
+                        backgroundPosition: ["0% 50%", "100% 50%", "0% 50%"]
+                      }}
+                      transition={{ 
+                        duration: 5,
+                        repeat: Infinity,
+                        ease: "linear"
+                      }}
+                      style={{
+                        backgroundImage: "linear-gradient(90deg, #ff69b4, #9370db, #87ceeb, #ff69b4)",
+                        backgroundSize: "200% 100%",
+                        WebkitBackgroundClip: "text",
+                        WebkitTextFillColor: "transparent"
+                      }}
+                    >
+                      IDEAS
+                    </motion.span>
+                    {" "}NEED ROOM TO RUN
+                  </motion.div>
+                  
+                  <motion.div 
+                    className="mt-6 space-y-6"
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ delay: 1 }}
+                  >
+                    <p className="text-xl sm:text-2xl text-neutral-300 font-light leading-relaxed max-w-3xl font-dotgothic16">
+                      Where{" "}
+                      <motion.span whileHover={{ color: "#ff69b4" }}>design</motion.span>,{" "}
+                      <motion.span whileHover={{ color: "#9370db" }}>storytelling</motion.span>, and{" "}
+                      <motion.span whileHover={{ color: "#87ceeb" }}>strategy</motion.span> come together 
+                      to create experiences that captivate, resonate, and leave a mark. Whether through 
+                      a campaign, or a brand, my work isn't about ideas, it's about making them{" "}
+                      <motion.span
+                        className="font-medium"
+                        whileHover={{ scale: 1.2, rotate: 360 }}
+                        transition={{ duration: 0.5 }}
+                      >
+                        felt
+                      </motion.span>
+                      . Because when creativity, when done right, 
+                      never rides alone.{" "}
+                      <motion.span
+                        animate={{ 
+                          scale: [1, 1.2, 1],
+                          rotate: [0, 360, 720],
+                          y: [0, -10, 0]
+                        }}
+                        transition={{ 
+                          duration: 2,
+                          repeat: Infinity,
+                          repeatDelay: 1
+                        }}
+                        className="inline-block"
+                      >
+                        🐎
+                      </motion.span>
+                    </p>
 
-          {/* ===================================
-              TL;DR Section
-              =================================== */}
-          <section className="mt-4">
-            <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
-              <Link href="/meet-stephen" className="inline-block">
-                <span className="bg-clip-text text-transparent bg-gradient-to-r from-pastel-pink via-pastel-purple to-pastel-blue text-lg font-bold hover:underline">
-                  Full Bio →
-                </span>
-              </Link>
+                    <motion.div
+                      whileHover={{ x: 10, scale: 1.05 }}
+                      transition={{ duration: 0.2 }}
+                      className="mt-4"
+                    >
+                      <Link 
+                        href="/meet-stephen" 
+                        className="group inline-flex items-center gap-2 text-neutral-400 hover:text-neutral-200 transition-colors font-jetbrains-mono"
+                      >
+                        FULL BIO{" "}
+                        <motion.span
+                          animate={{ x: [0, 5, 0] }}
+                          transition={{ 
+                            duration: 1.5,
+                            repeat: Infinity,
+                            repeatType: "reverse"
+                          }}
+                        >
+                          →
+                        </motion.span>
+                      </Link>
+                    </motion.div>
+                  </motion.div>
+                </div>
+              </div>
             </motion.div>
-          </section>
+          </div>
 
           {/* ===================================
               Formerly Section
               =================================== */}
-          <section className="container mx-auto px-6 pt-12 pb-16 relative">
+          <motion.section 
+            className="mt-8"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.3 }}
+          >
             <motion.h2
               className="text-3xl sm:text-4xl md:text-5xl font-bold mb-8 bg-clip-text text-transparent bg-gradient-to-r from-pastel-green via-pastel-blue to-pastel-pink cursor-pointer text-center font-dotgothic16"
               whileHover={{ backgroundSize: "200% 200%" }}
@@ -568,7 +492,7 @@ export default function Home() {
                 </span>
               </Link>
             </motion.div>
-          </section>
+          </motion.section>
 
           {/* Animated Dot Wave Divider */}
           <div className="relative pt-3 pb-12 overflow-hidden">
@@ -612,23 +536,23 @@ export default function Home() {
             <motion.div className="text-2xl sm:text-3xl md:text-4xl font-normal max-w-5xl mx-auto text-center leading-relaxed mb-12">
               <span className="font-dotgothic16 block">
                 <span className="block mb-3">
-                  I AM{" "}
+                  LET'S{" "}
                   <motion.span
                     className="font-bold relative inline-block cursor-pointer"
                     whileHover={{ scale: 1.05 }}
                     transition={{ duration: 0.3 }}
                   >
-                    COMMITTED
+                    CREATE
                   </motion.span>{" "}
-                  TO{" "}
+                  
                   <motion.span
                     className="bg-clip-text text-transparent bg-gradient-to-r from-pastel-pink via-pastel-purple to-pastel-blue"
                     animate={{ backgroundPosition: ["0% 50%", "100% 50%", "0% 50%"] }}
                     transition={{ duration: 3, repeat: Infinity, ease: "linear" }}
                   >
-                    DESIGNS THAT BOND
+                    SOMETHING
                   </motion.span>{" "}
-                  & WOULD{" "}
+                  THAT RESONATES.{" "}
                   <motion.span
                     className="relative inline-block"
                     whileHover={{
@@ -636,7 +560,7 @@ export default function Home() {
                       transition: { duration: 0.2 }
                     }}
                   >
-                    <span className="text-pastel-green">LOVE</span>
+                    <span className="text-pastel-green"></span>
                     <motion.span
                       className="absolute -bottom-1 left-0 w-full h-0.5 bg-pastel-green"
                       initial={{ scaleX: 0 }}
@@ -647,19 +571,19 @@ export default function Home() {
                 </span>
 
                 <span className="block mb-3">
-                  TO HEAR WHAT YOU'RE{" "}
+                  TELL ME WHAT YOU'RE{" "}
                   <motion.span
                     className="italic bg-clip-text text-transparent bg-gradient-to-r from-pastel-blue via-pastel-green to-pastel-pink"
                     animate={{ backgroundPosition: ["0% 50%", "100% 50%", "0% 50%"] }}
                     transition={{ duration: 3, repeat: Infinity, ease: "linear" }}
                   >
-                    WORKING ON
+                    DREAMING UP,
                   </motion.span>{" "}
-                  —
+                  
                 </span>
 
                 <span className="block">
-                  OR EVEN IF YOU JUST WANT TO{" "}
+                  OR JUST SAY{" "}
                   <motion.span
                     className="relative inline-block font-bold cursor-pointer"
                     whileHover={{ letterSpacing: "2px" }}
@@ -669,8 +593,8 @@ export default function Home() {
                   </motion.span>{" "}
                   <motion.span
                     initial={{ rotate: 0 }}
-                    animate={{ rotate: [0, -10, 10, -10, 10, 0] }}
-                    transition={{ duration: 2, repeat: Infinity, repeatDelay: 3 }}
+                    animate={{ rotate: [0, 14, -8, 14, -4, 10, 0] }}
+                    transition={{ duration: 2, repeat: Infinity, repeatDelay: 1 }}
                     className="inline-block"
                   >
                     👋

@@ -37,7 +37,7 @@ export default function Header() {
     >
       <div className="container mx-auto px-6 py-4">
         <div className="flex justify-between items-center">
-          <Link href="/" className="text-xl md:text-2xl font-bold tracking-tighter hover:text-pastel-blue transition-colors">
+          <Link href="/" className="text-xl md:text-2xl font-bold font-dotgothic16 hover:bg-clip-text hover:text-transparent hover:bg-gradient-to-r hover:from-pastel-pink hover:via-pastel-purple hover:to-pastel-blue transition-all">
             @OXYTOCINS
           </Link>
 
@@ -47,14 +47,14 @@ export default function Header() {
               <Link
                 key={link.href}
                 href={link.href}
-                className="text-sm hover:text-pastel-blue transition-colors font-jetbrains-mono"
+                className="text-sm hover:bg-clip-text hover:text-transparent hover:bg-gradient-to-r hover:from-pastel-pink hover:via-pastel-purple hover:to-pastel-blue transition-all font-jetbrains-mono"
               >
                 {link.label}
               </Link>
             ))}
             <motion.a
               href="mailto:howdy@oxytocins.me"
-              className="bg-white text-deep-grey px-4 py-2 text-sm font-medium hover:bg-pastel-blue hover:text-white transition-colors relative overflow-hidden font-jetbrains-mono"
+              className="bg-white text-deep-grey px-4 py-2 text-sm font-medium hover:bg-gradient-to-r hover:from-pastel-pink hover:via-pastel-purple hover:to-pastel-blue hover:text-white transition-all relative overflow-hidden font-jetbrains-mono"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
             >
