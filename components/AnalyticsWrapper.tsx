@@ -1,8 +1,10 @@
+'use client';
+
 import { useEffect } from 'react';
 import { usePathname } from 'next/navigation';
 import { useAnalytics } from '../hooks/useAnalytics';
 
-export function AnalyticsWrapper({
+export default function AnalyticsWrapper({
   children,
 }: {
   children: React.ReactNode;

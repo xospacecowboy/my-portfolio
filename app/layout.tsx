@@ -4,7 +4,11 @@ import { Space_Grotesk, DotGothic16 } from "next/font/google"
 import type React from "react"
 import { Metadata } from 'next'
 import { GoogleAnalytics } from '@next/third-parties/google'
-import { AnalyticsWrapper } from '../components/AnalyticsWrapper'
+import dynamic from 'next/dynamic'
+
+const AnalyticsWrapper = dynamic(() => import('../components/AnalyticsWrapper'), {
+  ssr: false
+})
 
 const spaceGrotesk = Space_Grotesk({ subsets: ["latin"] })
 const dotGothic16 = DotGothic16({ 
