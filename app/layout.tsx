@@ -29,54 +29,35 @@ export const metadata: Metadata = {
     "Roberto Beardslee",
     "Creative Strategist",
     "Social Media Manager",
-    "Digital Marketing",
-    "Graphic Designer",
-    "Artist",
-    "Brand Development",
-    "Creative Direction",
-    "Social Media Strategy",
-    "Content Creation",
-    "Houston",
-    "Digital Marketing Professional"
   ],
-  creator: "Stephen Beardslee",
   icons: {
-    icon: [{ url: 'https://oxytocins.me/icon.png', type: 'image/png' }],
-    shortcut: [{ url: 'https://oxytocins.me/icon.png', type: 'image/png' }],
-    apple: [{ url: 'https://oxytocins.me/icon.png', type: 'image/png' }]
+    icon: '/favicon.png',
+    shortcut: '/favicon.png',
+    apple: '/favicon.png',
   },
   openGraph: {
-    type: "website",
-    locale: "en_US",
-    url: "https://oxytocins.me",
     title: "Stephen Beardslee - Creative Strategist & Social Media Leader",
     description: "Creative strategist and social media leader specializing in digital marketing, brand development, and innovative social campaigns.",
-    siteName: "Stephen Beardslee Portfolio",
-    images: [{
-      url: 'https://oxytocins.me/share.png',
-      width: 1200,
-      height: 630,
-      alt: "Stephen Beardslee Portfolio"
-    }]
+    url: 'https://oxytocins.me',
+    siteName: 'Stephen Beardslee',
+    images: [
+      {
+        url: '/social.png',
+        width: 1200,
+        height: 630,
+        alt: 'Stephen Beardslee',
+      }
+    ],
+    locale: 'en_US',
+    type: 'website',
   },
   twitter: {
-    card: "summary_large_image",
+    card: 'summary_large_image',
     title: "Stephen Beardslee - Creative Strategist & Social Media Leader",
     description: "Creative strategist and social media leader specializing in digital marketing, brand development, and innovative social campaigns.",
-    images: ['https://oxytocins.me/share.png'],
-    creator: "@oxytocins"
+    images: ['/social.png'],
   },
-  robots: {
-    index: true,
-    follow: true,
-    googleBot: {
-      index: true,
-      follow: true
-    }
-  },
-  alternates: {
-    canonical: "https://oxytocins.me"
-  }
+  manifest: '/manifest.json'
 }
 
 export default function RootLayout({
