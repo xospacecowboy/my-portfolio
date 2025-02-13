@@ -49,7 +49,7 @@ export const metadata: Metadata = {
     siteName: "Stephen Beardslee Portfolio",
     images: [
       {
-        url: "https://oxytocins.me/og-image.png",
+        url: "https://oxytocins.me/social.png",
         width: 1200,
         height: 630,
         alt: "Stephen Beardslee Portfolio"
@@ -60,7 +60,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Stephen Beardslee - Creative Strategist & Social Media Leader",
     description: "Creative strategist and social media leader specializing in digital marketing, brand development, and innovative social campaigns.",
-    images: ["https://oxytocins.me/og-image.png"],
+    images: ["https://oxytocins.me/social.png"],
     creator: "@oxytocins"
   },
   robots: {
@@ -90,8 +90,8 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
-        <link rel="icon" href="/oxytocinslogo.svg" type="image/svg+xml" />
-        <link rel="alternate icon" href="/oxytocinslogo.png" type="image/png" />
+        <link rel="icon" href="/oxytocinslogo-2.svg" type="image/svg+xml" />
+        <link rel="alternate icon" href="/oxytocinslogo-2.svg" type="image/svg+xml" />
         <meta name="theme-color" content="#000000" />
       </head>
       <body className={`${spaceGrotesk.className} ${dotGothic16.className}`}>
