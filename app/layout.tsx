@@ -41,9 +41,9 @@ export const metadata: Metadata = {
   ],
   creator: "Stephen Beardslee",
   icons: {
-    icon: [{ url: '/icon.png', type: 'image/png' }],
-    shortcut: [{ url: '/icon.png', type: 'image/png' }],
-    apple: [{ url: '/icon.png', type: 'image/png' }]
+    icon: [{ url: 'https://oxytocins.me/icon.png', type: 'image/png' }],
+    shortcut: [{ url: 'https://oxytocins.me/icon.png', type: 'image/png' }],
+    apple: [{ url: 'https://oxytocins.me/icon.png', type: 'image/png' }]
   },
   openGraph: {
     type: "website",
@@ -53,7 +53,7 @@ export const metadata: Metadata = {
     description: "Creative strategist and social media leader specializing in digital marketing, brand development, and innovative social campaigns.",
     siteName: "Stephen Beardslee Portfolio",
     images: [{
-      url: '/share.png',
+      url: 'https://oxytocins.me/share.png',
       width: 1200,
       height: 630,
       alt: "Stephen Beardslee Portfolio"
@@ -63,7 +63,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Stephen Beardslee - Creative Strategist & Social Media Leader",
     description: "Creative strategist and social media leader specializing in digital marketing, brand development, and innovative social campaigns.",
-    images: ['/share.png'],
+    images: ['https://oxytocins.me/share.png'],
     creator: "@oxytocins"
   },
   robots: {
