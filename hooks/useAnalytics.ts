@@ -5,7 +5,7 @@ import { useCallback, useEffect, useState } from 'react';
 declare global {
   interface Window {
     dataLayer: any[];
-    gtag: (
+    gtag?: (
       command: 'event' | 'config' | 'js',
       action: string,
       params?: {
@@ -24,7 +24,7 @@ export const useAnalytics = () => {
   useEffect(() => {
     // Check if GA is initialized
     const checkGA = () => {
-      if (typeof window !== 'undefined' && window.gtag) {
+      if (typeof window !== 'undefined' && typeof window.gtag === 'function') {
         setIsInitialized(true);
       }
     };
@@ -42,7 +42,7 @@ export const useAnalytics = () => {
     label?: string,
     value?: number
   ) => {
-    if (!isInitialized) {
+    if (!isInitialized || typeof window.gtag !== 'function') {
       console.warn('Google Analytics not yet initialized');
       return;
     }
@@ -59,7 +59,7 @@ export const useAnalytics = () => {
   }, [isInitialized]);
 
   const trackPageView = useCallback((url: string, title: string) => {
-    if (!isInitialized) {
+    if (!isInitialized || typeof window.gtag !== 'function') {
       console.warn('Google Analytics not yet initialized');
       return;
     }
