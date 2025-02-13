@@ -54,9 +54,9 @@ export const metadata: Metadata = {
     site: '@oxytocins'
   },
   icons: {
-    icon: '/favicon.png',
-    shortcut: '/favicon.png',
-    apple: '/favicon.png',
+    icon: 'https://ik.imagekit.io/oxytocins/favicon.png',
+    shortcut: 'https://ik.imagekit.io/oxytocins/favicon.png',
+    apple: 'https://ik.imagekit.io/oxytocins/favicon.png',
   },
   manifest: '/manifest.json'
 }
