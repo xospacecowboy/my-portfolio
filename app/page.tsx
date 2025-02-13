@@ -108,53 +108,57 @@ export default function Home() {
   const experiences = [
     {
       company: "Apple",
-      role: "Creative",
+      role: "Technical Specialist, Product Education & Support",
       icon: "👨🏻‍💻",
       color: "text-pastel-green",
       bgGradient: "from-pastel-green to-pastel-blue"
     },
     {
-      company: "VerifiedWorks Agency",
-      role: "Creative Strategy Lead",
+      company: "VerifiedWorks",
+      role: "Creative Strategy Lead & Senior Social Media Manager",
+      icon: "🎨",
       color: "text-pastel-blue",
       bgGradient: "from-pastel-blue to-pastel-purple"
     },
     {
       company: "Samsung US",
-      role: "Social Media Campaign",
+      role: "Creative Direction & Gaming Collective Program Lead",
+      icon: "📺",
       color: "text-pastel-pink",
       bgGradient: "from-pastel-purple to-pastel-pink"
     },
     {
       company: "Electronic Arts",
-      role: "Gaming Campaign",
+      role: "Social Strategy Lead & Community Program Manager",
       icon: "🎮",
       color: "text-pastel-yellow",
       bgGradient: "from-pastel-pink to-pastel-yellow"
     },
     {
       company: "Discord",
-      role: "Social Strategy",
+      role: "Community Engagement & Platform Development for existing and emerging communities",
+      icon: "💬",
       color: "text-pastel-purple",
       bgGradient: "from-pastel-yellow to-pastel-green"
     },
     {
       company: "Twitch",
-      role: "Content Strategy",
+      role: "Managed talent for a variety of live stream events; Twitch Rivals, Galaxy Cup, and more",
+      icon: "🕹️",
       color: "text-pastel-blue",
       bgGradient: "from-pastel-green to-pastel-blue"
     },
     {
       company: "Cyberpunk",
-      role: "Gaming Campaign",
+      role: "Oversaw influencer-led launch campaign in partnership with Samsung US and CD Projekt Red",
       icon: "🎮",
       color: "text-pastel-pink",
       bgGradient: "from-pastel-blue to-pastel-pink"
     },
     {
       company: "Pokémon GO",
-      role: "Social Campaign",
-      icon: "🎮",
+      role: "Partnered with Samsung and Niantic for Community Day events featuring select creators",
+      icon: "🐣",
       color: "text-pastel-green",
       bgGradient: "from-pastel-pink to-pastel-green"
     }
@@ -276,9 +280,9 @@ export default function Home() {
           <section className="mt-16 mb-16">
             <div className="grid grid-cols-2 md:grid-cols-4 gap-1">
               {[
-                { number: "10+", label: "Years Experience" },
-                { number: "50+", label: "Brand Partnerships" },
-                { number: "100M+", label: "Social Impressions" },
+                { number: "7+", label: "Years Experience" },
+                { number: "100+", label: "Influencer Partnerships" },
+                { number: "200M+", label: "Social Impressions" },
                 { number: "∞", label: "Creative Possibilities" },
               ].map((stat, index) => (
                 <motion.div

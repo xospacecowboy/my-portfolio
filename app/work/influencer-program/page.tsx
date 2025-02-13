@@ -10,7 +10,7 @@ const projectData = {
   title: "Influencer Program Development",
   category: "Program Strategy",
   client: "Samsung US",
-  date: "2022-2023",
+  date: "2019-2023",
   description: "Designed and scaled Samsung US's centralized influencer program, securing 90 long-term partnerships and producing over 5,262 pieces of content that delivered massive audience reach and engagement.",
   challenge: "Creating a scalable, high-impact influencer strategy that fosters long-term partnerships while maximizing content output and effectively driving both brand awareness and product sales.",
   solution: "Led a structured influencer program that centralized partnerships and streamlined content production, negotiating and managing 90 long-term contracts while optimizing content strategy for maximum impact.",

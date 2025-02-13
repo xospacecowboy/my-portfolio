@@ -11,7 +11,7 @@ const projectData = {
   title: "Social-First Brand Growth",
   category: "Creative Strategy",
   client: "Electronic Arts", // Replace with actual client name
-  date: "2022-23",
+  date: "2022-2023",
   description: "Revitalized EA’s brand image by transforming its public perception through a purpose-driven creative strategy, innovative social content, and influencer partnerships—resulting in 4MM+ new followers and a surge in positive sentiment.",
   challenge: "Overcoming EA’s reputation as “Worst Company in America” by shifting public perception and fostering authentic player engagement through strategic branding.",
   solution: "Developed a year-round engagement strategy centered on culturally relevant moments, leveraged influencers to build trust, and redefined social content to prioritize meaningful player connections.",

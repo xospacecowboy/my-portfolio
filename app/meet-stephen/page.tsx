@@ -187,9 +187,9 @@ export default function MeetStephen() {
         <section className="py-20">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
             {[
-              { number: "10+", label: "Years Experience" },
-              { number: "50+", label: "Brand Partnerships" },
-              { number: "100M+", label: "Social Impressions" },
+              { number: "7+", label: "Years Experience" },
+              { number: "100+", label: "Influencer Partnerships" },
+              { number: "200M+", label: "Social Impressions" },
               { number: "∞", label: "Creative Possibilities" },
             ].map((stat, index) => (
               <motion.div

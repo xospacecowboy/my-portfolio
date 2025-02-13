@@ -11,7 +11,7 @@ const projectData = {
   title: "Community Building & Engagement",
   category: "Community Strategy",
   client: "Electronic Arts & Others",
-  date: "2023-2024",
+  date: "2022-2025",
   description: "Spearheaded the development and management of Discord communities for Electronic Arts and niche communities across games like Helldivers 2 and Suicide Squad, driving over 10K+ original sign-ups through strategic community-building.",
   challenge: "Expanding EA's engagement strategy beyond marketing-driven interactions to create authentic, self-sustaining communities tailored to specific game titles and creative niches.",
   solution: "Developed and executed a creative strategy establishing Discord as a key engagement platform, fostering player connections and knowledge sharing through structured programming and continuous community support.",

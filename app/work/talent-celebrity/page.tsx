@@ -12,7 +12,7 @@ const projectData = {
   category: "Talent Management",
   client: "Various Brands",
   date: "2019-2023",
-  description: "Spearheaded talent relations and contract management for 300+ partnerships with high-profile musicians, actors, and content creators, orchestrating seamless campaign execution while maintaining brand integrity.",
+  description: "Spearheaded talent relations and contract management for 200+ partnerships with high-profile musicians, actors, and content creators, orchestrating seamless campaign execution while maintaining brand integrity.",
   challenge: "Managing complex talent partnerships and negotiations while ensuring alignment between celebrity schedules, brand objectives, and campaign deliverables across multiple stakeholders.",
   solution: "Developed streamlined contract processes and talent guidelines while building strong relationships with agencies and management teams to ensure smooth campaign execution and deliverable tracking.",
   results: "Successfully managed $400K+ in talent contracts achieving 15.7MM+ reach across campaigns, while maintaining 100% contract compliance and establishing long-term partnerships with key celebrities.",

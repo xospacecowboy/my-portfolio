@@ -11,8 +11,8 @@ import { useEffect } from "react"
 const projectData = {
   title: "Creative Direction",
   category: "Creative Strategy",
-  client: "Samsung & Electronic Arts",
-  date: "2020-2024",
+  client: "Multiple clients, Freelance",
+  date: "2017-2024",
   description: "Led creative strategy and multimedia production for major gaming initiatives including #TeamGalaxy mobile gaming collective and EA's community programs, delivering captivating digital experiences across platforms.",
   challenge: "Developing innovative creative strategies that maintain brand consistency while scaling content production across multiple platforms, from mobile gaming initiatives to community programs.",
   solution: "Curated the first-of-its-kind Team Galaxy Gaming collective and developed comprehensive EA community initiatives, managing end-to-end program creation from talent acquisition to post-production.",
