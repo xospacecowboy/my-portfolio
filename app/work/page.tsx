@@ -19,7 +19,7 @@ const workProjects = [
   {
     title: "Experiential Gaming Activation",
     description: "Partnered with Samsung and #TeamGalaxy at PAX East 2020, engaging top gaming influencers to amplify mobile initiatives through activations and content.",
-    image: "/work/project-2.png",
+    image: "/work/project-2.jpg",
     link: "/work/gaming-activation",
     category: "Influencer Marketing"
   },
