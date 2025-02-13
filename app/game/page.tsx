@@ -25,28 +25,59 @@ export default function GamePage() {
               </p>
             </div>
             
-            <div className="relative aspect-[4/3] bg-black/50 rounded-xl overflow-hidden border border-white/10">
+            <div className="relative aspect-[16/10] max-w-3xl mx-auto bg-black/50 rounded-xl overflow-hidden border border-white/10">
               <RPGChat />
             </div>
             
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 text-center">
-              <div className="p-6 rounded-lg bg-white/5 backdrop-blur">
-                <h2 className="text-xl font-semibold mb-2">How to Play</h2>
-                <ul className="text-gray-400">
-                  <li>Type your responses or select choices</li>
-                  <li>Make strategic decisions</li>
-                  <li>Manage your inventory and stats</li>
-                  <li>Complete quests and missions</li>
-                </ul>
-              </div>
-              <div className="p-6 rounded-lg bg-white/5 backdrop-blur">
-                <h2 className="text-xl font-semibold mb-2">Features</h2>
-                <ul className="text-gray-400">
-                  <li>Dynamic storylines</li>
-                  <li>Character progression</li>
-                  <li>Inventory system</li>
-                  <li>Multiple endings</li>
-                </ul>
+            <div className="max-w-3xl mx-auto">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div className="group p-6 rounded-xl bg-gradient-to-br from-purple-900/50 via-black to-pink-900/30 backdrop-blur border border-white/10 hover:border-white/20 transition-all duration-300 hover:shadow-lg hover:shadow-purple-500/10">
+                  <h2 className="text-xl font-bold mb-4 bg-clip-text text-transparent bg-gradient-to-r from-purple-400 to-pink-400 group-hover:from-purple-300 group-hover:to-pink-300 transition-all">
+                    🎮 How to Play
+                  </h2>
+                  <ul className="text-gray-400 space-y-3">
+                    <li className="flex items-center space-x-2 group-hover:text-gray-300 transition-all">
+                      <span className="w-1.5 h-1.5 rounded-full bg-purple-400"></span>
+                      <span>Type your responses or select choices</span>
+                    </li>
+                    <li className="flex items-center space-x-2 group-hover:text-gray-300 transition-all">
+                      <span className="w-1.5 h-1.5 rounded-full bg-pink-400"></span>
+                      <span>Make strategic decisions that affect your journey</span>
+                    </li>
+                    <li className="flex items-center space-x-2 group-hover:text-gray-300 transition-all">
+                      <span className="w-1.5 h-1.5 rounded-full bg-purple-400"></span>
+                      <span>Manage your inventory and character stats</span>
+                    </li>
+                    <li className="flex items-center space-x-2 group-hover:text-gray-300 transition-all">
+                      <span className="w-1.5 h-1.5 rounded-full bg-pink-400"></span>
+                      <span>Complete quests and unlock new areas</span>
+                    </li>
+                  </ul>
+                </div>
+                
+                <div className="group p-6 rounded-xl bg-gradient-to-br from-pink-900/50 via-black to-purple-900/30 backdrop-blur border border-white/10 hover:border-white/20 transition-all duration-300 hover:shadow-lg hover:shadow-pink-500/10">
+                  <h2 className="text-xl font-bold mb-4 bg-clip-text text-transparent bg-gradient-to-r from-pink-400 to-purple-400 group-hover:from-pink-300 group-hover:to-purple-300 transition-all">
+                    ✨ Features
+                  </h2>
+                  <ul className="text-gray-400 space-y-3">
+                    <li className="flex items-center space-x-2 group-hover:text-gray-300 transition-all">
+                      <span className="w-1.5 h-1.5 rounded-full bg-pink-400"></span>
+                      <span>Rich storylines with branching paths</span>
+                    </li>
+                    <li className="flex items-center space-x-2 group-hover:text-gray-300 transition-all">
+                      <span className="w-1.5 h-1.5 rounded-full bg-purple-400"></span>
+                      <span>Character progression system</span>
+                    </li>
+                    <li className="flex items-center space-x-2 group-hover:text-gray-300 transition-all">
+                      <span className="w-1.5 h-1.5 rounded-full bg-pink-400"></span>
+                      <span>Interactive inventory management</span>
+                    </li>
+                    <li className="flex items-center space-x-2 group-hover:text-gray-300 transition-all">
+                      <span className="w-1.5 h-1.5 rounded-full bg-purple-400"></span>
+                      <span>Multiple unique endings to discover</span>
+                    </li>
+                  </ul>
+                </div>
               </div>
             </div>
           </div>
