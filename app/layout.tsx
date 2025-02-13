@@ -3,8 +3,8 @@ import "../styles/grid-pattern.css"
 import { Space_Grotesk, DotGothic16 } from "next/font/google"
 import type React from "react"
 import { Metadata } from 'next'
-import { GoogleAnalytics } from '@next/third-parties/google'
 import dynamic from 'next/dynamic'
+import Script from 'next/script'
 
 const AnalyticsWrapper = dynamic(() => import('../components/AnalyticsWrapper'), {
   ssr: false
@@ -98,7 +98,18 @@ export default function RootLayout({
         <AnalyticsWrapper>
           {children}
         </AnalyticsWrapper>
-        <GoogleAnalytics gaId="G-ZH28TT3LE0" />
+        <Script
+          src={`https://www.googletagmanager.com/gtag/js?id=G-ZH28TT3LE0`}
+          strategy="afterInteractive"
+        />
+        <Script id="google-analytics" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-ZH28TT3LE0');
+          `}
+        </Script>
       </body>
     </html>
   )
