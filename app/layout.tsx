@@ -49,7 +49,7 @@ export const metadata: Metadata = {
     siteName: "Stephen Beardslee Portfolio",
     images: [
       {
-        url: "/oxytocinslogo.png",
+        url: "https://oxytocins.me/oxytocinslogo.png",
         width: 1200,
         height: 630,
         alt: "Stephen Beardslee Logo"
@@ -60,7 +60,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Stephen Beardslee - Creative Strategist & Social Media Leader",
     description: "Creative strategist and social media leader specializing in digital marketing, brand development, and innovative social campaigns.",
-    images: ["/oxytocinslogo.png"],
+    images: ["https://oxytocins.me/oxytocinslogo.png"],
     creator: "@oxytocins"
   },
   robots: {
