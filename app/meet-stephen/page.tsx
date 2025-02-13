@@ -32,71 +32,76 @@ export default function MeetStephen() {
         </section>
 
         {/* Profile Section */}
-        <section className="grid md:grid-cols-2 gap-12 pb-16">
-          {/* Image Column */}
+        <section className="grid md:grid-cols-2 gap-16 pb-16">
+          {/* Content Column */}
           <motion.div
             initial={{ opacity: 0, x: -20 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.5 }}
-            className="relative aspect-square rounded-lg overflow-hidden"
-          >
-            <Image
-              src="/headshot.jpg"
-              alt="Stephen Beardslee"
-              fill
-              className="object-cover"
-              priority
-            />
-            <div className="absolute inset-0 bg-gradient-to-t from-deep-grey/80 to-transparent" />
-          </motion.div>
-
-          {/* Content Column */}
-          <motion.div
-            initial={{ opacity: 0, x: 20 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.5, delay: 0.2 }}
-            className="space-y-6"
+            className="space-y-12"
           >
             <div className="space-y-4">
               <div className="text-2xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-pastel-pink to-pastel-blue">
-                Background
+                BACKGROUND
               </div>
               <div className="text-white/80 font-jetbrains-mono space-y-4">
-                <div>
-                  With over a decade of experience in creative and social media, I've had the privilege of working with some of the world's most innovative brands.
-                </div>
-                <div>
-                  My journey began at Apple, where I honed my skills in creative storytelling and customer experience. Since then, I've led successful campaigns and strategies for various tech and gaming companies.
-                </div>
+                <p>
+                  With over 10 years of experience in social media management and digital marketing,
+                  I've developed a keen eye for creating content that resonates with audiences and
+                  drives engagement.
+                </p>
+                <p>
+                  My approach combines data-driven insights with creative storytelling to build
+                  meaningful connections between brands and their communities.
+                </p>
               </div>
             </div>
 
             <div className="space-y-4">
               <div className="text-2xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-pastel-blue to-pastel-purple">
-                Approach
+                APPROACH
               </div>
               <div className="text-white/80 font-jetbrains-mono space-y-4">
-                <div>
+                <p>
                   I believe in creating authentic connections through strategic storytelling and innovative design. Every project is an opportunity to push creative boundaries while delivering measurable results.
-                </div>
-                <div>
+                </p>
+                <p>
                   My work combines data-driven insights with creative intuition to craft experiences that resonate with audiences and drive engagement.
-                </div>
+                </p>
               </div>
             </div>
 
             <div className="space-y-4">
               <div className="text-2xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-pastel-purple to-pastel-pink">
-                Beyond Work
+                BEYOND WORK
               </div>
               <div className="text-white/80 font-jetbrains-mono space-y-4">
-                <div>
+                <p>
                   When I'm not crafting digital experiences, you'll find me exploring new creative mediums, experimenting with digital art, or staying up-to-date with the latest trends in technology and design.
-                </div>
-                <div>
+                </p>
+                <p>
                   I'm always excited to connect with fellow creatives and explore new opportunities for collaboration.
-                </div>
+                </p>
               </div>
+            </div>
+          </motion.div>
+
+          {/* Image Column */}
+          <motion.div
+            initial={{ opacity: 0, x: 20 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.5 }}
+            className="relative"
+          >
+            <div className="sticky top-32 w-[400px] h-[400px] rounded-full overflow-hidden mx-auto">
+              <Image
+                src="/headshot.jpg"
+                alt="Stephen Beardslee"
+                fill
+                className="object-cover"
+                priority
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-deep-grey/20 to-transparent" />
             </div>
           </motion.div>
         </section>
@@ -147,17 +152,17 @@ export default function MeetStephen() {
                 <GradientText>Professional Journey</GradientText>
               </h2>
               <div className="space-y-6 text-lg text-white/80 font-jetbrains-mono">
-                <div>
-                  With a background in global social media management at <GradientText>Electronic Arts</GradientText> and
-                  experience as a social strategist and gaming consultant at <GradientText>Cashmere Agency</GradientText>,
-                  Stephen has worked with major brands like <GradientText>Google, Meta, and Twitch</GradientText>.
-                </div>
-                <div>
+                <p>
+                  With a background in global social media management w/ <GradientText>Electronic Arts</GradientText> and
+                  experience as a social strategist and gaming consultant at <GradientText>VerifiedWorks Agency</GradientText>,
+                  Stephen has worked with major brands like <GradientText>Samsung, Meta, and Twitch</GradientText>.
+                </p>
+                <p>
                   Stephen's approach focuses on creating <GradientText>transformative content</GradientText> that is relevant,
                   meaningful, entertaining, and inspiring. He believes that{" "}
                   <GradientText>good stories are the key to good content</GradientText> and strives to extract meaningful
                   narratives from every idea.
-                </div>
+                </p>
               </div>
             </div>
 
@@ -166,13 +171,13 @@ export default function MeetStephen() {
                 <GradientText>Creative Vision</GradientText>
               </h2>
               <div className="space-y-6 text-lg text-white/80 font-jetbrains-mono">
-                <div>
+                <p>
                   Beyond his professional endeavors, Stephen is an{" "}
                   <GradientText>accomplished artist and graphic designer</GradientText>. His creative work spans various
                   mediums, from traditional painting to digital design. As an{" "}
                   <GradientText>emerging web developer</GradientText>, Stephen combines his artistic vision with technical
                   skills to create engaging and innovative digital experiences.
-                </div>
+                </p>
               </div>
             </div>
           </motion.div>

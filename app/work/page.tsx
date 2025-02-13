@@ -10,25 +10,46 @@ import Header from "@/components/Header"
 // Work Projects Data
 const workProjects = [
   {
-    title: "Project Alpha",
-    description: "A cutting-edge web application built with Next.js and TypeScript.",
-    image: "/work/project-alpha.jpg",
-    link: "/work/project-alpha",
-    category: "Web Development"
+    title: "Social-First Brand Growth",
+    description: "Revitalized EA’s brand through strategy, social innovation, and influencers, driving 4MM+ new followers and a surge in positive sentiment.",
+    image: "/work/project-1.png",
+    link: "/work/social-media-campaign",
+    category: "Creative Strategy"
   },
   {
-    title: "Project Beta",
-    description: "An innovative mobile app designed for seamless user experience.",
-    image: "/work/project-beta.jpg",
-    link: "/work/project-beta",
-    category: "Mobile Development"
+    title: "Experiential Gaming Activation",
+    description: "Partnered with Samsung and #TeamGalaxy at PAX East 2020, engaging top gaming influencers to amplify mobile initiatives through activations and content.",
+    image: "/work/project-2.jpg",
+    link: "/work/gaming-activation",
+    category: "Influencer Marketing"
   },
   {
-    title: "Project Gamma",
-    description: "A comprehensive branding and design system for a tech startup.",
-    image: "/work/project-gamma.jpg",
-    link: "/work/project-gamma",
-    category: "Design"
+    title: "Talent & Celebrity",
+    description: "Managed 300+ talent partnerships with musicians, actors, and creators, overseeing contract negotiations, relationship management, and campaign execution.",
+    image: "/work/project-3.jpg",
+    link: "/work/talent-celebrity",
+    category: "Talent Management"
+  },
+  {
+    title: "Community Building & Engagement",
+    description: "Built and managed thriving Discord communities for EA, Helldivers 2, and Suicide Squad, driving 10K+ sign-ups through strategic community initiatives.",
+    image: "/work/project-4.jpg",
+    link: "/work/community-building",
+    category: "Community Strategy"
+  },
+  {
+    title: "Influencer Program Development",
+    description: "Built Samsung US's centralized influencer program, securing 90 long-term partnerships and generating 229.1M+ impressions through 5,262+ content pieces.",
+    image: "/work/project-5.jpg",
+    link: "/work/influencer-program",
+    category: "Program Strategy"
+  },
+  {
+    title: "Creative Direction",
+    description: "Led creative strategy for major gaming initiatives including #TeamGalaxy and EA's community programs, delivering captivating digital experiences across platforms.",
+    image: "/work/project-6.jpg",
+    link: "/work/creative-direction",
+    category: "Creative Strategy"
   }
 ]
 
