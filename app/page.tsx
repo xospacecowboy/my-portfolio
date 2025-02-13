@@ -4,8 +4,8 @@
 // Imports and Dependencies
 // ===================================
 import { useState, useEffect, useCallback, MouseEvent, FormEvent } from "react"
+import { motion, useScroll } from "framer-motion"
 import Link from "next/link"
-import { motion } from "framer-motion"
 import Footer from "@/components/Footer"
 import Header from "@/components/Header"
 import emailjs from '@emailjs/browser'
@@ -76,6 +76,18 @@ export default function Home() {
   const [rotate, setRotate] = useState({ x: 0, y: 0, index: -1 })
   const [isSubmitting, setIsSubmitting] = useState(false)
   const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle')
+  const [isMobile, setIsMobile] = useState(false);
+  const [mounted, setMounted] = useState(false);
+
+  useEffect(() => {
+    setMounted(true);
+    const checkMobile = () => {
+      setIsMobile(window.innerWidth < 768);
+    };
+    checkMobile();
+    window.addEventListener('resize', checkMobile);
+    return () => window.removeEventListener('resize', checkMobile);
+  }, []);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -447,18 +459,18 @@ export default function Home() {
                   <div
                     key={`${exp.company}-${index}`}
                     className="flex-none w-64 h-40 perspective-1000 overflow-hidden rounded-xl"
-                    onMouseMove={(e) => window.innerWidth >= 768 ? onMouseMove(e, index) : undefined}
-                    onMouseLeave={window.innerWidth >= 768 ? onMouseLeave : undefined}
+                    onMouseMove={(e) => mounted && !isMobile ? onMouseMove(e, index) : undefined}
+                    onMouseLeave={mounted && !isMobile ? onMouseLeave : undefined}
                   >
                     <motion.div
                       className="relative h-full w-full transition-all duration-300 group rounded-xl overflow-hidden"
                       style={{
-                        transform: window.innerWidth >= 768 && rotate.index === index 
+                        transform: mounted && !isMobile && rotate.index === index 
                           ? `perspective(1000px) rotateX(${rotate.x}deg) rotateY(${rotate.y}deg) scale3d(1, 1, 1)`
                           : 'perspective(1000px) rotateX(0deg) rotateY(0deg) scale3d(1, 1, 1)',
                         transition: 'all 400ms cubic-bezier(0.03, 0.98, 0.52, 0.99) 0s',
                       }}
-                      whileHover={{ scale: window.innerWidth >= 768 ? 1.05 : 1 }}
+                      whileHover={{ scale: mounted && !isMobile ? 1.05 : 1 }}
                     >
                       <div className={`h-full w-full rounded-xl p-6 select-none
                         bg-gradient-to-tr from-deep-black via-deep-grey to-deep-black border border-white/10
