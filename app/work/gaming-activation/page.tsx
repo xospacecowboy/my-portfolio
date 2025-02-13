@@ -124,7 +124,7 @@ export default function ProjectPage() {
             {projectData.images.map((image, index) => (
               <motion.div
                 key={image.src}
-                className="relative aspect-video rounded-lg overflow-hidden"
+                className="relative aspect-video rounded-lg overflow-hidden bg-deep-grey/40"
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
@@ -132,11 +132,10 @@ export default function ProjectPage() {
                 <Image
                   src={image.src}
                   alt={image.alt}
-                  fill
-                  sizes="(max-width: 768px) 100vw, 50vw"
+                  width={1920}
+                  height={1080}
                   priority={index === 0}
-                  loading={index === 0 ? "eager" : "lazy"}
-                  className="object-cover"
+                  className="object-cover w-full h-full"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent">
                   <div className="absolute bottom-0 p-4">

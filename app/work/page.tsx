@@ -163,11 +163,10 @@ export default function WorkPage() {
                     <Image
                       src={project.image}
                       alt={project.title}
-                      fill
-                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                      width={1200}
+                      height={800}
                       priority={index < 2}
-                      quality={85}
-                      className="object-cover transition-transform duration-300 group-hover:scale-105"
+                      className="object-cover w-full h-full"
                     />
                   </div>
                   <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent">
