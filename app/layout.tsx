@@ -34,8 +34,8 @@ export const metadata: Metadata = {
     "Social Media Strategy"
   ],
   openGraph: {
+    url: 'https://oxytocins.me/',
     type: 'website',
-    url: 'https://oxytocins.me',
     title: '@oxytocins - Stephen Beardslee - Creative Strategist & Social Media Leader',
     description: 'Creative strategist and social media leader specializing in digital marketing, brand development, and innovative social campaigns.',
     images: [{
@@ -47,6 +47,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
+    domain: 'oxytocins.me',
+    url: 'https://oxytocins.me/',
     title: '@oxytocins - Stephen Beardslee - Creative Strategist & Social Media Leader',
     description: 'Creative strategist and social media leader specializing in digital marketing, brand development, and innovative social campaigns.',
     images: ['https://opengraph.b-cdn.net/production/images/9ce06c31-916e-44cf-b066-db58997e936d.png?token=grQGwuG57WAHlLm2ZSvROXbW--gLBCujGHPwHFB3_xc&height=630&width=1200&expires=33275484785'],
