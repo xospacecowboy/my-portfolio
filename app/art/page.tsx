@@ -1,4 +1,10 @@
+"use client"
+
 import { Metadata } from 'next'
+import { motion } from "framer-motion"
+import Header from "../../components/Header"
+import Footer from "../../components/Footer"
+import GradientText from "../../components/GradientText"
 
 export const metadata: Metadata = {
   title: 'Digital Art Gallery | Stephen Beardslee',
@@ -9,13 +15,6 @@ export const metadata: Metadata = {
     url: 'https://oxytocins.me/art',
   },
 }
-
-"use client"
-
-import { motion } from "framer-motion"
-import Header from "../../components/Header"
-import Footer from "../../components/Footer"
-import GradientText from "../../components/GradientText"
 
 export default function ArtPage() {
   return (
