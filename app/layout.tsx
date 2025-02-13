@@ -20,10 +20,10 @@ const dotGothic16 = DotGothic16({
 export const metadata: Metadata = {
   metadataBase: new URL('https://oxytocins.me'),
   title: {
-    default: "@oxytocins - Stephen Beardslee - Creative Strategist & Social Media Leader",
+    default: "Stephen Beardslee - @oxytocins - Portfolio",
     template: "%s | Stephen Beardslee"
   },
-  description: "Creative strategist and social media leader specializing in digital marketing, brand development, and innovative social campaigns.",
+  description: 'Creative strategist and social media leader specializing in digital marketing, brand development, and innovative social campaigns.',
   keywords: [
     "Stephen Beardslee",
     "Roberto Beardslee",
@@ -36,7 +36,7 @@ export const metadata: Metadata = {
   openGraph: {
     url: 'https://oxytocins.me/',
     type: 'website',
-    title: '@oxytocins - Stephen Beardslee - Creative Strategist & Social Media Leader',
+    title: 'Stephen Beardslee - @oxytocins - Portfolio',
     description: 'Creative strategist and social media leader specializing in digital marketing, brand development, and innovative social campaigns.',
     images: [{
       url: 'https://ik.imagekit.io/oxytocins/social.png',
@@ -46,10 +46,10 @@ export const metadata: Metadata = {
     }],
   },
   twitter: {
-    card: 'summary_large_image',
-    title: '@oxytocins - Stephen Beardslee - Creative Strategist & Social Media Leader',
+    card: 'summary',
+    title: 'Stephen Beardslee - @oxytocins - Portfolio',
     description: 'Creative strategist and social media leader specializing in digital marketing, brand development, and innovative social campaigns.',
-    images: 'https://ik.imagekit.io/oxytocins/social.png',
+    image: 'https://ik.imagekit.io/oxytocins/social.png',
     creator: '@oxytocins',
     site: '@oxytocins'
   },
