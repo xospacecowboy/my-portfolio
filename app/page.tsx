@@ -699,8 +699,8 @@ export default function Home() {
               <div className="mb-6">
                 <motion.input
                   type="text"
-                  id="name"
-                  name="name"
+                  id="from_name"
+                  name="from_name"
                   placeholder="Your Name"
                   className="w-full px-4 py-3 bg-white/5 border border-white/20 rounded-lg text-white placeholder-white/50
                     focus:outline-none focus:ring-2 focus:ring-pastel-blue focus:border-transparent
@@ -714,8 +714,8 @@ export default function Home() {
               <div className="mb-6">
                 <motion.input
                   type="email"
-                  id="email"
-                  name="email"
+                  id="reply_to"
+                  name="reply_to"
                   placeholder="Your Email"
                   className="w-full px-4 py-3 bg-white/5 border border-white/20 rounded-lg text-white placeholder-white/50
                     focus:outline-none focus:ring-2 focus:ring-pastel-blue focus:border-transparent
