@@ -39,7 +39,7 @@ export const metadata: Metadata = {
     title: '@oxytocins - Stephen Beardslee - Creative Strategist & Social Media Leader',
     description: 'Creative strategist and social media leader specializing in digital marketing, brand development, and innovative social campaigns.',
     images: [{
-      url: 'https://i.postimg.cc/cLYbXVqX/share.png',
+      url: 'https://ik.imagekit.io/oxytocins/social.png',
       width: 1200,
       height: 630,
       alt: 'Stephen Beardslee - Creative Strategist'
@@ -49,7 +49,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: '@oxytocins - Stephen Beardslee - Creative Strategist & Social Media Leader',
     description: 'Creative strategist and social media leader specializing in digital marketing, brand development, and innovative social campaigns.',
-    images: 'https://i.postimg.cc/cLYbXVqX/share.png',
+    images: 'https://ik.imagekit.io/oxytocins/social.png',
     creator: '@oxytocins',
     site: '@oxytocins'
   },
