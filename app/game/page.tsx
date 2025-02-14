@@ -20,7 +20,10 @@ export default function GamePage() {
             </p>
           </div>
           
-          <div className="relative h-[450px] max-w-3xl mx-auto bg-black/50 rounded-xl overflow-hidden border border-white/10 shadow-xl">
+          <div className="mb-4 text-center text-sm text-gray-400 italic">
+            Note: Best viewed in landscape mode on mobile devices
+          </div>
+          <div className="relative h-[500px] max-w-3xl mx-auto bg-black/50 rounded-xl overflow-hidden border border-white/10 shadow-xl mb-8">
             <RPGChat />
           </div>
           
