@@ -587,7 +587,7 @@ export default function Home() {
                 </span>
 
                 <span className="block">
-                  OR JUST SAY{" "}
+                  OR JUST{" "}
                   <motion.span
                     className="relative inline-block font-bold cursor-pointer"
                     whileHover={{ letterSpacing: "2px" }}
