@@ -46,7 +46,7 @@ const workProjects = [
   },
   {
     title: "Creative Direction",
-    description: "Led creative strategy for major gaming initiatives including #TeamGalaxy and EA's community programs, delivering captivating digital experiences across platforms.",
+    description: "Spearheaded social media creative strategy for major brands, leading campaigns that generated 200M+ impressions. Directed visual storytelling across Instagram, TikTok, and Twitter, while managing creative teams to deliver engaging content that resonated with Gen Z and Millennial audiences.",
     image: "/work/project-6.jpg",
     link: "/work/creative-direction",
     category: "Creative Strategy"
