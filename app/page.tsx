@@ -189,8 +189,8 @@ export default function Home() {
       {/* ===================================
           Main Content Section
           =================================== */}
-      <main className="pt-32">
-        <section className="container mx-auto px-6 py-16 flex flex-col relative">
+      <main className="container mx-auto px-6 py-8 md:pt-32">
+        <section className="relative">
           {/* ===================================
               Hero Section
               =================================== */}
