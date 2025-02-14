@@ -3,8 +3,8 @@
 import { useEffect, useState } from 'react'
 import { motion } from 'framer-motion'
 import Header from '../../../components/Header'
-import Footer from '../../../components/Footer'
-import { BlogPost, staticBlogPosts } from '@/lib/notion'
+import BlogFooter from '../../../components/BlogFooter'
+import { BlogPost } from '@/lib/notion'
 import Link from 'next/link'
 import ReactMarkdown from 'react-markdown'
 import remarkGfm from 'remark-gfm'
@@ -17,47 +17,71 @@ interface FullBlogPost extends BlogPost {
 export default function BlogPostPage({ params }: { params: { slug: string } }) {
   const [post, setPost] = useState<FullBlogPost | null>(null)
   const [loading, setLoading] = useState(true)
+  const [error, setError] = useState<string | null>(null)
 
   useEffect(() => {
-    // First try to fetch from API
-    fetch(`/api/posts/${params.slug}`)
-      .then(res => res.json())
-      .then(post => {
-        if (post.error) {
-          throw new Error(post.error)
+    const fetchPost = async () => {
+      try {
+        const res = await fetch(`/api/posts/${params.slug}`)
+        if (!res.ok) {
+          if (res.status === 404) {
+            throw new Error('Post not found')
+          }
+          throw new Error('Failed to fetch post')
         }
-        setPost(post)
-      })
-      .catch(() => {
-        // If API fails, try static posts
-        const staticPost = staticBlogPosts.find(p => p.slug === params.slug)
-        if (staticPost) {
-          setPost(staticPost)
+        const data = await res.json()
+        if (data.error) {
+          throw new Error(data.error)
         }
-      })
-      .finally(() => setLoading(false))
+        setPost(data)
+      } catch (err) {
+        console.error('Error loading post:', err)
+        setError(err instanceof Error ? err.message : 'Failed to load post')
+        setPost(null)
+      } finally {
+        setLoading(false)
+      }
+    }
+
+    fetchPost()
   }, [params.slug])
 
   if (loading) {
     return (
-      <div className="bg-deep-grey text-white min-h-screen">
+      <div className="min-h-screen bg-gradient-to-b from-black via-purple-900/20 to-black">
         <Header />
         <main className="container mx-auto px-6 pt-32">
-          <div className="text-center">Loading...</div>
+          <div className="text-center">
+            <div className="inline-block animate-spin rounded-full h-8 w-8 border-t-2 border-b-2 border-purple-400"></div>
+            <div className="mt-4 text-white/60 font-jetbrains-mono">Loading post...</div>
+          </div>
         </main>
-        <Footer />
+        <BlogFooter />
       </div>
     )
   }
 
-  if (!post) {
+  if (error || !post) {
     return (
-      <div className="bg-deep-grey text-white min-h-screen">
+      <div className="min-h-screen bg-gradient-to-b from-black via-purple-900/20 to-black">
         <Header />
         <main className="container mx-auto px-6 pt-32">
-          <div className="text-center">Post not found</div>
+          <div className="max-w-3xl mx-auto">
+            <div className="p-8 rounded-xl bg-gradient-to-br from-purple-900/50 via-black to-pink-900/30 backdrop-blur border border-white/10">
+              <div className="text-center">
+                <div className="text-2xl font-bold text-white/80 mb-4">😕 {error || 'Post not found'}</div>
+                <Link 
+                  href="/blog" 
+                  className="inline-flex items-center text-pastel-blue hover:text-pastel-pink transition-colors font-jetbrains-mono group"
+                >
+                  <span className="mr-2 transform transition-transform group-hover:-translate-x-1">←</span>
+                  Back to Blog
+                </Link>
+              </div>
+            </div>
+          </div>
         </main>
-        <Footer />
+        <BlogFooter />
       </div>
     )
   }
@@ -91,10 +115,10 @@ export default function BlogPostPage({ params }: { params: { slug: string } }) {
   }
 
   return (
-    <div className="bg-deep-grey text-white min-h-screen">
+    <div className="min-h-screen bg-gradient-to-b from-black via-purple-900/20 to-black">
       <Header />
 
-      <main className="container mx-auto px-6 pt-32">
+      <main className="container mx-auto px-6 py-8">
         <motion.article
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -103,8 +127,12 @@ export default function BlogPostPage({ params }: { params: { slug: string } }) {
         >
           {/* Back Link */}
           <div className="mb-8">
-            <Link href="/blog" className="inline-block text-pastel-blue hover:text-pastel-pink transition-colors font-jetbrains-mono">
-              ← Back to Blog
+            <Link 
+              href="/blog" 
+              className="inline-flex items-center text-pastel-blue hover:text-pastel-pink transition-colors font-jetbrains-mono group"
+            >
+              <span className="mr-2 transform transition-transform group-hover:-translate-x-1">←</span>
+              Back to Blog
             </Link>
           </div>
 
@@ -114,7 +142,7 @@ export default function BlogPostPage({ params }: { params: { slug: string } }) {
           </div>
 
           {/* Title */}
-          <h1 className="text-4xl md:text-5xl font-bold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-pastel-pink to-pastel-blue">
+          <h1 className="text-4xl md:text-5xl font-bold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-purple-400 to-pink-400">
             {post.title}
           </h1>
 
@@ -130,13 +158,15 @@ export default function BlogPostPage({ params }: { params: { slug: string } }) {
           {/* Content */}
           <div className="prose prose-invert max-w-none font-jetbrains-mono">
             {post.content ? (
-              <ReactMarkdown 
-                remarkPlugins={[remarkGfm]}
-                className="blog-content"
-                components={components}
-              >
-                {post.content}
-              </ReactMarkdown>
+              <div className="p-8 rounded-xl bg-gradient-to-br from-purple-900/50 via-black to-pink-900/30 backdrop-blur border border-white/10">
+                <ReactMarkdown 
+                  remarkPlugins={[remarkGfm]}
+                  className="blog-content"
+                  components={components}
+                >
+                  {post.content}
+                </ReactMarkdown>
+              </div>
             ) : (
               <div className="text-lg text-white/80 leading-relaxed">
                 {post.excerpt}
@@ -146,7 +176,7 @@ export default function BlogPostPage({ params }: { params: { slug: string } }) {
         </motion.article>
       </main>
 
-      <Footer />
+      <BlogFooter />
     </div>
   )
 }

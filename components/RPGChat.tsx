@@ -84,12 +84,31 @@ export default function RPGChat() {
   const messagesEndRef = useRef<HTMLDivElement>(null)
 
   const scrollToBottom = () => {
-    messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' })
+    if (messagesEndRef.current) {
+      const container = messagesEndRef.current.parentElement;
+      if (container) {
+        const smoothScroll = () => {
+          const targetScroll = container.scrollHeight - container.clientHeight;
+          const currentScroll = container.scrollTop;
+          const distance = targetScroll - currentScroll;
+          
+          if (Math.abs(distance) < 1) return;
+          
+          container.scrollTop = currentScroll + distance * 0.3;
+          requestAnimationFrame(smoothScroll);
+        };
+        
+        requestAnimationFrame(smoothScroll);
+      }
+    }
   }
 
   useEffect(() => {
-    scrollToBottom()
-  }, [messages])
+    if (messages.length > 0) {
+      const timeoutId = setTimeout(scrollToBottom, 50);
+      return () => clearTimeout(timeoutId);
+    }
+  }, [messages]);
 
   const addMessage = (text: string, type: 'system' | 'player' | 'options', options?: string[]) => {
     setMessages(prev => [...prev, {
@@ -101,8 +120,13 @@ export default function RPGChat() {
   }
 
   const handleInput = async (e: React.FormEvent) => {
-    e.preventDefault()
-    if (!inputValue.trim()) return
+    e.preventDefault();
+    if (!inputValue.trim()) return;
+
+    const container = messagesEndRef.current?.parentElement;
+    if (container) {
+      container.style.scrollBehavior = 'smooth';
+    }
 
     // Add player's message
     addMessage(inputValue, 'player')
@@ -131,11 +155,24 @@ export default function RPGChat() {
     }
 
     setIsTyping(false)
+    
+    if (container) {
+      container.style.scrollBehavior = 'auto';
+    }
   }
 
   const handleGameAction = async (action: string) => {
-    switch (action.toLowerCase()) {
-      case "visit the merchant's quarter":
+    const normalizedAction = action.toLowerCase().trim()
+    const normalizedOptions = {
+      merchant: storylines.starport_options[0].toLowerCase(),
+      cantina: storylines.starport_options[2].toLowerCase(),
+      mission: storylines.starport_options[1].toLowerCase(),
+      inventory: storylines.starport_options[3].toLowerCase(),
+      return: "return to main area"
+    }
+
+    switch (normalizedAction) {
+      case normalizedOptions.merchant:
         setGameState(prev => ({ ...prev, currentLocation: "Merchant's Quarter" }))
         for (const text of storylines.merchant) {
           await new Promise(resolve => setTimeout(resolve, 1000))
@@ -145,7 +182,7 @@ export default function RPGChat() {
         addMessage('💭 What would you like to do?', 'options', storylines.merchant_options)
         break
 
-      case "enter the cantina":
+      case normalizedOptions.cantina:
         setGameState(prev => ({ ...prev, currentLocation: "Cantina" }))
         for (const text of storylines.cantina) {
           await new Promise(resolve => setTimeout(resolve, 1000))
@@ -155,7 +192,7 @@ export default function RPGChat() {
         addMessage('💭 What would you like to do?', 'options', storylines.cantina_options)
         break
 
-      case "head to the mission board":
+      case normalizedOptions.mission:
         setGameState(prev => ({ ...prev, currentLocation: "Mission Board" }))
         for (const text of storylines.mission) {
           await new Promise(resolve => setTimeout(resolve, 1000))
@@ -165,7 +202,7 @@ export default function RPGChat() {
         addMessage('📝 Available missions:', 'options', storylines.mission_options)
         break
 
-      case "check your inventory":
+      case normalizedOptions.inventory:
         const inventoryMessage = gameState.inventory.length > 0
           ? `🎒 Your inventory contains: ${gameState.inventory.join(', ')}`
           : "🎒 Your inventory is empty"
@@ -174,7 +211,7 @@ export default function RPGChat() {
         addMessage('💭 What would you like to do?', 'options', storylines.starport_options)
         break
 
-      case "return to main area":
+      case normalizedOptions.return:
         setGameState(prev => ({ ...prev, currentLocation: "Starport" }))
         addMessage("🚀 You return to the main area of the Starport.", 'system')
         await new Promise(resolve => setTimeout(resolve, 1000))
@@ -261,12 +298,20 @@ export default function RPGChat() {
 
   const handleOptionClick = (option: string) => {
     setInputValue(option)
-    handleInput({ preventDefault: () => {} } as React.FormEvent)
+    const fakeEvent = { preventDefault: () => {}, stopPropagation: () => {} } as React.FormEvent
+    handleInput(fakeEvent)
   }
 
   return (
-    <div className="h-full flex flex-col bg-black/80 text-gray-100">
-      <div className="flex-1 overflow-y-auto p-4 space-y-4">
+    <div 
+      className="absolute inset-0 flex flex-col bg-black/80 text-gray-100" 
+      onWheel={(e) => e.stopPropagation()}
+      onTouchMove={(e) => e.stopPropagation()}
+    >
+      <div 
+        className="flex-1 overflow-y-auto p-4 space-y-4 no-scrollbar scroll-smooth"
+        onScroll={(e) => e.stopPropagation()}
+      >
         <AnimatePresence mode="popLayout">
           {messages.map(message => (
             <motion.div
@@ -289,7 +334,11 @@ export default function RPGChat() {
                     {message.options?.map((option, index) => (
                       <button
                         key={index}
-                        onClick={() => handleOptionClick(option)}
+                        onClick={(e) => {
+                          e.preventDefault()
+                          e.stopPropagation()
+                          handleOptionClick(option)
+                        }}
                         className="text-left px-3 py-2 rounded bg-purple-500/20 hover:bg-purple-500/30 transition-colors"
                       >
                         {option}
@@ -315,17 +364,32 @@ export default function RPGChat() {
         <div ref={messagesEndRef} />
       </div>
 
-      <form onSubmit={handleInput} className="p-4 border-t border-white/10">
+      <form 
+        onSubmit={(e) => {
+          e.preventDefault()
+          e.stopPropagation()
+          handleInput(e)
+        }} 
+        className="p-4 border-t border-white/10"
+        onWheel={(e) => e.stopPropagation()}
+        onTouchMove={(e) => e.stopPropagation()}
+      >
         <div className="flex gap-2">
           <input
             type="text"
             value={inputValue}
-            onChange={(e) => setInputValue(e.target.value)}
+            onChange={(e) => {
+              e.stopPropagation()
+              setInputValue(e.target.value)
+            }}
+            onWheel={(e) => e.stopPropagation()}
+            onTouchMove={(e) => e.stopPropagation()}
             placeholder="Type your response..."
             className="flex-1 bg-white/5 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-purple-500"
           />
           <button
             type="submit"
+            onClick={(e) => e.stopPropagation()}
             className="px-4 py-2 bg-purple-600 hover:bg-purple-700 rounded-lg transition-colors"
           >
             Send

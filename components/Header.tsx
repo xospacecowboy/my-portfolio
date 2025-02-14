@@ -3,22 +3,12 @@
 import Link from "next/link"
 import { motion } from "framer-motion"
 import { usePathname } from "next/navigation"
-import { useState, useEffect } from "react"
+import { useState } from "react"
 import { Menu, X } from "lucide-react"
 
 export default function Header() {
   const pathname = usePathname()
-  const [isScrolled, setIsScrolled] = useState(false)
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
-
-  useEffect(() => {
-    const handleScroll = () => {
-      setIsScrolled(window.scrollY > 0)
-    }
-
-    window.addEventListener("scroll", handleScroll)
-    return () => window.removeEventListener("scroll", handleScroll)
-  }, [])
 
   const navLinks = [
     { href: "/work", label: "WORK" },
@@ -29,13 +19,7 @@ export default function Header() {
   ]
 
   return (
-    <header 
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        isScrolled || isMobileMenuOpen
-          ? "bg-deep-grey/80 backdrop-blur-sm" 
-          : "bg-transparent"
-      }`}
-    >
+    <header className="z-50">
       <div className="container mx-auto px-6 py-4">
         <div className="flex justify-between items-center">
           <Link href="/" className="text-xl md:text-2xl font-bold font-dotgothic16 hover:bg-clip-text hover:text-transparent hover:bg-gradient-to-r hover:from-pastel-pink hover:via-pastel-purple hover:to-pastel-blue transition-all">

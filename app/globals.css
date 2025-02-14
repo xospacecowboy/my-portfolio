@@ -6,6 +6,17 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer utilities {
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+  
+  .no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+}
+
 :root {
   --foreground-rgb: 255, 255, 255;
   --background-rgb: 30, 30, 30;
@@ -93,6 +104,59 @@ body {
   .animate-scroll {
     animation: none;
   }
+}
+
+/* Blog Content Styles */
+.blog-content {
+  @apply space-y-6;
+}
+
+.blog-content h2 {
+  @apply text-2xl font-bold mt-8 mb-4 bg-clip-text text-transparent bg-gradient-to-r from-purple-400 to-pink-400;
+}
+
+.blog-content h3 {
+  @apply text-xl font-bold mt-6 mb-3 text-white/90;
+}
+
+.blog-content p {
+  @apply text-white/80 leading-relaxed;
+}
+
+.blog-content ul {
+  @apply list-disc list-inside space-y-2 text-white/80 ml-4;
+}
+
+.blog-content ol {
+  @apply list-decimal list-inside space-y-2 text-white/80 ml-4;
+}
+
+.blog-content a {
+  @apply text-pastel-blue hover:text-pastel-pink transition-colors;
+}
+
+.blog-content blockquote {
+  @apply border-l-4 border-purple-400/50 pl-4 italic text-white/70;
+}
+
+.blog-content img {
+  @apply rounded-lg my-6 w-full object-cover;
+}
+
+.blog-content hr {
+  @apply my-8 border-white/10;
+}
+
+.blog-content table {
+  @apply w-full border-collapse my-6;
+}
+
+.blog-content th {
+  @apply bg-white/10 px-4 py-2 text-left font-bold;
+}
+
+.blog-content td {
+  @apply border-t border-white/10 px-4 py-2;
 }
 
 /* Blog Post Markdown Styles */
