@@ -19,7 +19,7 @@ export default function Header() {
   ]
 
   return (
-    <header className="z-50">
+    <header className="relative z-50 bg-transparent">
       <div className="container mx-auto px-6 py-4">
         <div className="flex justify-between items-center">
           <Link href="/" className="text-xl md:text-2xl font-bold font-dotgothic16 hover:bg-clip-text hover:text-transparent hover:bg-gradient-to-r hover:from-pastel-pink hover:via-pastel-purple hover:to-pastel-blue transition-all">
@@ -49,11 +49,14 @@ export default function Header() {
 
           {/* Mobile Menu Button */}
           <button
+            className="md:hidden"
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-            className="md:hidden p-2 hover:text-pastel-blue transition-colors"
-            aria-label="Toggle mobile menu"
           >
-            {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
+            {isMobileMenuOpen ? (
+              <X className="w-6 h-6" />
+            ) : (
+              <Menu className="w-6 h-6" />
+            )}
           </button>
         </div>
 
@@ -63,27 +66,26 @@ export default function Header() {
             initial={{ opacity: 0, y: -20 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -20 }}
-            className="md:hidden py-4"
+            className="md:hidden mt-4 py-4 bg-deep-grey/80 backdrop-blur-lg rounded-lg"
           >
             <div className="flex flex-col space-y-4">
               {navLinks.map((link) => (
                 <Link
                   key={link.href}
                   href={link.href}
-                  className="text-sm hover:text-pastel-blue transition-colors font-jetbrains-mono py-2"
+                  className="text-sm px-6 py-2 hover:bg-clip-text hover:text-transparent hover:bg-gradient-to-r hover:from-pastel-pink hover:via-pastel-purple hover:to-pastel-blue transition-all font-jetbrains-mono"
                   onClick={() => setIsMobileMenuOpen(false)}
                 >
                   {link.label}
                 </Link>
               ))}
               <motion.a
-                href="mailto:beardslee.stephen@icloud.com"
-                className="bg-white text-deep-grey px-4 py-2 text-sm font-medium hover:bg-pastel-blue hover:text-white transition-colors font-jetbrains-mono inline-block w-fit"
+                href="mailto:howdy@oxytocins.me"
+                className="mx-6 bg-white text-deep-grey px-4 py-2 text-sm font-medium hover:bg-gradient-to-r hover:from-pastel-pink hover:via-pastel-purple hover:to-pastel-blue hover:text-white transition-all relative overflow-hidden text-center font-jetbrains-mono"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-                onClick={() => setIsMobileMenuOpen(false)}
               >
-                CONTACT
+                @
               </motion.a>
             </div>
           </motion.nav>

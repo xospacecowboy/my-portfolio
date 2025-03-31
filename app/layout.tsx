@@ -1,5 +1,4 @@
 import "./globals.css"
-import "../styles/grid-pattern.css"
 import { Space_Grotesk, DotGothic16 } from "next/font/google"
 import type React from "react"
 import { Metadata } from 'next'
@@ -7,6 +6,10 @@ import dynamic from 'next/dynamic'
 import Script from 'next/script'
 
 const AnalyticsWrapper = dynamic(() => import('../components/AnalyticsWrapper'), {
+  ssr: false
+})
+
+const SpaceBackground = dynamic(() => import('../components/SpaceBackground'), {
   ssr: false
 })
 
@@ -85,10 +88,13 @@ export default function RootLayout({
           `}
         </Script>
       </head>
-      <body className={`${spaceGrotesk.className} ${dotGothic16.className}`}>
-        <AnalyticsWrapper>
-          {children}
-        </AnalyticsWrapper>
+      <body className={`${spaceGrotesk.className} ${dotGothic16.className} text-white min-h-screen`}>
+        <SpaceBackground />
+        <div className="relative">
+          <AnalyticsWrapper>
+            {children}
+          </AnalyticsWrapper>
+        </div>
       </body>
     </html>
   )

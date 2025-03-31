@@ -19,8 +19,8 @@ const ThreadsIcon = () => (
 
 export default function Footer() {
   return (
-    <footer className="bg-deep-grey text-white py-6">
-      <div className="container mx-auto px-6">
+    <footer className="relative z-50">
+      <div className="container mx-auto px-6 py-4">
         <div className="flex flex-col space-y-4">
           <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
             <div>
@@ -34,31 +34,28 @@ export default function Footer() {
                 target="_blank"
                 rel="noopener noreferrer"
                 className="hover:text-pastel-blue transition-colors"
-                aria-label="LinkedIn"
               >
-                <Linkedin className="w-5 h-5" />
+                <Linkedin className="w-6 h-6" />
               </a>
               <a
-                href="https://www.instagram.com/xospacecowboy"
+                href="https://www.instagram.com/xospacecowboy/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="hover:text-pastel-blue transition-colors"
-                aria-label="Instagram"
+                className="hover:text-pastel-pink transition-colors"
               >
-                <Instagram className="w-5 h-5" />
+                <Instagram className="w-6 h-6" />
               </a>
               <a
-                href="https://www.threads.net/xospacecowboy"
+                href="https://www.threads.net/@xospacecowboy"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="hover:text-pastel-blue transition-colors"
-                aria-label="Threads"
+                className="hover:text-pastel-purple transition-colors"
               >
                 <ThreadsIcon />
               </a>
             </div>
           </div>
-          <div className="text-center text-sm text-gray-400 font-jetbrains-mono">
+          <div className="text-center md:text-right text-sm opacity-60">
             &copy; {new Date().getFullYear()} Stephen Beardslee. All rights reserved.
           </div>
         </div>

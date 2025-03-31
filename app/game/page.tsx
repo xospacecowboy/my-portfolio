@@ -6,9 +6,9 @@ import GameFooter from '@/components/GameFooter'
 
 export default function GamePage() {
   return (
-    <div className="min-h-screen bg-gradient-to-b from-black via-purple-900/20 to-black">
+    <div className="min-h-screen">
       <Header />
-      <div className="container mx-auto px-4 py-8">
+      <main className="container mx-auto px-6 py-12 md:py-32">
         <div className="max-w-4xl mx-auto space-y-8">
           <div className="text-center space-y-4">
             <h1 className="text-5xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-purple-400 to-pink-600">
@@ -71,7 +71,7 @@ export default function GamePage() {
             </div>
           </div>
         </div>
-      </div>
+      </main>
       <GameFooter />
     </div>
   )

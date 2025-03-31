@@ -63,10 +63,10 @@ function GradientText({ children, className = "" }: { children: React.ReactNode;
 
 export default function WorkPage() {
   return (
-    <div className="bg-deep-grey text-white min-h-screen">
+    <div className="min-h-screen">
       <Header />
 
-      <main className="container mx-auto px-6 py-8 md:pt-32">
+      <main className="container mx-auto px-6 py-12 md:py-32">
         {/* Hero Section */}
         <section className="pb-12">
           <h1 className="text-6xl md:text-7xl font-bold font-dotgothic16 mb-6">

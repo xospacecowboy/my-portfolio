@@ -7,10 +7,10 @@ import GradientText from "../../components/GradientText"
 
 export default function ArtPage() {
   return (
-    <div className="bg-deep-grey text-white min-h-screen">
+    <div className="min-h-screen">
       <Header />
 
-      <main className="container mx-auto px-6 py-8 md:pt-32 pb-16">
+      <main className="container mx-auto px-6 py-12 md:py-32">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}

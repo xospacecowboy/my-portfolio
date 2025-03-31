@@ -10,6 +10,7 @@ import Footer from "@/components/Footer"
 import Header from "@/components/Header"
 import emailjs from '@emailjs/browser'
 import { useMounted, useIsMobile } from "@/hooks/useMounted"
+import TypewriterText from "../components/TypewriterText"
 
 // ===================================
 // Utility Functions
@@ -175,12 +176,7 @@ export default function Home() {
   const duplicatedExperiences = [...experiences, ...experiences];
 
   return (
-    <div className="bg-deep-grey text-white min-h-screen font-space-grotesk overflow-x-hidden">
-      {/* ===================================
-          Background Grid Pattern
-          =================================== */}
-      <div className="fixed inset-0 bg-grid-pattern opacity-5 pointer-events-none"></div>
-
+    <div className="min-h-screen font-space-grotesk overflow-x-hidden">
       {/* ===================================
           Header Section
           =================================== */}
@@ -189,7 +185,7 @@ export default function Home() {
       {/* ===================================
           Main Content Section
           =================================== */}
-      <main className="container mx-auto px-6 py-8 md:pt-32">
+      <main className="container mx-auto px-6 py-12 md:py-32">
         <section className="relative">
           {/* ===================================
               Hero Section
@@ -221,7 +217,11 @@ export default function Home() {
                   </span>
                 </motion.div>
               </motion.div>
-              I'M STEPHEN
+              <TypewriterText 
+                text="I'M STEPHEN"
+                delay={100}
+                repeatDelay={5000}
+              />
             </span>
             {/* Mobile AKA text */}
             <span className="md:hidden">

@@ -54,6 +54,22 @@ module.exports = {
           foreground: "hsl(var(--card-foreground))",
         },
       },
+      zIndex: {
+        '-1': '-1',
+      },
+      keyframes: {
+        twinkle: {
+          '0%, 100%': { 
+            opacity: 0.2,
+          },
+          '50%': { 
+            opacity: 1,
+          }
+        }
+      },
+      animation: {
+        twinkle: 'twinkle 3s ease-in-out infinite'
+      },
       borderRadius: {
         lg: "var(--radius)",
         md: "calc(var(--radius) - 2px)",

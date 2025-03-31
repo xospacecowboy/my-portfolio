@@ -52,10 +52,10 @@ export default function BlogPage() {
   }
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-black via-purple-900/20 to-black">
+    <div className="min-h-screen">
       <Header />
 
-      <main className="container mx-auto px-6 py-8">
+      <main className="container mx-auto px-6 py-12 md:py-32">
         {/* Hero Section */}
         <motion.section 
           className="pb-12"
