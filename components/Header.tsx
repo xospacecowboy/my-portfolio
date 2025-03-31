@@ -23,7 +23,7 @@ export default function Header() {
       <div className="container mx-auto px-6 py-4">
         <div className="flex justify-between items-center">
           <Link href="/" className="text-xl md:text-2xl font-bold font-dotgothic16 hover:bg-clip-text hover:text-transparent hover:bg-gradient-to-r hover:from-pastel-pink hover:via-pastel-purple hover:to-pastel-blue transition-all">
-            @OXYTOCINS
+            XO, SPACECOWBOY
           </Link>
 
           {/* Desktop Navigation */}

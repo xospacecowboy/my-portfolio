@@ -25,7 +25,7 @@ export default function Footer() {
           <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
             <div>
               <Link href="/" className="text-lg font-bold tracking-tighter hover:text-pastel-blue transition-colors">
-                @OXYTOCINS
+                XO, SPACECOWBOY
               </Link>
             </div>
             <div className="flex space-x-4">
@@ -39,7 +39,7 @@ export default function Footer() {
                 <Linkedin className="w-5 h-5" />
               </a>
               <a
-                href="https://www.instagram.com/oxytocins"
+                href="https://www.instagram.com/xospacecowboy"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="hover:text-pastel-blue transition-colors"
@@ -48,7 +48,7 @@ export default function Footer() {
                 <Instagram className="w-5 h-5" />
               </a>
               <a
-                href="https://www.threads.net/@oxytocins"
+                href="https://www.threads.net/xospacecowboy"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="hover:text-pastel-blue transition-colors"
@@ -59,7 +59,7 @@ export default function Footer() {
             </div>
           </div>
           <div className="text-center text-sm text-gray-400 font-jetbrains-mono">
-            {new Date().getFullYear()} Stephen Beardslee. All rights reserved.
+            &copy; {new Date().getFullYear()} Stephen Beardslee. All rights reserved.
           </div>
         </div>
       </div>

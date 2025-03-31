@@ -217,7 +217,7 @@ export default function Home() {
                   transition={{ duration: 0.3, delay: 0.5 }}
                 >
                   <span className="bg-clip-text text-transparent bg-gradient-to-r from-pastel-pink to-pastel-blue">
-                    AKA @OXYTOCINS
+                    AKA XO, SPACECOWBOY
                   </span>
                 </motion.div>
               </motion.div>
@@ -232,7 +232,7 @@ export default function Home() {
                   animate={{ backgroundPosition: ["0% 50%", "100% 50%", "0% 50%"] }}
                   transition={{ duration: 3, repeat: Infinity, ease: "linear" }}
                 >
-                AKA @OXYTOCINS
+                AKA XO, SPACECOWBOY
                 </motion.span>
                 )
               </span>
@@ -377,8 +377,8 @@ export default function Home() {
                       impact.{" "}
                       <span className="block mt-2">
                         Whether shaping a brand or building a campaign, I don't just generate ideas—I bring them to{" "}
-                        <motion.span whileHover={{ color: "#dda0dd" }}>life</motion.span>{" "}
-                        in ways that resonate, move, and endure.{" "}
+                      <motion.span whileHover={{ color: "#dda0dd" }}>life</motion.span>{" "}
+                      in ways that resonate, move, and endure.{" "}
                       </span>
                       <span className="block mt-2">
                         Because creativity, when done right, never rides alone.

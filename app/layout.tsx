@@ -20,7 +20,7 @@ const dotGothic16 = DotGothic16({
 export const metadata: Metadata = {
   metadataBase: new URL('https://oxytocins.me'),
   title: {
-    default: "Stephen Beardslee - @oxytocins - Portfolio",
+    default: "Stephen Beardslee - XO, SPACECOWBOY - Portfolio",
     template: "%s | Stephen Beardslee"
   },
   description: 'Creative strategist and social media leader specializing in digital marketing, brand development, and innovative social campaigns.',
@@ -36,7 +36,7 @@ export const metadata: Metadata = {
   openGraph: {
     url: 'https://oxytocins.me/',
     type: 'website',
-    title: 'Stephen Beardslee - @oxytocins - Portfolio',
+    title: 'Stephen Beardslee - XO, SPACECOWBOY - Portfolio',
     description: 'Creative strategist and social media leader specializing in digital marketing, brand development, and innovative social campaigns.',
     images: [{
       url: 'https://ik.imagekit.io/oxytocins/social.png',
@@ -47,11 +47,11 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary',
-    title: 'Stephen Beardslee - @oxytocins - Portfolio',
+    title: 'Stephen Beardslee - XO, SPACECOWBOY - Portfolio',
     description: 'Creative strategist and social media leader specializing in digital marketing, brand development, and innovative social campaigns.',
     images: 'https://ik.imagekit.io/oxytocins/social.png',
-    creator: '@oxytocins',
-    site: '@oxytocins'
+    creator: 'XO, SPACECOWBOY',
+    site: 'XO, SPACECOWBOY'
   },
   icons: {
     icon: 'https://ik.imagekit.io/oxytocins/favicon.png',
