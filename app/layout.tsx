@@ -74,17 +74,15 @@ export default function RootLayout({
       <head>
         <meta name="theme-color" content="#000000" />
         <Script
-          src={`https://www.googletagmanager.com/gtag/js?id=G-ZH28TT3LE0`}
-          strategy="beforeInteractive"
+          src="https://www.googletagmanager.com/gtag/js?id=G-ZH28TT3LE0"
+          async
         />
-        <Script id="google-analytics" strategy="beforeInteractive">
+        <Script id="google-analytics">
           {`
             window.dataLayer = window.dataLayer || [];
             function gtag(){dataLayer.push(arguments);}
             gtag('js', new Date());
-            gtag('config', 'G-ZH28TT3LE0', {
-              page_path: window.location.pathname,
-            });
+            gtag('config', 'G-ZH28TT3LE0');
           `}
         </Script>
       </head>
