@@ -21,9 +21,9 @@ const dotGothic16 = DotGothic16({
 })
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://oxytocins.me'),
+  metadataBase: new URL('https://xospacecowboy.studio'),
   title: {
-    default: "Stephen Beardslee - XO, SPACECOWBOY - Portfolio",
+    default: "Stephen Beardslee - Portfolio + Digital Playground",
     template: "%s | Stephen Beardslee"
   },
   description: 'Creative strategist and social media leader specializing in digital marketing, brand development, and innovative social campaigns.',
@@ -37,9 +37,9 @@ export const metadata: Metadata = {
     "Social Media Strategy"
   ],
   openGraph: {
-    url: 'https://oxytocins.me/',
+    url: 'https://xospacecowboy.studio/',
     type: 'website',
-    title: 'Stephen Beardslee - XO, SPACECOWBOY - Portfolio',
+    title: 'Stephen Beardslee - Portfolio + Digital Playground',
     description: 'Creative strategist and social media leader specializing in digital marketing, brand development, and innovative social campaigns.',
     images: [{
       url: 'https://ik.imagekit.io/oxytocins/social.png',
@@ -50,7 +50,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary',
-    title: 'Stephen Beardslee - XO, SPACECOWBOY - Portfolio',
+    title: 'Stephen Beardslee - Portfolio + Digital Playground',
     description: 'Creative strategist and social media leader specializing in digital marketing, brand development, and innovative social campaigns.',
     images: 'https://ik.imagekit.io/oxytocins/social.png',
     creator: 'XO, SPACECOWBOY',
@@ -74,7 +74,7 @@ export default function RootLayout({
       <head>
         <meta name="theme-color" content="#000000" />
         <Script
-          src="https://www.googletagmanager.com/gtag/js?id=G-ZH28TT3LE0"
+          src="https://www.googletagmanager.com/gtag/js?id=G-VBMV0Z03R6"
           async
         />
         <Script id="google-analytics">
@@ -82,7 +82,7 @@ export default function RootLayout({
             window.dataLayer = window.dataLayer || [];
             function gtag(){dataLayer.push(arguments);}
             gtag('js', new Date());
-            gtag('config', 'G-ZH28TT3LE0');
+            gtag('config', 'G-VBMV0Z03R6');
           `}
         </Script>
       </head>
