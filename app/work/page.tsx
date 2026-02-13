@@ -88,8 +88,7 @@ export default function WorkPage() {
               Welcome to my digital playground! 🎨 Built from scratch with modern tech and lots of love, 
               this portfolio showcases the perfect blend of <span className="text-pastel-pink">minimalist design</span> and{" "}
               <span className="text-pastel-blue">playful interactions</span>. From gradient animations to 
-              cyberpunk-inspired elements, every detail has been crafted to create an engaging experience. 
-              It's not just a portfolio—it's a vibe ✨
+              cyberpunk-inspired elements, every detail has been crafted to create an engaging experience ✨
             </p>
             <div className="space-y-3">
               <div className="text-sm text-neutral-400 font-jetbrains-mono flex items-center gap-2">
